@@ -1,0 +1,324 @@
+Checking: 10.pdf
+Checking 10.pdf
+All Clear!
+---
+Checking: 15.pdf
+Checking 15.pdf
+All Clear!
+---
+Checking: 16.pdf
+Checking 16.pdf
+All Clear!
+---
+Checking: 18.pdf
+Checking 18.pdf
+All Clear!
+---
+Checking: 19.pdf
+Checking 19.pdf
+All Clear!
+---
+Checking: 20.pdf
+Checking 20.pdf
+All Clear!
+---
+Checking: 21.pdf
+Checking 21.pdf
+All Clear!
+---
+Checking: 22.pdf
+Checking 22.pdf
+All Clear!
+---
+Checking: 23.pdf
+Checking 23.pdf
+All Clear!
+---
+Checking: 24.pdf
+Checking 24.pdf
+All Clear!
+---
+Checking: 25.pdf
+Checking 25.pdf
+All Clear!
+---
+Checking: 26.pdf
+Checking 26.pdf
+All Clear!
+---
+Checking: 27.pdf
+Checking 27.pdf
+All Clear!
+---
+Checking: 28.pdf
+Checking 28.pdf
+All Clear!
+---
+Checking: 29.pdf
+Checking 29.pdf
+All Clear!
+---
+Checking: 3.pdf
+Checking 3.pdf
+All Clear!
+---
+Checking: 30.pdf
+Checking 30.pdf
+All Clear!
+---
+Checking: 31.pdf
+Checking 31.pdf
+All Clear!
+---
+Checking: 32.pdf
+Checking 32.pdf
+All Clear!
+---
+Checking: 34.pdf
+Checking 34.pdf
+All Clear!
+---
+Checking: 35.pdf
+Checking 35.pdf
+All Clear!
+---
+Checking: 36.pdf
+Checking 36.pdf
+Traceback (most recent call last):
+  File "/Users/may4/Library/Python/3.9/lib/python/site-packages/wand/api.py", line 154, in <module>
+    libraries = load_library()
+  File "/Users/may4/Library/Python/3.9/lib/python/site-packages/wand/api.py", line 143, in load_library
+    raise IOError('cannot find library; tried paths: ' + repr(tried_paths))
+OSError: cannot find library; tried paths: []
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/may4/Library/Python/3.9/bin/aclpubcheck", line 8, in <module>
+    sys.exit(main())
+  File "/Users/may4/Library/Python/3.9/lib/python/site-packages/aclpubcheck/formatchecker.py", line 493, in main
+    worker(submission, args.paper_type)
+  File "/Users/may4/Library/Python/3.9/lib/python/site-packages/aclpubcheck/formatchecker.py", line 456, in worker
+    return Formatter().format_check(submission=pdf_path, paper_type=paper_type)
+  File "/Users/may4/Library/Python/3.9/lib/python/site-packages/aclpubcheck/formatchecker.py", line 81, in format_check
+    self.check_page_margin(output_dir)
+  File "/Users/may4/Library/Python/3.9/lib/python/site-packages/aclpubcheck/formatchecker.py", line 285, in check_page_margin
+    im = self.pdf.pages[page].to_image(resolution=150)
+  File "/Users/may4/Library/Python/3.9/lib/python/site-packages/pdfplumber/page.py", line 381, in to_image
+    from .display import DEFAULT_RESOLUTION, PageImage
+  File "/Users/may4/Library/Python/3.9/lib/python/site-packages/pdfplumber/display.py", line 6, in <module>
+    from wand.image import Color as WandColor  # type: ignore
+  File "/Users/may4/Library/Python/3.9/lib/python/site-packages/wand/image.py", line 20, in <module>
+    from . import assertions
+  File "/Users/may4/Library/Python/3.9/lib/python/site-packages/wand/assertions.py", line 150, in <module>
+    from .color import Color  # noqa: E402
+  File "/Users/may4/Library/Python/3.9/lib/python/site-packages/wand/color.py", line 10, in <module>
+    from .api import library
+  File "/Users/may4/Library/Python/3.9/lib/python/site-packages/wand/api.py", line 178, in <module>
+    raise ImportError('MagickWand shared library not found.\n'
+ImportError: MagickWand shared library not found.
+You probably had not installed ImageMagick library.
+Try to install:
+  brew install freetype imagemagick
+---
+Checking: 37.pdf
+Checking 37.pdf
+All Clear!
+---
+Checking: 39.pdf
+Checking 39.pdf
+All Clear!
+---
+Checking: 41.pdf
+Checking 41.pdf
+All Clear!
+---
+Checking: 42.pdf
+Checking 42.pdf
+All Clear!
+---
+Checking: 43.pdf
+Checking 43.pdf
+All Clear!
+---
+Checking: 44.pdf
+Checking 44.pdf
+All Clear!
+---
+Checking: 46.pdf
+Checking 46.pdf
+All Clear!
+---
+Checking: 47.pdf
+Checking 47.pdf
+All Clear!
+---
+Checking: 48.pdf
+Checking 48.pdf
+All Clear!
+---
+Checking: 49.pdf
+Checking 49.pdf
+All Clear!
+---
+Checking: 52.pdf
+Checking 52.pdf
+All Clear!
+---
+Checking: 53.pdf
+Checking 53.pdf
+Traceback (most recent call last):
+  File "/Users/may4/Library/Python/3.9/lib/python/site-packages/wand/api.py", line 154, in <module>
+    libraries = load_library()
+  File "/Users/may4/Library/Python/3.9/lib/python/site-packages/wand/api.py", line 143, in load_library
+    raise IOError('cannot find library; tried paths: ' + repr(tried_paths))
+OSError: cannot find library; tried paths: []
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/may4/Library/Python/3.9/bin/aclpubcheck", line 8, in <module>
+    sys.exit(main())
+  File "/Users/may4/Library/Python/3.9/lib/python/site-packages/aclpubcheck/formatchecker.py", line 493, in main
+    worker(submission, args.paper_type)
+  File "/Users/may4/Library/Python/3.9/lib/python/site-packages/aclpubcheck/formatchecker.py", line 456, in worker
+    return Formatter().format_check(submission=pdf_path, paper_type=paper_type)
+  File "/Users/may4/Library/Python/3.9/lib/python/site-packages/aclpubcheck/formatchecker.py", line 81, in format_check
+    self.check_page_margin(output_dir)
+  File "/Users/may4/Library/Python/3.9/lib/python/site-packages/aclpubcheck/formatchecker.py", line 285, in check_page_margin
+    im = self.pdf.pages[page].to_image(resolution=150)
+  File "/Users/may4/Library/Python/3.9/lib/python/site-packages/pdfplumber/page.py", line 381, in to_image
+    from .display import DEFAULT_RESOLUTION, PageImage
+  File "/Users/may4/Library/Python/3.9/lib/python/site-packages/pdfplumber/display.py", line 6, in <module>
+    from wand.image import Color as WandColor  # type: ignore
+  File "/Users/may4/Library/Python/3.9/lib/python/site-packages/wand/image.py", line 20, in <module>
+    from . import assertions
+  File "/Users/may4/Library/Python/3.9/lib/python/site-packages/wand/assertions.py", line 150, in <module>
+    from .color import Color  # noqa: E402
+  File "/Users/may4/Library/Python/3.9/lib/python/site-packages/wand/color.py", line 10, in <module>
+    from .api import library
+  File "/Users/may4/Library/Python/3.9/lib/python/site-packages/wand/api.py", line 178, in <module>
+    raise ImportError('MagickWand shared library not found.\n'
+ImportError: MagickWand shared library not found.
+You probably had not installed ImageMagick library.
+Try to install:
+  brew install freetype imagemagick
+---
+Checking: 54.pdf
+Checking 54.pdf
+All Clear!
+---
+Checking: 55.pdf
+Checking 55.pdf
+All Clear!
+---
+Checking: 57.pdf
+Checking 57.pdf
+All Clear!
+---
+Checking: 58.pdf
+Checking 58.pdf
+All Clear!
+---
+Checking: 59.pdf
+Checking 59.pdf
+All Clear!
+---
+Checking: 61.pdf
+Checking 61.pdf
+All Clear!
+---
+Checking: 63.pdf
+Checking 63.pdf
+Traceback (most recent call last):
+  File "/Users/may4/Library/Python/3.9/lib/python/site-packages/wand/api.py", line 154, in <module>
+    libraries = load_library()
+  File "/Users/may4/Library/Python/3.9/lib/python/site-packages/wand/api.py", line 143, in load_library
+    raise IOError('cannot find library; tried paths: ' + repr(tried_paths))
+OSError: cannot find library; tried paths: []
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/may4/Library/Python/3.9/bin/aclpubcheck", line 8, in <module>
+    sys.exit(main())
+  File "/Users/may4/Library/Python/3.9/lib/python/site-packages/aclpubcheck/formatchecker.py", line 493, in main
+    worker(submission, args.paper_type)
+  File "/Users/may4/Library/Python/3.9/lib/python/site-packages/aclpubcheck/formatchecker.py", line 456, in worker
+    return Formatter().format_check(submission=pdf_path, paper_type=paper_type)
+  File "/Users/may4/Library/Python/3.9/lib/python/site-packages/aclpubcheck/formatchecker.py", line 81, in format_check
+    self.check_page_margin(output_dir)
+  File "/Users/may4/Library/Python/3.9/lib/python/site-packages/aclpubcheck/formatchecker.py", line 285, in check_page_margin
+    im = self.pdf.pages[page].to_image(resolution=150)
+  File "/Users/may4/Library/Python/3.9/lib/python/site-packages/pdfplumber/page.py", line 381, in to_image
+    from .display import DEFAULT_RESOLUTION, PageImage
+  File "/Users/may4/Library/Python/3.9/lib/python/site-packages/pdfplumber/display.py", line 6, in <module>
+    from wand.image import Color as WandColor  # type: ignore
+  File "/Users/may4/Library/Python/3.9/lib/python/site-packages/wand/image.py", line 20, in <module>
+    from . import assertions
+  File "/Users/may4/Library/Python/3.9/lib/python/site-packages/wand/assertions.py", line 150, in <module>
+    from .color import Color  # noqa: E402
+  File "/Users/may4/Library/Python/3.9/lib/python/site-packages/wand/color.py", line 10, in <module>
+    from .api import library
+  File "/Users/may4/Library/Python/3.9/lib/python/site-packages/wand/api.py", line 178, in <module>
+    raise ImportError('MagickWand shared library not found.\n'
+ImportError: MagickWand shared library not found.
+You probably had not installed ImageMagick library.
+Try to install:
+  brew install freetype imagemagick
+---
+Checking: 64.pdf
+Checking 64.pdf
+All Clear!
+---
+Checking: 65.pdf
+Checking 65.pdf
+All Clear!
+---
+Checking: 67.pdf
+Checking 67.pdf
+All Clear!
+---
+Checking: 68.pdf
+Checking 68.pdf
+All Clear!
+---
+Checking: 7.pdf
+Checking 7.pdf
+All Clear!
+---
+Checking: 71.pdf
+Checking 71.pdf
+Errors. Check errors-71.json for details.
+Error (Font): Wrong font. The main font used is BPIMAM+TeXGyreTermes-Regular when it should a font in {'TeXGyreTermesX-Regular', 'ICWANT+STIXGeneral-Regular', 'NimbusRomNo9L-Regu', 'TimesNewRomanPSMT'}.
+
+We detected 1 error and 0 warnings in your paper.
+In general, it is required that you fix errors for your paper to be published. Fixing warnings is optional, but recommended.
+Important: Some of the margin errors may be spurious. The library detects the location of images, but not whether they have a white background that blends in.
+Important: Some of the warnings generated for citations may be spurious and inaccurate, due to parsing and indexing errors.
+We encourage you to double check the citations and update them depending on the latest source. If you believe that your citation is updated and correct, then please ignore those warnings.
+---
+Checking: 73.pdf
+Checking 73.pdf
+All Clear!
+---
+Checking: 74.pdf
+Checking 74.pdf
+All Clear!
+---
+Checking: 75.pdf
+Checking 75.pdf
+All Clear!
+---
+Checking: 76.pdf
+Checking 76.pdf
+All Clear!
+---
+Checking: 8.pdf
+Checking 8.pdf
+All Clear!
+---
+Checking: 9.pdf
+Checking 9.pdf
+All Clear!
+---

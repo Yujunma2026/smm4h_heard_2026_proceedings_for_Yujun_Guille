@@ -1,0 +1,2281 @@
+- abstract: 'Detecting insomnia from clinical narratives requires both accurate classification
+    and clinically grounded reasoning with interpretable evidence. We present our
+    systems for the SMM4H-HeaRD 2026 shared task, which leverages MIMIC-III notes
+    annotated with rule-based insomnia criteria and supporting evidence spans. We
+    explore two complementary approaches: parameter-efficient fine-tuning of lightweight
+    models using QLoRA and LoRA, and few-shot prompting of large language models for
+    joint reasoning and evidence extraction. Our best system achieves an F1-score
+    of 0.7333 on binary classification and a micro-F1 of 0.6535 on multi-label rule
+    prediction, with up to 0.5192 partial-match F1 for evidence extraction. Results
+    show that lightweight fine-tuned models can outperform larger models in classification,
+    while larger models demonstrate stronger reasoning but struggle with precise span
+    localization, highlighting a key gap in clinically interpretable NLP systems.'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@cdac.in'
+    first_name: Abhishek
+    google_scholar_id: https://scholar.google.co.in/citations?user=PS3BfRIAAAAJ&hl=en
+    institution: Centre for Development of Advanced Computing, India
+    last_name: Maity
+    name: Abhishek Maity
+    username: ~Abhishek_Maity1
+  - emails: '****@cdac.in'
+    first_name: Amol
+    last_name: Shinde
+    name: Amol Shinde
+    username: ~Amol_Shinde1
+  - emails: '****@cdac.in'
+    first_name: Abhishek
+    institution: Centre for Development of Advanced Computing, India
+    last_name: Kushare
+    middle_name: Suresh
+    name: Abhishek Suresh Kushare
+    username: ~Abhishek_Suresh_Kushare1
+  - emails: '****@cdac.in'
+    first_name: Swapnil
+    institution: Centre for Development of Advanced Computing, India
+    last_name: Pawar
+    name: Swapnil Pawar
+    username: ~Swapnil_Pawar1
+  decision: Poster
+  file: 3.pdf
+  id: 3
+  openreview_id: 5wwekDoVhr
+  pdf_file: d6aa0aa5056e1b81ebe1286061111af2fe8a2952.pdf
+  title: 'A3S@C-DAC at \#SMM4H-HeaRD 2026: Reasoning Meets Evidence: LLMs for Interpretable
+    Insomnia Detection with Evidence Extraction in Clinical Notes'
+- abstract: 'This paper describes the Gladiators system for Task 1 of the SMM4H 2026
+    shared task on binary classification of adverse drug event (ADE) mentions in multilingual
+    social media posts. Our system fine-tunes three XLM-RoBERTa large models with
+    different random seeds using focal loss (α=0.75, γ=2.0) and 3× positive oversampling,
+    then averages their predicted probabilities and applies per-language threshold
+    optimization. On the development set, our ensemble achieves a pooled binary F1
+    of 0.7505. On the official test set—which introduced surprise Farsi comprising
+    35.5% of samples—our system achieves F1 = 0.6039, above the competition mean (0.5465)
+    and median (0.5798). We evaluated eleven approaches and document key negative
+    results. Post evaluation, a six-model cross-regime ensemble
+
+    improved dev F1 to 0.7585.'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@abbvie.com'
+    first_name: Ankit
+    institution: Abbvie Inc
+    last_name: Singh
+    middle_name: Kumar
+    name: Ankit Kumar Singh
+    username: ~Ankit_Kumar_Singh4
+  decision: Poster
+  file: 7.pdf
+  id: 7
+  openreview_id: odf8ncFXcw
+  pdf_file: 7549c2b9f5c11f66d0643f0e41785214eb6528ce.pdf
+  title: 'Gladiators at \#SMM4H–HeaRD 2026: Multi-Seed XLM-RoBERTa Ensemble with Focal
+    Loss and Per-Language Threshold Optimization for Multilingual Adverse Drug Event
+    Detection'
+- abstract: 'This paper describes the participation of the LSI_UNED team in the firt
+    sub-task of MultiClinAI at the #SMM4H-HeaRD 2026 Workshop, which focuses on multilingual
+    clinical named entity recognition in seven languages. The task requires identifying
+    mentions of diseases, procedures, and symptoms in clinical case reports. We propose
+    a set of systems based on the W2NER architecture, with a separate model trained
+    for each language and entity type. For Spanish, we use a RoBERTa-based model with
+    data augmentation from additional NER resources, while English and Italian systems
+    are based on different biomedical BERT variants. Results show consistent performance
+    across languages, with the best overall results obtained for Spanish. Data augmentation
+    improves recall and F1, while English and Italian models achieve competitive but
+    slightly lower scores. Symptom recognition remains the most challenging entity
+    type across all languages.'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@lsi.uned.es'
+    first_name: Alicia
+    institution: Universidad Nacional de Educación a Distancia
+    last_name: Ramirez-Arrabe
+    name: Alicia Ramirez-Arrabe
+    username: ~Alicia_Ramirez-Arrabe1
+  - dblp_id: https://dblp.org/pid/128/1735
+    emails: '****@lsi.uned.es'
+    first_name: Juan
+    google_scholar_id: https://scholar.google.es/citations?user=RPW-1MwAAAAJ&hl=es
+    homepage: http://nlp.uned.es/~juaner/
+    institution: Universidad Nacional de Educación a Distancia
+    last_name: Martinez-Romo
+    name: Juan Martinez-Romo
+    orcid: https://orcid.org/0000-0002-6905-7051
+    semantic_scholar_id: https://www.semanticscholar.org/author/Juan-Mart%C3%ADnez-Romo/1403946389
+    username: ~Juan_Martinez-Romo1
+  - dblp_id: https://dblp.org/pid/122/4739.html
+    emails: '****@lsi.uned.es'
+    first_name: Andres
+    google_scholar_id: https://scholar.google.es/citations?user=hMunNCgAAAAJ&hl=es&oi=ao
+    institution: Universidad Nacional de Educación a Distancia
+    last_name: Duque
+    name: Andres Duque
+    orcid: https://orcid.org/0000-0002-0619-8615
+    username: ~Andres_Duque1
+  decision: Poster
+  file: 8.pdf
+  id: 8
+  openreview_id: mT0Txf4jdg
+  pdf_file: c30cbcc96d0659d131ad1df2a9585c2ea1507321.pdf
+  title: 'LSI_UNED at \#SMM4H–HeaRD 2026: Grid-Based Biomedical Named Entity Recognition
+    Across Languages and Entity Types'
+- abstract: This paper describes the system submitted by our team to the MultiClinAI
+    shared task at the 11th SMM4H-HeaRD Workshop (ACL 2026). The task addresses multilingual
+    clinical Named Entity Recognition (NER) for three entity types (Disease, Procedure,
+    and Symptom) in Spanish clinical texts. Our approach fine-tunes MrBERT-biomed,
+    a domain-adapted ModernBERT model pre-trained on biomedical corpora, using multilingual
+    clinical data from seven European languages. We train independent entity-specific
+    models, each optimized via Bayesian hyperparameter search with Optuna, and apply
+    a deterministic post-processing step that aligns predicted spans to word boundaries.
+    On the official test set, our system achieves overall strict micro-F1 scores of
+    0.7453, 0.7107, and 0.6603 for Disease, Procedure, and Symptom, respectively.
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@ujaen.es'
+    first_name: Lucas
+    google_scholar_id: https://scholar.google.com/citations?user=cyl4A1oAAAAJ&hl=es
+    institution: Universidad de Jaén
+    last_name: Piñar
+    middle_name: Molino
+    name: Lucas Molino Piñar
+    orcid: https://orcid.org/0009-0009-5990-9802
+    username: ~Lucas_Molino_Piñar1
+  - emails: '****@ujaen.es'
+    first_name: Manuel
+    google_scholar_id: https://scholar.google.es/citations?user=kKKQXpgAAAAJ&hl=es
+    institution: Universidad de Jaén
+    last_name: Diaz-Galiano
+    middle_name: Carlos
+    name: Manuel Carlos Diaz-Galiano
+    orcid: https://orcid.org/0000-0001-9298-1376
+    username: ~Manuel_Carlos_Diaz-Galiano1
+  - dblp_id: https://dblp.org/pid/m/MariaTeresaMartinValdivia.html
+    emails: '****@ujaen.es'
+    first_name: María-Teresa
+    google_scholar_id: https://scholar.google.com/citations?user=Y0o3ILIAAAAJ&hl=es
+    homepage: http://blogs.ujaen.es/maite/
+    institution: Universidad de Jaén
+    last_name: Martín-Valdivia
+    name: María-Teresa Martín-Valdivia
+    orcid: https://orcid.org/0000-0002-2874-0401
+    username: ~María-Teresa_Martín-Valdivia1
+  decision: Poster
+  file: 9.pdf
+  id: 9
+  openreview_id: K14mb7mOEz
+  pdf_file: ac2a968e08de2b62fdc6bde0538cb3131ebbac89.pdf
+  title: 'SINAI at \#SMM4H–HeaRD 2026: Multilingual Clinical NER with MrBERT-biomed
+    and Optuna Hyperparameter Optimization'
+- abstract: 'This paper describes our system for Subtask 1 of the SMM4H HeaRD 2026
+    Task 2, which is an LLM-based system for binary insomnia classification from MIMIC-III
+    clinical notes using OpenAI GPT-5.2 with chain-of-thought (CoT) prompting. Our
+    approach implements three strategies: baseline fixed 8-shot prompting, dynamic
+    retrieval using semantic embeddings, and self-consistency voting. The system applies
+    rule-based criteria combining symptom patterns (difficulty sleeping and daytime
+    impairment) with medication indicators (primary and secondary insomnia medications).Our
+    best configuration (Self-Consistency Voting) achieved 95.67\% weighted F1 on validation
+    and 82.35% F1 on the official test set , outperforming the Baseline (81.25% F1).
+    Notably, our test F1-score of 82.35% substantially exceeded the task mean (68.05%)
+    and median (70.37%) across all participating teams. Key contributions include
+    explicit comorbidity exclusion prompting, context-aware nursing note handling,
+    logical constraint enforcement for prediction consistency, and a comparative analysis
+    demonstrating that self-consistency improves recall at moderate computational
+    cost.'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@uwo.ca'
+    first_name: Oyindolapo
+    google_scholar_id: https://scholar.google.ca/citations?hl=en&user=UKp4FgYAAAAJ
+    last_name: Komolafe
+    middle_name: O.
+    name: Oyindolapo O. Komolafe
+    orcid: https://orcid.org/0009-0009-2614-7805
+    username: ~Oyindolapo_O._Komolafe1
+  decision: Poster
+  file: 10.pdf
+  id: 10
+  openreview_id: eaaDvd9het
+  pdf_file: 30816efa7a05ed2b645587715561fb4b960303b3.pdf
+  title: 'Prestige at \#SMM4H-HeaRD 2026: Binary Insomnia Classification from Clinical
+    Notes Using LLMs with Chain-of-Thought Reasoning'
+- abstract: 'This paper describes the system submitted by Team Gazoo! for Task~7 of
+    the #SMM4H-HeaRD 2026 shared task on detecting self-reported clinical and social
+    impacts of nonmedical opioid use in social media text. We present a zero-training,
+    prompt-only approach that uses a large language model (GPT-5.4) with structured
+    few-shot prompting and autonomous, iterative rule optimization. Our system encodes
+    a domain-specific entity ontology, three core decision rules, and 65 cognitively
+    organized few-shot examples into a single prompt, with BIO constraint enforcement
+    applied as post-processing. Crucially, the prompt itself is refined by the LLM:
+    at each iteration the model analyzes its own errors and proposes targeted edits
+    to its rules and examples. Through 18 such self-refinement cycles, our system
+    achieved an F1-Strict of 0.53 and F1-Relaxed of 0.60 on the test set, ranking
+    first among all participating teams under both evaluation criteria.'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@gmail.com'
+    first_name: Diego
+    institution: Claremont Graduate University and Cedars-Sinai
+    last_name: Estuar
+    name: Diego Estuar
+    username: ~Diego_Estuar1
+  decision: WinningSystem
+  file: 15.pdf
+  id: 15
+  openreview_id: dLJsPkVTMY
+  pdf_file: 9fc473d4b5eab574d641514e12eef0868b2cfb1b.pdf
+  title: 'Team Gazoo! at \#SMM4H-HeaRD 2026: Zero-Training NER via Iterative LLM Prompt
+    Self-Optimization for Opioid Impact Span Detection'
+- abstract: This paper presents our systems for two tasks at \#SMM4H-HeaRD 2026. For
+    Task 1 (multilingual Adverse Drug Event detection), we fine-tune BERT-based multilingual
+    models (InfoXLM and XLM-RoBERTa) and Qwen3.5-9B with ensemble methods, achieving
+    0.8584 macro F1 on the development set and 0.5304 F1 on unseen Farsi. For Task
+    7 (span detection of ClinicalImpacts and SocialImpacts in opioid narratives),
+    DeBERTa-Large with simplified labeling achieves the best test performance (0.583
+    relaxed F1, 0.500 strict F1). Our analysis shows that LLMs excel on known languages
+    in Task 1, while transformer-based models with simplified labeling generalize
+    better for NER tasks.
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@gm.uit.edu.vn'
+    first_name: Doan
+    google_scholar_id: https://scholar.google.com/citations?hl=vi&user=mThvQk8AAAAJ&scilu=&scisig=ADQXK0wAAAAAaeXGfHb3UyF51C2FFgV59vBkGYk&gmla=AEk_c1tIF_fE3yNxH3LmyK6LQ6R28Q12ZY0lIujburEuMI5oYfI0ftRE6spTKob6kCuRZ4NGk0woVmPxbt9p4enVe4z4AuvpRyARk-hSCXvDreo6i8oQPeJfifn0hFxp&sciund=14528320315587653591
+    last_name: Tien
+    middle_name: Nhat
+    name: Doan Nhat Tien
+    username: ~Doan_Nhat_Tien1
+  - emails: '****@uit.edu.vn'
+    first_name: Thìn
+    homepage: https://sites.google.com/uit.edu.vn/thindv/
+    last_name: Văn
+    middle_name: Đặng
+    name: Thìn Đặng Văn
+    username: ~Thìn_Đặng_Văn1
+  decision: Poster
+  file: 16.pdf
+  id: 16
+  openreview_id: v9yYQmoRmf
+  pdf_file: 15b1717338b9298fe1bb7a63a90fa83a02ad59e5.pdf
+  title: 'DNT at \#SMM4H–HeaRD 2026: Leveraging BERT-based Encoders and LLMs for Medical
+    Information Extraction'
+- abstract: 'This paper describes the BIT.UA system for the MultiClinNER shared task
+    at #SMM4H–HeaRD 2026, targeting multilingual clinical named entity recognition
+    across seven languages for three entity types (Disease, Procedure, Symptom). We
+    extend the Multi-Head CRF architecture, originally developed for multi-class NER
+    on Spanish clinical text, to the multilingual setting. To enable joint multi-entity
+    training despite per-entity text variations in the dataset, we develop an adaptive
+    text consolidation pipeline that preserves over 94% of annotations. Our central
+    finding is that a single xlm-roberta-large model, trained jointly on all seven
+    languages and three entity types, achieves competition rank 2 for five of seven
+    languages, outperforming dedicated monolingual models by up to +6.94 F1 points,
+    while requiring only a single set of weights. Ensembling multiple seeds of this
+    model achieves rank 1 for those five languages, and combining it with monolingual
+    models yields rank 1 for the remaining two.  Code and models are publicly available
+    at https://github.com/ieeta-pt/Multi-Head-CRF/tree/MultiClinNER and https://huggingface.co/collections/IEETA/multiclinner-models.'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - dblp_id: https://dblp.org/pid/338/5311
+    emails: '****@ua.pt'
+    first_name: Richard
+    google_scholar_id: https://scholar.google.com/citations?user=OOKBW44AAAAJ&hl=en
+    homepage: https://github.com/richardjonker2000
+    institution: Universidade de Aveiro
+    last_name: Jonker
+    middle_name: A. A.
+    name: Richard A. A. Jonker
+    orcid: https://orcid.org/0000-0002-3806-6940
+    username: ~Richard_A._A._Jonker1
+  - dblp_id: https://dblp.org/pid/43/7440
+    emails: '****@ua.pt'
+    first_name: Sérgio
+    google_scholar_id: https://scholar.google.pt/citations?user=qv26xhMAAAAJ&hl=en
+    institution: Universidade de Aveiro
+    last_name: Matos
+    name: Sérgio Matos
+    semantic_scholar_id: https://www.semanticscholar.org/author/Sérgio-Matos/145212049
+    username: ~Sérgio_Matos1
+  decision: WinningSystem
+  file: 18.pdf
+  id: 18
+  openreview_id: TsogZETL8k
+  pdf_file: b0c3e4536ceb120b93cd508bbf7d8247b186189e.pdf
+  title: 'BIT.UA at \#SMM4H–HeaRD 2026: Towards Multi-Class Multilingual Clinical Entity
+    Recognition with Multi-Head CRF Ensembles'
+- abstract: 'This paper describes the submission by **Team Bhramastra** for the **\#SMM4H-HeaRD
+    2026** Shared Task 1, focused on personal Adverse Drug Event (ADE) detection in
+    multilingual social media. A decoupled architecture, **Hunter-Judge**, is proposed
+    to handle extreme class imbalance and linguistic variance across seven languages,
+    including a surprise zero-shot Farsi set. The system employs a fine-tuned multilingual
+    mDeBERTa-v3 model as a high-recall filter (**Hunter**), followed by a Gemini-2.5-Flash
+    model (**Judge**) optimized via the **DSPy** framework for precision-oriented
+    agentic adjudication. By implementing a reasoning protocol grounded in clinical
+    RAG evidence and universal ingredient mapping, the pipeline achieved the **highest
+    average F1-score (0.6653)** among all teams. Strong zero-shot generalizability
+    on Farsi (**F1: 0.5863**) was demonstrated, highlighting the effectiveness of
+    medically-grounded adjudication in low-resource contexts.'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@gmail.com'
+    first_name: Bhaarat
+    institution: Hindustan Computers Limited
+    last_name: Pachori
+    name: Bhaarat Pachori
+    username: ~Bhaarat_Pachori1
+  decision: WinningSystem
+  file: 19.pdf
+  id: 19
+  openreview_id: GVUUJBwKGm
+  pdf_file: 6b6d418727654fedf239dcb3eaba1f1fecdb97f0.pdf
+  title: 'Bhramastra at \#SMM4H-HeaRD 2026: A Multi-Stage Hunter-Judge Pipeline using
+    DSPy-Optimized LLMs for Multilingual ADE Detection'
+- abstract: 'We describe the LLATMU systems submitted to the \#SMM4H-HeaRD 2026 shared
+    tasks, covering two related clinical text structuring problems: dialogue-to-SOAP
+    note generation (Task 4) and TNM staging classification from pathology reports
+    (Task 6). Although the two tasks differ in modeling paradigm (text generation
+    versus supervised classification), both require transforming unstructured clinical
+    narratives into structured representations.
+
+
+    For Task 4, we instruction-tuned LLMs with parameter-efficient adaptation and
+    submitted a QLoRA-based Ministral-3B system, achieving an official blind test
+    average score of 0.53 and outperforming the task-wide mean and median. For Task
+    6, we formulate TNM prediction as a three-head classification problem using BioClinical-ModernBERT-large
+    with long-context encoding, class-weighted loss, and normalized partial-label
+    training. The model achieves a validation average macro-F1 of 0.9196 and continues
+    to outperform the official baseline on the more challenging tie-break test set.
+
+
+    Across both tasks, our results suggest that robust data handling, stable fine-tuning,
+    and task-appropriate supervision are important for practical clinical NLP under
+    constrained and imperfect shared-task settings.'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: hsiaoeric.dev@gmail.com
+    first_name: Eric
+    institution: NA
+    last_name: Hsiao
+    name: Eric Hsiao
+    username: hsiaoeric.dev@gmail.com
+  - emails: michelleku0813@gmail.com
+    first_name: Min-Hsuan
+    institution: NA
+    last_name: Ku
+    name: Min-Hsuan Ku
+    username: michelleku0813@gmail.com
+  - emails: '****@tmu.edu.tw'
+    first_name: Hsuan-Lei
+    institution: Taipei Medical University
+    last_name: Shao
+    name: Hsuan-Lei Shao
+    orcid: https://orcid.org/0000-0002-7101-5272
+    username: ~Hsuan-Lei_Shao1
+  decision: Poster
+  file: 20.pdf
+  id: 20
+  openreview_id: cywqYJljrc
+  pdf_file: 3d3a8ee7f279f76d6180f9652afe2a9401eda6b3.pdf
+  title: 'LLATMU at \#SMM4H-HeaRD 2026: Clinical Text Structuring with QLoRA-based
+    Generation and Partial-Label TNM Classification'
+- abstract: 'We present a retrieval-augmented few-shot system for the MedSynth Dial2Note
+    shared task at SMM4H-HEARD 2026, placing 3rd on the official leaderboard (0.51
+    avg). Across 28 configurations, we find that retrieval design (hybrid BM25 + medical-domain
+    dense fused via RRF) and prompt presentation format (few-shot examples as conversation
+    turns) are the primary quality drivers, while model scale has surprisingly limited
+    impact: Llama 3.2:3B, Llama 3.1:8B and GPT-4o mini remain within a narrow band
+    on our locally computed scores. Our final submission used GPT-4o mini with $k{=}3$
+    few-shot examples retrieved by RRF over BioLORD-2023 embeddings. We report a full
+    ablation, including negative results, to show where the gains come from and where
+    further engineering stops paying off.'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@s.unibuc.ro'
+    first_name: Ioan-Tudor-Alexandru
+    google_scholar_id: https://scholar.google.com/citations?user=UTX-bYoAAAAJ&hl=en
+    last_name: Anghel
+    name: Ioan-Tudor-Alexandru Anghel
+    username: ~Ioan-Tudor-Alexandru_Anghel1
+  - emails: '****@s.unibuc.ro'
+    first_name: Timotei
+    last_name: Andrei
+    name: Timotei Andrei
+    username: ~Timotei_Andrei1
+  - emails: '****@s.unibuc.ro'
+    first_name: Comârdici
+    homepage: https://github.com/bogdancomardici
+    last_name: Bogdan
+    middle_name: Marian
+    name: Comârdici Marian Bogdan
+    username: ~Comârdici_Marian_Bogdan1
+  - emails: carina.saicu@gmail.com
+    first_name: Carina
+    institution: NA
+    last_name: Sâicu
+    name: Timotei Andrei
+    username: carina.saicu@gmail.com
+  decision: Poster
+  file: 21.pdf
+  id: 21
+  openreview_id: jwPTLW5SAr
+  pdf_file: 3429b02184d6fa4bb1e55c65d00cca60ba25e721.pdf
+  title: 'Patient2Paper at \#SMM4H-HeaRD 2026: Retrieval-Augmented Few-Shot Generation
+    for Clinical Note Synthesis'
+- abstract: We present a lightweight, deterministic post-processing approach for clinical
+    text classification based on entanglement between clinically meaningful concepts.
+    Our system was developed for the SMM4H 2026 shared task on insomnia detection
+    and related information extraction from clinical notes. For Subtask 1, we introduce
+    an entanglement-based rescue layer that models dependencies between sleep disturbance,
+    daytime impairment, and sleep-targeted medication evidence. Applied as a false-negative
+    correction on top of an LLM baseline, this approach improves recall while preserving
+    precision. On the official test set, the rescue layer increases F1 by 25\% without
+    degrading precision (1.00). Local experiments show larger gains on weaker runs,
+    suggesting a stabilizing effect on variable LLM outputs. For Subtask 2, we implement
+    an LLM-based system for rule-based evidence and span extraction. Results highlight
+    the effectiveness of modeling clinically grounded dependencies and suggest directions
+    for improving evidence extraction and span matching.
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@udea.edu.co'
+    first_name: Antonio
+    google_scholar_id: https://scholar.google.com/citations?user=643heS8AAAAJ&hl=es
+    institution: University of Antioquia
+    last_name: Herrera
+    middle_name: Jesus Tamayo
+    name: Antonio Jesus Tamayo Herrera
+    username: ~Antonio_Jesus_Tamayo_Herrera1
+  - emails: giovanny.diaz@udea.edu.co
+    first_name: Giovanny
+    institution: NA
+    last_name: Díaz-Laínes
+    name: Giovanny Díaz-Laínes
+    username: giovanny.diaz@udea.edu.co
+  - emails: '****@enallt.unam.mx'
+    first_name: Carlos
+    google_scholar_id: https://scholar.google.com/citations?user=r1tQR0MAAAAJ&hl=es
+    institution: Universidad Nacional Autónoma de México
+    last_name: Perez
+    middle_name: Mario Perez
+    name: Carlos Mario Perez
+    username: ~Carlos_Mario_Perez_Perez1
+  - emails: '****@wfu.edu'
+    first_name: Diego
+    homepage: https://spanish.wfu.edu/faculty-staff/diego-burgos/
+    institution: Wake Forest University
+    last_name: Burgos
+    middle_name: A
+    name: Diego A Burgos
+    orcid: https://orcid.org/0000-0002-5784-3952
+    username: ~Diego_A_Burgos1
+  decision: Poster
+  file: 22.pdf
+  id: 22
+  openreview_id: XWemvc14gG
+  pdf_file: bc3e65c430c060df8bc91955910fc496a21b2544.pdf
+  title: 'In2Lab-TNT at \#SMM4H-HeaRD 2026: An Application of QTT’s Terminological
+    Entanglement to Leverage Insomnia Detection in Clinical Notes'
+- abstract: 'We describe team blue’s participation across six SMM4H-HeaRD 2026 shared
+    tasks spanning multilingual adverse drug event detection (Task 1), influenza vaccine
+    effectiveness estimation (Task 3), patient metadata classification (Task 5), TNM
+    cancer staging (Task 6), opioid impact span detection (Task 7), and multilingual
+    clinical NER with cross-lingual annotation projection (Task 8). Despite the heterogeneity
+    of these tasks, binary, multi-class, multi-label, and sequence-labelling, our
+    systems share three recurring design principles: (i) inverse-frequency class weighting
+    to handle severe imbalance, (ii) multi-seed and/or multi-backbone ensembling to
+    reduce variance, and (iii) post-hoc calibration of decision boundaries. Key results
+    include micro-F1 of 0.990 on TNM staging (Task 6), 0.872/0.918 on flu vaccination/test
+    classification surpassing the 70B CoT baseline on vaccination (Task 3), F1 of
+    0.764 on patient metadata approaching the fine-tuning benchmark of 0.776 (Task
+    5), and competitive performance on ADE detection (Task 1, F1 = 0.580), opioid
+    spans (Task 7, relaxed F1 = 0.59), and multilingual clinical NER (Task 8, strict
+    F1 0.20–0.41 across 7 languages).'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@thapar.edu'
+    first_name: Krish
+    google_scholar_id: https://scholar.google.com/citations?user=4pSvQfYAAAAJ&hl=en
+    homepage: https://portfolio-liart-psi-98.vercel.app/
+    last_name: Sharma
+    name: Krish Sharma
+    orcid: https://orcid.org/0009-0005-0128-8151
+    username: ~Krish_Sharma2
+  - emails: '****@thapar.edu'
+    first_name: Rhea
+    last_name: Singhal
+    name: Rhea Singhal
+    username: ~Rhea_Singhal1
+  - emails: '****@thapar.edu'
+    first_name: Jatin
+    homepage: https://scholar.google.com/
+    last_name: Bedi
+    name: Jatin Bedi
+    username: ~Jatin_Bedi1
+  decision: Poster
+  file: 23.pdf
+  id: 23
+  openreview_id: 5hCpfAIfoe
+  pdf_file: c953d56aacfbec4dd8e94747c998a9c29b3c9b96.pdf
+  title: 'blue at SMM4H-HeaRD 2026: Class-Weighted Transformer Ensembles with Structured
+    Decoding and Chain-of-Thought Blending across Six Health NLP Shared Tasks'
+- abstract: We describe the setup we used to complete the MultiClinAI-NER task in
+    the SMM4H-HeaRD workshop 2026. In this work we employed a dedicated multilingual
+    encoder model (EuroBERT-610m), two Dutch encoder models trained from scratch on
+    clinical corpora (MedRoBERTa.nl and CardioDeBERTa.nl) and a generic Dutch encoder
+    model (RobBERT2023-large), all finetuned with a 3-layer DNN head. We find that
+    the use of multilingual datasets is potentially beneficial in augmenting the training
+    corpora of monolingual models.
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@umcutrecht.nl'
+    first_name: Bram
+    google_scholar_id: https://scholar.google.com/citations?user=KsB29UYAAAAJ&hl=nl
+    homepage: https://www.b-lab.nl
+    last_name: van Es
+    name: Bram van Es
+    username: ~Bram_van_Es1
+  decision: Poster
+  file: 24.pdf
+  id: 24
+  openreview_id: vAEFtyAz4c
+  pdf_file: f307912bc53e0ca10213e9da371e49b557483537.pdf
+  title: 'DT4H.nl at \#SMM4H-HeaRD 2026: Multilingual Clinical NER with multilingual
+    and monolingual models'
+- abstract: "This paper describes the participation of team SMMTech in the SMM4H-HeaRD\
+    \ 2026 Shared Task 2: Detection of Insomnia in Clinical Notes. We present a comparative\
+    \ architectural study exploring the friction between extractive token-classification\
+    \ models and generative Large Language Models (LLMs) in clinical span extraction,\
+    \ on the MIMIC-III Clinical Database. \nDuring the validation phase we established\
+    \ baselines using encoder-only transformers such as BERT, ClinicalBERT, BigBird\
+    \ and Clinical BigBird. For the official test phase, we deployed a 4-bit quantized\
+    \ generative hybrid pipeline using Llama3-Med42-8B to evaluate its multi-hop reasoning\
+    \ capabilities. \nWhile the generative pipeline achieved an F1-score of 0.4783\
+    \ on Subtask 1 (Classification), it struggled with exact span matching on Subtask\
+    \ 2.\nIn this paper we present the mechanical limitations of zero-shot JSON extraction\
+    \ and the necessity of decoupling clinical reasoning from character-level span\
+    \ extraction."
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@s.unibuc.ro'
+    first_name: Emilia-Ioana
+    last_name: Cristea
+    name: Emilia-Ioana Cristea
+    username: ~Emilia-Ioana_Cristea1
+  decision: Poster
+  file: 25.pdf
+  id: 25
+  openreview_id: asNm7rAHLU
+  pdf_file: 59a065edf6577987b98fd6e461f68ab37f36f3b0.pdf
+  title: 'SMMTech at \#SMM4H-HeaRD 2026: Detection of Insomnia in Clinical Notes'
+- abstract: 'Medical query rewriting transforms verbose consumer health questions
+    into concise clinical queries, a critical step in health information retrieval.
+    Large language models (LLMs) perform well on this task by standard metrics, yet
+    high ROUGE or BERTScore does not guarantee preservation of clinical content. To
+    address this issue, we introduce MedFaith-F1, a category-level faithfulness metric
+    over four clinically salient categories: diagnoses, medications, procedures, and
+    follow-up intent. We further propose a hybrid Evidence and Knowledge-Grounded
+    Retrieval-Augmented Generation EKG-RAG, an evidence and knowledge-grounded framework
+    combining hybrid retrieval over PubMed and MedlinePlus resources with UMLS (Unified
+    Medical Language System)-aligned ontology grounding. Evaluating large language
+    models LLaMA-3 and Qwen2.5 across zero-shot, few-shot, and QLoRA settings on MeQSum
+    and medical question-pair (MQP) datasets revealed that base models exhibit category-level
+    hallucination rates exceeding 40\%, invisible to standard metrics, while EKG-RAG
+    with QLoRA reduces this rate to 26.75\%, achieving MedFaith-F1 of 0.73. Our findings
+    call for faithfulness-aware evaluation in clinical query rewriting, and MedFaith-F1
+    provides a reproducible step in that direction.'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@univ.yo.oulu.fi'
+    first_name: Md
+    google_scholar_id: https://scholar.google.com/citations?hl=en&user=Vc8rK4AAAAAJ
+    last_name: Hasan
+    middle_name: Rabiul
+    name: Md Rabiul Hasan
+    orcid: https://orcid.org/0009-0004-9868-7708
+    username: ~Md_Rabiul_Hasan1
+  - dblp_id: https://dblp.org/pid/316/8186
+    emails: '****@oulu.fi'
+    first_name: Aleka
+    google_scholar_id: https://scholar.google.com/citations?user=Yda5OkEAAAAJ&hl=en
+    homepage: https://www.oulu.fi/en/researchers/aleka-melese-ayalew
+    last_name: Ayalew
+    middle_name: Melese
+    name: Aleka Melese Ayalew
+    orcid: https://orcid.org/0000-0001-5869-6029
+    semantic_scholar_id: https://www.semanticscholar.org/search?q=Aleka+Melese+Ayalew
+    username: ~Aleka_Melese_Ayalew1
+  - dblp_id: https://dblp.org/pid/179/6149
+    emails: '****@oulu.fi'
+    first_name: Mourad
+    google_scholar_id: https://scholar.google.co.uk/citations?user=X3E7Aj0AAAAJ&hl=en
+    institution: University of Oulu
+    last_name: Oussalah
+    name: Mourad Oussalah
+    orcid: https://orcid.org/0000-0002-4422-8723
+    username: ~Mourad_Oussalah1
+  decision: WorkshopPaper
+  file: 26.pdf
+  id: 26
+  openreview_id: FYI7VkIzWS
+  pdf_file: 3dbc22c884134c8f279e44f4d9ef30dbdebc28f9.pdf
+  title: 'Beyond Lexical Similarity: Evaluating Faithfulness in LLM-Based Medical
+    Question Reformulation'
+- abstract: 'We describe two system submissions to Task 4 of the SMM4H-HeaRD 2026
+    Shared Task on automated SOAP note generation from doctor–patient dialogues. Our
+    first submission is a standalone entity-conditioned generation model: Mistral-7B-Instruct-v0.1
+    fine-tuned with QLoRA on 8,529 MedSynth training dialogues, where both training
+    and inference prompts include clinical entities extracted and grouped by SOAP
+    section. Our second submission is a four-stage modular pipeline that additionally
+    incorporates a hybrid retrieval stage and a rule-based verification stage. The
+    key finding of this work is that incorporating structured clinical domain knowledge,
+    in the form of NER entities grouped by SOAP section, directly into the generation
+    prompt produces consistent and reliable improvements over dialogue-only generation.
+    Our four-stage pipeline submission achieved an average score of 0.54 on the official
+    test set, ranking first on the shared task leaderboard.'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@northeastern.edu'
+    first_name: Thanya
+    last_name: Santhosh
+    middle_name: Mysore
+    name: Thanya Mysore Santhosh
+    username: ~Thanya_Mysore_Santhosh2
+  - emails: '****@northeastern.edu'
+    first_name: Deahan
+    institution: Northeastern University
+    last_name: Yu
+    name: Deahan Yu
+    orcid: https://orcid.org/0000-0001-7263-078X
+    username: ~Deahan_Yu1
+  decision: WinningSystem
+  file: 27.pdf
+  id: 27
+  openreview_id: u9xQjN9Rev
+  pdf_file: 4a18cca60c0b63bebae6f79a6ed29e62059582a0.pdf
+  title: 'NU_DeepHealthNLP at \#SMM4H-HeaRD 2026: Entity-Conditioned Generation and
+    a Four-Stage Pipeline for Automated SOAP Note Generation'
+- abstract: We describe our systems for \#SMM4H-HeaRD 2026 Task 6, which requires
+    predicting the T, N, and M components of pathological TNM stage from TCGA pathology
+    reports. We explored both discriminative long-context encoders and generative
+    biomedical LLMs. For the first test set, our BioClinical-ModernBERT-large ensemble
+    achieved 0.993 micro-F1 and 0.915 macro-F1, improving over the BB-TEN baseline
+    scoring-log result of 0.947 micro-F1 and 0.780 macro-F1. For the harder second
+    test set, our OpenBioLLM-8B LoRA extractor improved component macro-F1 over the
+    organizer baseline from 0.454 to 0.626 for T, from 0.591 to 0.758 for N, and from
+    0.554 to 1.000 for M. These results suggest that long-context encoders are strong
+    for explicit T and N evidence, while constrained generative LLM extraction can
+    be effective for harder reports. The main remaining weakness is rare-class T4
+    recognition.
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@umich.edu'
+    first_name: Shangqing
+    last_name: Wei
+    name: Shangqing Wei
+    username: ~Shangqing_Wei1
+  decision: Poster
+  file: 28.pdf
+  id: 28
+  openreview_id: FmxRbGSKqa
+  pdf_file: 8b7ca373f304503328c70f0dcc91d457463c4bb0.pdf
+  title: 'GoBlueInformatics at \#SMM4H-HeaRD 2026: Long-Context Encoders and Generative
+    Biomedical LLMs for Pathological TNM Stage Prediction'
+- abstract: 'This paper addresses the MultiClinAI challenge, subtask MultiClinNER,
+    which focuses on clinical Named Entity Recognition (NER) across seven languages:
+    Czech, Dutch, English, Italian, Romanian, Spanish, and Swedish. The main goal
+    of MultiClinNER is to identify and extract clinical terms specifically related
+    to diseases, procedures, and symptoms from discharge summaries.  The paper explores
+    a variety of state-of-the-art methods, both monolingual and multilingual, ranging
+    from pretrained, zero-shot, domain-adapted transformers to fine-tuned transformer
+    models, and demonstrates the benefits of ensemble modeling. Data augmentation
+    through external resources significantly enhanced the models'' ability to recognize
+    clinical entities. Both monolingual and multilingual approaches showed complementary
+    strengths depending on the language and entity type. The average F1 score achieved
+    across the best models for each language and category is 0.6502.'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - dblp_id: https://dblp.org/pid/306/9194
+    emails: '****@fmi.uni-sofia.bg'
+    first_name: Sylvia
+    google_scholar_id: https://scholar.google.com/citations?hl=en&user=PE0SJMUAAAAJ
+    last_name: Vassileva
+    name: Sylvia Vassileva
+    orcid: https://orcid.org/0000-0002-2257-0659
+    username: ~Sylvia_Vassileva1
+  - emails: pmladenovi@uni-sofia.bg
+    first_name: Plamena
+    institution: NA
+    last_name: Ilieva
+    name: Plamena Ilieva
+    username: pmladenovi@uni-sofia.bg
+  - emails: '****@uni-sofia.bg'
+    first_name: Teodor
+    last_name: Kostadinov
+    middle_name: Svetoslavov
+    name: Teodor Svetoslavov Kostadinov
+    username: ~Teodor_Svetoslavov_Kostadinov1
+  - emails: '****@fmi.uni-sofia.bg'
+    first_name: Monika
+    google_scholar_id: https://scholar.google.com/citations?user=wR5luD0AAAAJ
+    institution: Sofia University "St. Kliment Ohridski"
+    last_name: Petkova
+    middle_name: Peteva
+    name: Monika Peteva Petkova
+    username: ~Monika_Peteva_Petkova1
+  - emails: manchevski@uni-sofia.bg
+    first_name: Daniel
+    institution: NA
+    last_name: Manchevski
+    name: Daniel Manchevski
+    username: manchevski@uni-sofia.bg
+  - emails: v.dojnov@uni-sofia.bg
+    first_name: Vitosh
+    institution: NA
+    last_name: Doynov
+    name: Vitosh Doynov
+    username: v.dojnov@uni-sofia.bg
+  - dblp_id: https://dblp.org/pid/88/2617
+    emails: '****@fmi.uni-sofia.bg'
+    first_name: Ivan
+    google_scholar_id: https://scholar.google.bg/citations?user=o5YAI9wAAAAJ&hl=bg
+    homepage: https://www.fmi.uni-sofia.bg/en/faculty/ivan-koychev
+    institution: Sofia University "St. Kliment Ohridski"
+    last_name: Koychev
+    name: Ivan Koychev
+    orcid: https://orcid.org/0000-0003-3919-030X
+    semantic_scholar_id: https://www.semanticscholar.org/author/52553663
+    username: ~Ivan_Koychev1
+  - dblp_id: https://dblp.org/pid/22/3040.html
+    emails: '****@uni-sofia.bg'
+    first_name: Svetla
+    google_scholar_id: https://scholar.google.com/citations?user=aozXOfMAAAAJ&hl=en
+    institution: Sofia University "St. Kliment Ohridski"
+    last_name: Boytcheva
+    name: Svetla Boytcheva
+    orcid: https://orcid.org/0000-0002-5542-9168
+    semantic_scholar_id: https://www.semanticscholar.org/author/S.-Boytcheva/2142778
+    username: ~Svetla_Boytcheva2
+  decision: Poster
+  file: 29.pdf
+  id: 29
+  openreview_id: Os9n3bnO5c
+  pdf_file: 2bcda3bd6be0cad0b2779efe6c4cf77452153600.pdf
+  title: 'Enigma at \#SMM4H–HeaRD 2026: Leveraging Multilingual Pre-trained Models
+    for Clinical Named Entity Recognition'
+- abstract: 'In this work, we address the detection of drug abuse repercussions in
+    Reddit posts, as part of SMM4H-HeaRD Task 7: Extraction of Social and Clinical
+    Impacts of Substance Use from Social Media Posts. We evaluate multiple approaches,
+    including fine-tuning and zero-shot inference, across several deep learning architectures.
+    Our best result is obtained using an adapter-based fine-tuning approach on the
+    DeBERTaV3 model. In addition, we explore text-based evolutionary optimization
+    for Gemma 4 workflows and show that, on this task, they achieve competitive performance
+    with the supervised DeBERTaV3 setup.'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - dblp_id: https://dblp.org/pid/136/8665
+    emails: '****@gmail.com'
+    first_name: Tiberiu
+    google_scholar_id: https://scholar.google.com/citations?user=veRsdF4AAAAJ
+    homepage: https://tiberiuboros.github.io/?
+    institution: Adobe Systems
+    last_name: Boros
+    name: Tiberiu Boros
+    orcid: https://orcid.org/0000-0003-1416-915X
+    semantic_scholar_id: https://www.semanticscholar.org/author/Tiberiu-Boros/2333001
+    username: ~Tiberiu_Boros1
+  - emails: '****@gmail.com'
+    first_name: Radu-Gabriel
+    google_scholar_id: https://scholar.google.com/citations?user=PsVJEdcAAAAJ&hl=ro
+    last_name: Chivereanu
+    name: Radu-Gabriel Chivereanu
+    username: ~Radu-Gabriel_Chivereanu1
+  decision: Poster
+  file: 30.pdf
+  id: 30
+  openreview_id: pB24vLT1jl
+  pdf_file: c03d5cabf00a134e789f6f62346e826f56b2dbe3.pdf
+  title: 'RACAI at \#SMM4H-HeaRD: Named Entity Recognition for Detecting the Impacts
+    of Drug Abuse in Social Media Posts: Zero-Shot and Fine-Tuning Approaches'
+- abstract: 'This paper presents our submission to the MultiClinAI Shared Task (Gallego-Donoso
+    et al., 2026) on cross-lingual clinical entity annotation projection from Spanish
+    to English. Our system transfers expert annotations for $\textit{Diseases}$, $\textit{Symptoms}$
+    and $\textit{Procedures}$ entities. The approach integrates three core components:
+    adaptive candidate window generation, an XGBoost classifier leveraging surface
+    and semantic features, and an LLM-based post-processing stage to resolve complex
+    misalignments. Our highest-performing run ranked 3rd on the official leaderboard,
+    achieving strict F1 scores of 0.737, 0.549, and 0.538 for $\textit{Diseases}$,
+    $\textit{Symptoms}$ and $\textit{Procedures}$, respectively. These results show
+    that combining supervised candidate scoring with targeted LLM refinement provides
+    a robust strategy for clinical entity projection.'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@uma.es'
+    first_name: Alvaro
+    homepage: https://alvaroreyb.com
+    institution: Universidad de Málaga
+    last_name: Rey-Blanes
+    name: Alvaro Rey-Blanes
+    orcid: https://orcid.org/0009-0006-3569-5633
+    username: ~Alvaro_Rey-Blanes1
+  - emails: gimenezgomezs@gmail.com
+    first_name: Sara
+    institution: NA
+    last_name: Giménez-Gómez
+    name: Sara Giménez-Gómez
+    username: gimenezgomezs@gmail.com
+  - emails: '****@uma.es'
+    first_name: Francisco
+    google_scholar_id: https://scholar.google.es/citations?user=7npQ90gAAAAJ&hl=es
+    homepage: https://sites.google.com/uma.es/franveredas
+    institution: Universidad de Málaga
+    last_name: Veredas
+    middle_name: J.
+    name: Francisco J. Veredas
+    orcid: https://orcid.org/0000-0003-0739-2505
+    username: ~Francisco_J._Veredas1
+  - emails: '****@lcc.uma.es'
+    first_name: Francisco
+    google_scholar_id: https://scholar.google.com/citations?user=f5wguV0AAAAJ&hl=es
+    last_name: Moreno-Barea
+    middle_name: J.
+    name: Francisco J. Moreno-Barea
+    orcid: https://orcid.org/0000-0002-3887-9095
+    username: ~Francisco_J._Moreno-Barea1
+  decision: Poster
+  file: 31.pdf
+  id: 31
+  openreview_id: VLF7YQVCV9
+  pdf_file: 1b39b3af7748b53ce2e50c931591e24d2eba2b54.pdf
+  title: 'ICB-UMA at \#SMM4H–HeaRD 2026: Hybrid Clinical Entity Projection for MultiClinAI:
+    Adaptive Candidate Windows, XGBoost, and LLM Refinement'
+- abstract: TNM cancer staging is a critical process for characterizing tumor burden
+    and guiding clinical decisions. Nevertheless, its automated extraction remains
+    challenging due to the unstructured and heterogeneous nature of free-text pathology
+    reports. This paper describes the participation of the URJC-Team in Task 6 of
+    the Social Media Mining for Health/Health Real-World Data (#SMM4H-HeaRD) 2026
+    Shared Tasks. It focuses on predicting TNM staging from pathology reports. The
+    proposed workflow combines hand-crafted regular expressions with a Large Language
+    Model (LLM). First, explicit TNM mentions are extracted using rule-based patterns.
+    Then, any stage not recovered by these rules is inferred by an LLM. Overall, the
+    proposal provides competitive results across all official shared-task phases.
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@urjc.es'
+    first_name: Natalia
+    google_scholar_id: https://scholar.google.es/citations?user=QBUi9CgAAAAJ
+    institution: Universidad Rey Juan Carlos
+    last_name: Madrueño
+    name: Natalia Madrueño
+    orcid: https://orcid.org/0009-0008-9823-9701
+    username: ~Natalia_Madrueño1
+  - emails: '****@urjc.es'
+    first_name: Jose
+    institution: Universidad Rey Juan Carlos
+    last_name: Pérez
+    middle_name: Walter Hernández
+    name: Jose Walter Hernández Pérez
+    orcid: https://orcid.org/0009-0001-2536-210X
+    username: ~Jose_Walter_Hernández_Pérez1
+  - emails: '****@urjc.es'
+    first_name: Rubén
+    google_scholar_id: https://scholar.google.es/citations?user=7ffLA30AAAAJ
+    homepage: https://servicios.urjc.es/pdi/ver/ruben.rodriguez
+    institution: Universidad Rey Juan Carlos
+    last_name: Fernández
+    middle_name: R.
+    name: Rubén R. Fernández
+    orcid: https://orcid.org/0000-0002-4140-1551
+    username: ~Rubén_R._Fernández1
+  - dblp_id: https://dblp.org/pid/44/1331
+    emails: '****@urjc.es'
+    first_name: Soto
+    google_scholar_id: https://scholar.google.com/citations?user=0ro0Sy0AAAAJ&hl=es
+    homepage: https://gestion2.urjc.es/pdi/ver/soto.montalvo
+    institution: Universidad Rey Juan Carlos
+    last_name: Montalvo
+    name: Soto Montalvo
+    orcid: https://orcid.org/0000-0001-8158-7939
+    username: ~Soto_Montalvo1
+  decision: WinningSystem
+  file: 32.pdf
+  id: 32
+  openreview_id: nMm3YYGRrq
+  pdf_file: 67405170eb565087711d3ca9c07e380c1eca3e68.pdf
+  title: 'URJC-Team at \#SMM4H-HeaRD 2026: TNM Stage Extraction with a Regex-LLM Workflow'
+- abstract: 'This paper presents our submission to MultiClinAI''s NER subtask for
+    #SMM4H-HeaRD 2026. We focus on the questions 1) which Language Model represents
+    the clinical notes best and 2) which annotations can help training these models.
+    To get answers for these questions, we follow a token-based classification approach
+    with pretrained encoder language models, where we compare models that were pretrained
+    on generic data against medical data, and on a single language, Dutch, against
+    many languages. In addition, we present two data-augmented systems: one with data
+    from the other languages of the workshop for multilingual training, and one with
+    synthetic annotations.'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@vu.nl'
+    first_name: Sophie
+    institution: Vrije Universiteit Amsterdam
+    last_name: Arnoult
+    name: Sophie Arnoult
+    orcid: https://orcid.org/0000-0001-7828-0960
+    semantic_scholar_id: https://www.semanticscholar.org/author/S.-Arnoult/40361485
+    username: ~Sophie_Arnoult1
+  - emails: '****@gmail.com'
+    first_name: Shutao
+    institution: Vrije Universiteit Amsterdam
+    last_name: Chen
+    name: Shutao Chen
+    username: ~Shutao_Chen2
+  - emails: '****@vu.nl'
+    first_name: Piek
+    google_scholar_id: https://scholar.google.com/citations?user=JvllTMIAAAAJ&hl=en&oi=ao
+    homepage: https://vossen.info/
+    institution: Vrije Universiteit Amsterdam
+    last_name: Vossen
+    name: Piek Vossen
+    orcid: https://orcid.org/0000-0002-6238-5941
+    semantic_scholar_id: https://www.semanticscholar.org/author/P.-Vossen/1791713
+    username: ~Piek_Vossen2
+  decision: Poster
+  file: 34.pdf
+  id: 34
+  openreview_id: syqPIPMfox
+  pdf_file: e03a00c2d728a6a5fb6a6e9e4d6a3c3be45a8756.pdf
+  title: 'LotusOrchid at \#SMM4H–HeaRD 2026: Fitting pretrained encoders for Dutch
+    medical data'
+- abstract: 'This paper presents our approach to Task 5 of the \#SMM4H-HeaRD 2026 Workshop,
+    which focuses on detecting patient metadata in SARS-CoV-2 sequencing articles
+    as a binary classification task. We explore both encoder-based and large language
+    model (LLM) approaches, using BioM-BERT as a baseline and Mistral-Nemo as the
+    LLM. To improve performance, we propose a paraphrase-based data augmentation pipeline
+    using Qwen3, where paraphrased training and validation instances are added for
+    fine-tuning. For the LLM, we perform prompt refinement and error analysis, while
+    for the encoder-based model, we reformulate the task as a hypothesis-conditioned
+    classification task inspired by Natural Language Inference (NLI). Our methods
+    improve both models: Mistral-Nemo increases from 0.423 to 0.750 F1, and BioM-BERT
+    from 0.801 to 0.821 on the validation set. Although Mistral-Nemo does not surpass
+    BioM-BERT, our best BioM-BERT model achieves an F1-score of 0.786 on the test
+    set, outperforming the mean and median of competing systems. To support reproducibility,
+    we release our best-performing model on Hugging Face.'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@pei.de'
+    first_name: Farnaz
+    last_name: Zeidi
+    name: Farnaz Zeidi
+    orcid: https://orcid.org/0000-0002-3528-0132
+    semantic_scholar_id: https://www.semanticscholar.org/author/Farnaz-Zeidi/123704375
+    username: ~Farnaz_Zeidi1
+  - dblp_id: https://dblp.org/pid/351/6337
+    emails: '****@stud.uni-frankfurt.de'
+    first_name: Roman
+    google_scholar_id: https://scholar.google.com/citations?user=ZryZeMUAAAAJ&hl=de&oi=sra
+    institution: Johann Wolfgang Goethe Universität Frankfurt am Main
+    last_name: Christof
+    name: Roman Christof
+    semantic_scholar_id: https://www.semanticscholar.org/author/Roman-Christof/2223694297
+    username: ~Roman_Christof1
+  - emails: '****@pei.de'
+    first_name: Farnoush
+    last_name: Zeidi
+    name: Farnoush Zeidi
+    username: ~Farnoush_Zeidi1
+  - emails: renate.koenig@pei.de
+    first_name: Renate
+    institution: NA
+    last_name: König
+    name: Renate König
+    username: renate.koenig@pei.de
+  - emails: '****@pei.de'
+    first_name: Liam
+    institution: Paul-Ehrlich Institute
+    last_name: Childs
+    name: Liam Childs
+    orcid: https://orcid.org/0000-0002-2080-1804
+    username: ~Liam_Childs1
+  decision: Poster
+  file: 35.pdf
+  id: 35
+  openreview_id: 9KSvNVNkoZ
+  pdf_file: 98970f132fb4484029878adabf3dbd860e4883a2.pdf
+  title: 'PEI at \#SMM4H-HeaRD 2026: Enhancing Patient Metadata Detection via Hypothesis-Conditioned
+    Classification and Paraphrase-Based Data Augmentation'
+- abstract: 'We describe our submission to SMM4H-
+
+    HeaRD 2026 Task 7, which asks systems to
+
+    label ClinicalImpacts and SocialImpacts
+
+    spans in Reddit posts about non-medical sub-
+
+    stance use. We compare four pipeline shapes
+
+    built on the same DeBERTa-v3-base back-
+
+    bone: (i) a direct 5-class encoder with a linear-
+
+    chain CRF head, (ii) a two-stage detect-then-
+
+    classify pipeline that delegates span typing
+
+    to an instruction-tuned LLM (Qwen2.5-7B
+
+    or Gemma-3-12B, 4-bit NF4), (iii) an audit
+
+    pipeline in which the same LLM verifies the
+
+    encoder’s predictions, and (iv) a classical-ML
+
+    variant that replaces the LLM with an SVM
+
+    trained on encoder span embeddings. Across
+
+    16 configurations, the encoder-only DeBERTa-
+
+    v3 + CRF configuration is the strongest sin-
+
+    gle system on the official test split, reaching
+
+    45.4% strict and 54.2% relaxed F1 — +8.6
+
+    / +5.3 points above a mental-roberta-base
+
+    baseline. LLM audits give a small dev gain that
+
+    does not transfer to test.'
+
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@gmail.com'
+    first_name: Gijs
+    last_name: Danoe
+    name: Gijs Danoe
+    username: ~Gijs_Danoe1
+  - emails: a.voss@umcg.nl
+    first_name: Andreas
+    institution: NA
+    last_name: Voss
+    name: Andreas Voss
+    username: a.voss@umcg.nl
+  - emails: axel.hamprecht@uni-oldenburg.de
+    first_name: Axel
+    institution: NA
+    last_name: Hamprecht
+    name: Axel Hamprecht
+    username: axel.hamprecht@uni-oldenburg.de
+  - emails: m.s.berends@umcg.nl
+    first_name: Matthijs S.
+    institution: NA
+    last_name: Berends
+    name: Matthijs S. Berends
+    username: m.s.berends@umcg.nl
+  decision: Poster
+  file: 37.pdf
+  id: 37
+  openreview_id: 2351vfZCJU
+  pdf_file: 4172c279326b788e478e2dc4240d5e49fbe0965d.pdf
+  title: 'Dr-BERT-NL at \#SMM4H–HeaRD 2026: DOKTERBERT – Ontology-Grounded Contextual
+    Representations for Dutch Clinical NLP'
+- abstract: 'We describe our system for Shared Task 2 of \#SMM4H–HeaRD 2026, which
+    targets the detection of insomnia in MIMIC-III clinical notes. We frame the task
+    as evidence extraction followed by deterministic rule application, rather than
+    end-to-end label prediction. Our system operates in two passes: (1) a Gemini 2.5
+    Flash large language model (LLM), invoked through typed prompts written in BAML,
+    extracts structured evidence (sleep difficulties, daytime impairment, hypnotic
+    medications) with verbatim character-level citations from each note; (2) a small
+    Python rule engine deterministically applies the task''s published Insomnia rules--Definition
+    1, Definition 2, and Rules B and C--to derive the binary patient-level label,
+    the rule-component labels, and their evidence spans. We submitted two test-set
+    systems: a zero-shot variant and a retrieval-augmented few-shot variant that selects
+    nearest-neighbor training notes via FAISS over a sentence-embedding index. Our
+    zero-shot variant achieved F1 = 0.8108 on Subtask 1 (binary classification) and
+    a label-classification micro-F1 of 0.7126 with partial-match span F1 = 0.6621
+    on Subtask 2, both above the across-team mean. We additionally evaluate a GEPA-optimized
+    prompt variant on the validation split. We discuss two findings of methodological
+    interest: the few-shot variant improves Subtask 1 precision but does not improve
+    F1, and does not move the multi-label or span metrics on Subtask 2 in our submission,
+    and pushing the deterministic rule engine to consume LLM-extracted evidence (rather
+    than asking the LLM to emit labels directly) gives strong, easily auditable behavior
+    on a small test set.'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@nyu.edu'
+    first_name: Vasudev
+    institution: New York University
+    last_name: Awatramani
+    name: Vasudev Awatramani
+    username: ~Vasudev_Awatramani1
+  decision: Poster
+  file: 39.pdf
+  id: 39
+  openreview_id: yZHb278LTr
+  pdf_file: 08c566239d42a8385852391471420214a09b3c48.pdf
+  title: 'Vasudev Awatramani at \#SMM4H-HeaRD 2026: A Two-Pass LLM Pipeline with Deterministic
+    Rule Derivation for Interpretable Insomnia Detection in Clinical Notes'
+- abstract: "Word-level cross-lingual alignment is central to annotation projection,\
+    \ translation auditing, and cross-lingual faithfulness estimation, yet existing\
+    \ neural aligners are rarely adapted to specialized domains.\nIn this paper, we\
+    \ introduce ClinicalAligner26AM, a large-context multilingual aligner model for\
+    \ biomedical and clinical text initialized from ClinicalEncoder26AM.\nOur training\
+    \ recipe is inspired by AWESoME Align. We build our soft alignment target by sharpening\
+    \ with Sinkhorn--Knop optimal transport a cost matrix established for parallel\
+    \ clinical texts and conversations through the fusion of sentence-level, phrase-level,\
+    \ and token-level signals. We distill this sharpened alignment matrix directly\
+    \ into our student aligner, by encouraging its naive cosine-based token similarity\
+    \ scores to match this target.\nAt inference time, we project source-span scores\
+    \ through the learned token alignment matrix and decode the longest valid high-scoring\
+    \ span in the target text, optionally supported by MultiClinNER predictions.\n\
+    We evaluate CA26AM on the MultiClinCorpus shared task, which projects Spanish\
+    \ clinical entity annotations into six target languages. \nOur two submitted systems\
+    \ ranked respectively first and second across all languages and entity types,\
+    \ with character-weighted F1 scores above 0.95 in nearly all settings."
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@outlook.com'
+    first_name: François
+    google_scholar_id: https://scholar.google.com/citations?user=pyCw7HcAAAAJ&hl=en&oi=ao
+    homepage: http://fremycompany.com/
+    institution: Parallia
+    last_name: Remy
+    name: François Remy
+    orcid: https://orcid.org/0000-0003-4775-6975
+    semantic_scholar_id: https://www.semanticscholar.org/author/Fran%C3%A7ois-Remy/2188652700
+    username: ~François_Remy1
+  decision: WinningSystem
+  file: 41.pdf
+  id: 41
+  openreview_id: mp0bWSa143
+  pdf_file: 38217e9c36ffc0b871b2248f5c71083a7d2e49b0.pdf
+  title: 'Parallia at \#SMM4H-HeaRD 2026: ClinicalAligner26AM: A Cross-Lingual Aligner
+    for Dataset Translation; Evidences from the MultiClinCorpus Shared Task'
+- abstract: 'We present a system for multilingual clinical named entity recognition
+    (NER) submitted to the MultiClinNER subtask of MultiClinAI 2026, covering all
+    seven languages and three entity classes (disease, symptom, procedure).
+
+    Our approach trains one binary token classifier ensemble per entity class using
+    cross-lingual fine-tuning of XLM-RoBERTa-large, with all languages handled jointly.
+
+    We apply character-level ensembling over six models (two encoder variants $\times$
+    three cross-validation folds).
+
+    This ensembling method provides more granular probability estimates than single-model
+    classifiers, allowing for more flexible precision-recall trade-off tuning.
+
+    The system achieves character-level F1 scores of 0.70--0.88 on the official test
+    set.'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@fi.muni.cz'
+    first_name: Petr
+    google_scholar_id: https://scholar.google.cz/citations?user=Y3P7cKYAAAAJ
+    last_name: Zelina
+    name: Petr Zelina
+    orcid: https://orcid.org/0009-0004-1247-522X
+    username: ~Petr_Zelina1
+  - dblp_id: https://dblp.org/pid/79/1204
+    emails: '****@fi.muni.cz'
+    first_name: Vit
+    google_scholar_id: https://scholar.google.com/citations?user=6iXI6CkAAAAJ
+    homepage: https://www.fi.muni.cz/~novacek
+    institution: Masaryk University
+    last_name: Novacek
+    name: Vit Novacek
+    orcid: https://orcid.org/0000-0003-4687-6043
+    username: ~Vit_Novacek1
+  decision: Poster
+  file: 42.pdf
+  id: 42
+  openreview_id: IZiFYRZezT
+  pdf_file: ba2e161ed21945eb790338bc91117b6a2f820b55.pdf
+  title: 'Discovery@FI at \#SMM4H–HeaRD 2026: Ensemble Character Classifier for Multilingual
+    Clinical NER'
+- abstract: 'We describe our submission to Task 1 of \#SMM4H-HeaRD~2026: multilingual
+    binary classification of adverse drug event (ADE) mentions in social media. Our
+    system fine-tunes $\texttt{xlm-roberta-large}$ with LoRA adapters and learned
+    language embeddings, using two-stage training (CADEC translated domain adaptation,
+    then five-fold cross-validation on the official training set). We ensemble the
+    five fold checkpoints by mean logits, apply temperature scaling on the development
+    set, and tune decision thresholds to maximize the official metric. On development,
+    the final ensemble reaches macro-F$_1$ 0.788 with a global threshold and 0.796
+    with per-language thresholds; our best official test submission achieves macro-F$_1$
+    0.616 (ID 678990).'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@iitp.ac.in'
+    first_name: Sofia
+    google_scholar_id: https://scholar.google.com/citations?hl=en&user=3K5qmw4AAAAJ
+    last_name: Jamil
+    name: Sofia Jamil
+    username: ~Sofia_Jamil1
+  - emails: '****@gmail.com'
+    first_name: Manish
+    homepage: https://github.com/ManishBangari
+    last_name: Singh
+    name: Manish Singh
+    username: ~Manish_Singh7
+  - emails: '****@gmail.com'
+    first_name: Harshal
+    homepage: https://harshaldharpure.github.io/
+    last_name: Dharpure
+    name: Harshal Dharpure
+    orcid: https://orcid.org/0009-0006-0916-2788
+    username: ~Harshal_Dharpure1
+  - dblp_id: https://dblp.org/pid/27/1664-1
+    emails: '****@gmail.com'
+    first_name: Sriparna
+    google_scholar_id: https://scholar.google.co.in/citations?user=Fj7jA_AAAAAJ&hl=en
+    homepage: http://www.iitp.ac.in/~sriparna
+    last_name: Saha
+    name: Sriparna Saha
+    orcid: https://orcid.org/0000-0001-5458-9381
+    semantic_scholar_id: https://www.semanticscholar.org/author/S.-Saha/145470045
+    username: ~Sriparna_Saha1
+  - emails: '****@iitp.ac.in'
+    first_name: Rajiv
+    google_scholar_id: https://scholar.google.com/citations?user=A84B7KYAAAAJ&hl=en
+    homepage: https://www.iitp.ac.in/people/faculty/214:view-profile-25
+    institution: Indian Institute of Technology, Patna
+    last_name: Misra
+    name: Rajiv Misra
+    orcid: https://orcid.org/0000-0002-4910-5749
+    semantic_scholar_id: https://www.semanticscholar.org/author/R.-Misra/39274551?sort=influence&page=5
+    username: ~Rajiv_Misra1
+  decision: Poster
+  file: 43.pdf
+  id: 43
+  openreview_id: I4KMHFkB3n
+  pdf_file: d79a9d49b1cb8d6c8e5233d88b3ee7fe925d1b5e.pdf
+  title: 'IITPatna_ADE at \#SMM4H-HeaRD 2026: Multilingual Adverse Drug Event Detection
+    with LoRA-XLM-RoBERTa, Cross-Fold Ensembles, and Post-hoc Calibration'
+- abstract: 'In this paper, we describe systems for two \#SMM4H-HeaRD 2026 shared tasks.
+    Task 6 asks for per-axis TNM cancer staging from free-text TCGA pathology reports
+    under severe label imbalance and long-document constraints. We fine-tune GatorTron-base
+    separately on each axis using Focal loss with class weights and a pooled [CLS]–mean
+    representation, reaching macro F1 of 0.700 (T), 0.774 (N), and 0.640 (M) on test
+    set 2 against a baseline of 0.454, 0.591, and 0.554 respectively. Task 7 asks
+    for span-level detection of opioid-related ClinicalImpacts and SocialImpacts in
+    first-person Reddit posts. We combine DeBERTa-large and PubMedBERT (two seeds
+    each) in a uniform-weight ensemble with boundary-aware loss, entity-replacement
+    augmentation, and a first-person post filter, achieving strict F1 of 0.51 and
+    relaxed F1 of 0.60, above both the task mean (0.46 / 0.55) and median (0.48 /
+    0.58).'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@student.cuet.ac.bd'
+    first_name: Shuva
+    last_name: Dey
+    name: Shuva Dey
+    username: ~Shuva_Dey1
+  - emails: '****@student.cuet.ac.bd'
+    first_name: Priyangshu
+    last_name: Barua
+    name: Priyangshu Barua
+    username: ~Priyangshu_Barua1
+  - emails: '****@cuet.ac.bd'
+    first_name: Mohammad
+    google_scholar_id: https://scholar.google.com/citations?user=0g6uXIYAAAAJ&hl=en&oi=ao
+    institution: Chittagong University of Engineering and Technology
+    last_name: Habib
+    middle_name: Ashfak
+    name: Mohammad Ashfak Habib
+    username: ~Mohammad_Ashfak_Habib1
+  decision: Poster
+  file: 44.pdf
+  id: 44
+  openreview_id: bkNamG33Uk
+  pdf_file: d9f9d7ea9a551ace2f9e2c72940e872ef3b94392.pdf
+  title: 'CUET_DiagNLP at \#SMM4H-HeaRD 2026: Per-Axis TNM Staging from Pathology Reports
+    and Opioid Impact Span Detection from Social Media'
+- abstract: 'Six tasks from the SMM4H–HeaRD 2026 workshop were addressed with task-specific
+    large-language-model (LLM) pipelines relying on prompt engineering, strict structured
+    (JSON) responses, and deterministic rule sets. The pipelines utilize no task-specific
+    fine-tuning and can be adapted across diverse clinical and social media data.
+    This study demonstrates that general-purpose LLMs (gpt-5.4-mini and gpt-
+
+    5.4) can accurately extract and classify crucial health information when constrained
+    by strict output schemas. Notably, our hybrid approach
+
+    achieved the best overall performance among all participating systems for Task
+    2 (Insomnia Detection).'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@gmail.com'
+    first_name: Aatish
+    google_scholar_id: https://scholar.google.com/citations?user=49-hLi4AAAAJ&hl=en&oi=ao
+    institution: Dow, Inc.
+    last_name: Pradhan
+    name: Aatish Pradhan
+    username: ~Aatish_Pradhan1
+  - emails: '****@gmail.com'
+    first_name: Brian
+    google_scholar_id: https://scholar.google.com/citations?user=CIiNT7kAAAAJ&hl=en
+    institution: CAS
+    last_name: Habersberger
+    middle_name: M.
+    name: Brian M. Habersberger
+    username: ~Brian_M._Habersberger1
+  decision: WinningSystem
+  file: 46.pdf
+  id: 46
+  openreview_id: Zt5OUk3Jan
+  pdf_file: a32687e0e5a89c9752589d709761bcdfa2d19d8e.pdf
+  title: 'MedMind AI at \#SMM4H-HeaRD 2026: Data Extraction and Generation Using Prompt
+    Engineering and Structured Outputs (Tasks 1–6)'
+- abstract: The   Tumor,   Node,   and   Metastasis   (TNM)   staging   system   is   critical   to   cancer   treatment.   This
+    study   aims   to   predict   TNM   stage   labels   independently,   with   the   Cancer   Genome   Atlas
+    (TCGA)   pathology   report   as   the   sixth   shared   task   of   SMM4H-HeaRD   2026.   The   problem   is
+    framed   as   three   multi-label   classification   tasks.   We   explore   both   classical   and   deep   learning
+    approaches   using   Term   Frequency-Inverse   Document   Frequency   (TF-IDF)   features   and
+    embeddings from ClinicalBERT,   BioBERT,   and   PubMedBERT.   These   representations   are   used
+    with   Logistic   Regression   (LR),   Light   Gradient   Boosting   Machine   (LightGBM),   Feed-Forward
+    Neural   Networks   (FFNN),   and   Wide   Residual   Networks   (WRN).   Our   results   show   that
+    individual   embeddings   perform   similarly   to   the   TNM   label   classification,   while   their
+    combination   improves   its   predictive   ability.   WRN   achieves   AUROC   scores   of   0.839   (T),   0.8502
+    (N),   and   0.803   (M)   with   F1-scores   of   0.622,   0.702,   and   0.9337,   respectively,   for   the   training
+    phase.   LightGBM   with   TF-IDF   performs   best   with   AUROC   scores   of   0.9368   (T),   0.9524   (N),
+    and   0.8311   (M)   and   F1-scores   of   0.7559   (T),   0.7384   (N),   and   0.7017   (M)   during   the   training
+    phase.  Furthermore,   the   result   of   the   Codabench   for   the   test   sets   indicates   a   Macro-F1   score
+    of   0.978,   0.957,   and   0.879   for   the   T,   N,   and   M   categories   respectively   for   test   set   1;   while
+    test   set   2   records   a   Macro-F1   score   for   T,   N,   and   M   is   0.807,   0.767,   1.0   respectively.
+    However,   performance   declined   during   the   evaluation   phase   of   the   test   sets,   a   drop   from
+    0.938   for   test   set   1   to   0.858   for   test   set   2,   for   the   Macro-F1   score   across   all   stages;
+    suggesting   limitations   in   model   generalizability,   sensitivity   to   class   imbalance,   and
+    challenges   in   processing   lengthy   clinical   documents.   Although   this   study   provides   an
+    efficient   baseline   model   and   a   reproducible   pipeline,   further   optimization   and   validation   are
+    required   before   it   can   be   considered   suitable   for   use   in   a   real-world   clinical   setting.
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: joseph.itopaa@gmail.com
+    first_name: Joseph Itopa
+    institution: NA
+    last_name: Abubakar
+    name: Joseph Itopa Abubakar
+    username: joseph.itopaa@gmail.com
+  - emails: jorjarme@gbox.adnu.edu.ph
+    first_name: Jorge
+    institution: NA
+    last_name: Jarme
+    name: Jorge Jarme
+    username: jorjarme@gbox.adnu.edu.ph
+  - emails: '****@unn.edu.ng'
+    first_name: Favour
+    google_scholar_id: https://scholar.google.com/citations?user=lA-1AjMAAAAJ&hl=en
+    last_name: Igwezeke
+    name: Favour Igwezeke
+    username: ~Favour_Igwezeke1
+  - emails: mary.adewunmi@menzies.edu.au
+    first_name: Mary
+    institution: NA
+    last_name: Adewunmi
+    name: Mary Adewunmi
+    username: mary.adewunmi@menzies.edu.au
+  decision: Poster
+  file: 47.pdf
+  id: 47
+  openreview_id: zUoI0XysC0
+  pdf_file: 44a6c685cdd3a8f5da993c8e5dd993c4482dface.pdf
+  title: 'CaresAI at SMM4H-HeaRD 2026: Predicting TNM Staging'
+- abstract: In this paper, we address Task 1 on adverse drug event (ADE) detection
+    and Task 8 on MultiClinNER at SMM4H-HeaRD 2026. ADE detection is formulated as
+    a multilingual binary classification problem over social media posts spanning
+    German, French, Russian, English, Mandarin and Japanese, with zero-shot on Farsi.
+    Using XLM-RoBERTa-Large with a dual-pooling head, combined with stratified sampling,
+    language-conditioned inputs, translation-based augmentation, and calibrated ensembling,
+    our model achieves a macro F1 score of 0.6088, surpassing both the competition
+    mean (0.5465) and median (0.5798). Our work in MultiClinNER targets clinical NER
+    for English text. Using GLiNER-large with sliding-window inference, query augmentation,
+    and calibrated thresholds, it achieves strict F1 scores of 0.7591 (Disease), 0.7263
+    (Procedure), and 0.6733 (Symptom), outperforming a PubMedBERT baseline across
+    all entities.
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@student.cuet.ac.bd'
+    first_name: Nirjhar
+    last_name: Das
+    name: Nirjhar Das
+    username: ~Nirjhar_Das2
+  - emails: '****@student.cuet.ac.bd'
+    first_name: Rathijit
+    last_name: Aich
+    name: Rathijit Aich
+    username: ~Rathijit_Aich1
+  - emails: mahfuz@cuet.ac.bd
+    first_name: Mahfuzulhoq
+    institution: NA
+    last_name: Chowdhury
+    name: Mahfuzulhoq Chowdhury
+    username: mahfuz@cuet.ac.bd
+  decision: Poster
+  file: 48.pdf
+  id: 48
+  openreview_id: 156YSk4KDp
+  pdf_file: 2223b260e72cd7dc4f71a01faec1b3c1b9b20ec7.pdf
+  title: 'Vinland_Vector at \#SMM4H-HeaRD 2026: Multilingual ADE Detection and Query-Augmented
+    Clinical NER for English'
+- abstract: 'This paper describes our participation in the MultiClinNER subtask of
+    the MultiClinAI shared task, part of the #SMM4H-HeaRD Workshop at ACL 2026. The
+    task requires identifying DISEASE, SYMPTOM, and PROCEDURE mentions in clinical
+    case reports across seven languages: Czech, Dutch, English, Italian, Romanian,
+    Spanish, and Swedish. We compare two BERT-based sequence labeling methods: (i)
+    sentence-level token classification with a fixed train/validation split, and (ii)
+    paragraph-level chunking with 5-fold cross-validation and checkpoint merging,
+    using language-specific BERT models and multilingual XLM-RoBERTa-large as backbones.
+    Our results show that 5-fold training with checkpoint merging consistently outperforms
+    the fixed split strategy, with further analysis suggesting that the gains are
+    primarily driven by improved training-set coverage rather than by differences
+    in input granularity. Language-specific BERT encoders prove most effective for
+    Spanish and English, while XLM-RoBERTa-large yields the strongest results for
+    the remaining five languages through cross-lingual transfer.'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@siemens.com'
+    first_name: Manuela
+    google_scholar_id: https://scholar.google.com/citations?user=y8aUEH0AAAAJ&hl=ro&oi=ao
+    institution: University "Transilvany" of Brasov and Siemens Corporate Research
+    last_name: Danu
+    middle_name: Daniela
+    name: Manuela Daniela Danu
+    orcid: https://orcid.org/0000-0003-2568-0973
+    username: ~Manuela_Daniela_Danu1
+  decision: Poster
+  file: 49.pdf
+  id: 49
+  openreview_id: mDDmY27ciH
+  pdf_file: 4b843252e8be9002598c41ca3e04acf87e27f204.pdf
+  title: 'SIEMENS at \#SMM4H–HeaRD 2026: The Impact of Training Strategy and Backbone
+    Selection on BERT-based Multilingual Clinical NER'
+- abstract: This article presents a system description for our work as part of Task
+    5 of the SMM4H-HeaRD 2026 workshop. We fine-tune pretrained BERT and BiomedBERT
+    models and further enhance them using custom feature augmentation techniques.
+    Incorporating these engineered features results in improved performance, with
+    the best model achieving a validation F1 score of 0.8419 and an evaluation phase
+    F1 score of 0.753.
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@nitk.edu.in'
+    first_name: Aakarsh
+    last_name: Bansal
+    name: Aakarsh Bansal
+    username: ~Aakarsh_Bansal1
+  - emails: '****@nitk.edu.in'
+    first_name: Abhishek
+    last_name: Srinivas
+    name: Abhishek Srinivas
+    username: ~Abhishek_Srinivas1
+  - emails: '****@nitk.edu.in'
+    first_name: Sowmya
+    google_scholar_id: https://scholar.google.com/citations?hl=en&user=IjRAvRgAAAAJ
+    institution: National Institute of Technology Karnataka
+    last_name: S.
+    middle_name: Kamath
+    name: Sowmya Kamath S.
+    username: ~Sowmya_Kamath_S.1
+  decision: Poster
+  file: 52.pdf
+  id: 52
+  openreview_id: bixWTAQmJG
+  pdf_file: 7555dec8e55a52fc9f60af93a994137a32efc669.pdf
+  title: 'HALELab-NITK at \#SMM4H-HeaRD2026: Inclusion of Feature Engineering for Detection
+    of Patient Metadata in SARS-CoV2 Sequencing Articles'
+- abstract: 'We present our systems for Task 1 and Task 3 of the \#SMM4H-HeaRD 2026
+    shared tasks. Task 1 focuses on binary classification of adverse drug event (ADE)
+    mentions across seven languages, including a zero-shot Persian setting without
+    labeled training data. We fine-tune XLM-RoBERTa-large using weighted cross-entropy
+    loss and augment low-resource settings with additional CADEC data and machine
+    translation-based Persian augmentation. Our system achieves a macro F1 score of
+    0.582, outperforming the shared task average of 0.547. Task 3 addresses influenza
+    vaccine effectiveness estimation through classification of vaccination status
+    and flu-test results from X posts. We fine-tune twitter-roberta-large, achieving
+    micro F1 scores of 0.845 for vaccination status and 0.883 for flu-test classification
+    on the official test set. Post-evaluation experiments with focal loss, test-time
+    augmentation, and head-tail truncation further improve performance. These results
+    highlight the effectiveness of robust transformer adaptation for health-related
+    social media classification.'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@student.cuet.ac.bd'
+    first_name: Abir
+    last_name: Dey
+    name: Abir Dey
+    username: ~Abir_Dey1
+  - emails: '****@student.cuet.ac.bd'
+    first_name: Mohammed
+    last_name: Faiaz
+    middle_name: Omar
+    name: Mohammed Omar Faiaz
+    username: ~Mohammed_Omar_Faiaz1
+  - emails: '****@cuet.ac.bd'
+    first_name: Muhammad
+    institution: Chittagong University of Engineering and Technology
+    last_name: Khan
+    middle_name: Ibrahim
+    name: MUHAMMAD IBRAHIM KHAN
+    orcid: https://orcid.org/0000-0002-4228-6727
+    username: ~MUHAMMAD_IBRAHIM_KHAN1
+  decision: Poster
+  file: 53.pdf
+  id: 53
+  openreview_id: d76xZl4itP
+  pdf_file: 24d896255514f580f2d47fde2e819519bb9fd9b4.pdf
+  title: 'Cuet_Data_Wizards at \#SMM4H-HeaRD 2026: Multilingual ADE Detection and Influenza
+    Vaccine Effectiveness Estimation from Social Media'
+- abstract: 'This paper describes our system for the SMM4H-HeaRD 2026 Task 1: \textit{Detection
+    of Adverse Drug Events in Multilingual and Multi-platform Social Media Posts}.
+    We developed a two-stage pipeline combining a fine-tuned XLM-RoBERTa-large encoder-only
+    model with a large language model for final decision on ambiguous cases. To handle
+    complex linguistic boundaries, we explore explicitly training the encoder to treat
+    ambiguity as a discrete third label to delegate those cases to the generative
+    model. Although introducing the third label was associated with lower performance
+    than relying on a binary model, when using the encoder as a preliminary filter
+    for classifying $78.62\%$ of posts as negatives, we achieved a global $F_1$ score
+    of 0.614 (+0.034 over task median).'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@sorbonne-universite.fr'
+    first_name: Nour
+    last_name: Allam
+    name: Nour Allam
+    orcid: https://orcid.org/0009-0006-7350-6426
+    username: ~Nour_Allam1
+  decision: Poster
+  file: 54.pdf
+  id: 54
+  openreview_id: bFIF9rq6PC
+  pdf_file: 6e7f965b80d9e96d886fab96021a417910d12dcb.pdf
+  title: 'Limics at \#SMM4H-HeaRD 2026: Uncertainty-Driven Prediction for ADE Detection
+    in Social Media'
+- abstract: 'This paper demonstrates our system for shared task 4 of \#SMM4H-HeaRD
+    2026 Workshop where a given doctor-patient dialogue is summarized into a clinical
+    note in the corresponding SOAP format. Our proposed solution includes semi-supervised
+    learning together with parameter efficient finetuning (PEFT) applied to a lightweight
+    pre-trained QWEN3.5 model. Our model delivers competitive performance relative
+    to its parameter count, and generalizes its performance to unseen test dataset.'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@fu-berlin.de'
+    first_name: Jessica
+    last_name: Wong
+    middle_name: Ying En
+    name: Jessica Ying En Wong
+    username: ~Jessica_Ying_En_Wong1
+  decision: Poster
+  file: 55.pdf
+  id: 55
+  openreview_id: BPtBrTlsnL
+  pdf_file: b0f729c2d22ffbc654c26b0db89c8734622052d4.pdf
+  title: 'FU-HU-P5 at \#SMM4H-HeaRD 2026: MedSynth Dialogue-to-Note Generation'
+- abstract: 'We apply an LLM-driven autoresearch protocol to Task 7 of \#SMM4H-HeaRD
+    2026, which requires extracting ClinicalImpacts and SocialImpacts spans from Reddit
+    posts about non-medical opioid use. A coding agent iteratively proposes a hypothesis,
+    modifies the training configuration, and evaluates against the held-out validation
+    set. Across 79 runs, only 9 improved strict F1, indicating a narrow viable search
+    space on this small dataset (842 training examples). The submitted ensemble combines
+    DeBERTa-large, MC Dropout blending, and a constrained multi-LLM consensus layer,
+    reaching 0.46 strict and 0.52 relaxed F1 on test, though single-seed evaluation
+    limits the reliability of run-level comparisons. The run log provides a reproducible
+    case study of autonomous experimentation, including failure modes and guardrails
+    for small-data NER.'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@dauphine.psl.eu'
+    first_name: Olivier
+    homepage: https://github.com/oliviercaron
+    last_name: Caron
+    name: Olivier CARON
+    username: ~Olivier_CARON1
+  - emails: '****@dauphine.psl.eu'
+    first_name: Bruno
+    institution: Université Paris-Dauphine (Paris IX)
+    last_name: Ferreira
+    middle_name: Chaves
+    name: Bruno Chaves Ferreira
+    username: ~Bruno_Chaves_Ferreira1
+  - emails: '****@dauphine.psl.eu'
+    first_name: Christophe
+    last_name: Benavent
+    name: Christophe Benavent
+    username: ~Christophe_Benavent1
+  decision: Poster
+  file: 57.pdf
+  id: 57
+  openreview_id: FUsiADqOIK
+  pdf_file: 3bbc8f2bf8d64112dc826062baae7ec39d7c10f9.pdf
+  title: 'ACSS-PSL at \#SMM4H-HeaRD 2026: An LLM-Driven Autoresearch Loop for Opioid-Impact
+    NER'
+- abstract: Adverse drug events (ADEs) automatic detection from social media posts
+    has become an important task for healthcare  systems with real-world, patient-collected
+    data. The current work deals with ADE on user generated content for Task 1 of
+    the Social Media Mining for Health Research and Applications Workshop (SMM4H 2026),
+    Creative Catalysts. We fine-tuned XLM-RoBERTa, pre-trained model chosen for its
+    robustness in handling multilingual content and linguistic diversity common in
+    social media text. To better handle the class imbalance, we subsequently implemented
+    a class-weighting strategy to increase the model's focus on the underrepresented
+    positive class. This adjusted model improved the validation F1-score to 65%. Our
+    results demonstrate the effectiveness of transformer-based architectures for ADE
+    detection while highlighting the critical need for robust class-balancing techniques
+    and multilingual generalization to handle real-world, imbalanced social media
+    data.
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@univ-khenchela.dz'
+    first_name: Radja
+    google_scholar_id: https://scholar.google.com/schhp?hl=fr
+    institution: abbes laghrour khenchela ,algeria
+    last_name: Afren
+    name: RADJA AFREN
+    orcid: https://orcid.org/0009-0001-8608-4940
+    username: ~RADJA_AFREN1
+  - emails: '****@univ-khenchela.dz'
+    first_name: Hichem
+    google_scholar_id: https://scholar.google.com/citations?user=7L5rZBIAAAAJ&hl=en
+    homepage: https://rahab.e-monsite.com/
+    institution: Abbes Laghrour university
+    last_name: Rahab
+    name: Hichem RAHAB
+    orcid: https://orcid.org/0000-0002-4411-0901
+    username: ~Hichem_RAHAB1
+  - dblp_id: https://dblp.org/pid/203/0939.html
+    emails: '****@gmail.com'
+    first_name: Imane
+    google_scholar_id: https://scholar.google.com/citations?user=EQk5dlkAAAAJ&hl=en
+    institution: University of Birmingham
+    last_name: Guellil
+    name: Imane Guellil
+    semantic_scholar_id: https://www.semanticscholar.org/author/I.-Guellil/51217514
+    username: ~Imane_Guellil2
+  decision: Poster
+  file: 58.pdf
+  id: 58
+  openreview_id: eBBYmXZS2j
+  pdf_file: c219eacd428e41d6bf82b79dc3bda04d4d9417d4.pdf
+  title: 'Creative Catalysts at \#SMM4H-HeaRD 2026: XLM-RoBERTa for Task 1 Binary Classification
+    of Social Media Posts Containing Adverse Drug Events'
+- abstract: "This paper presents our systems for the SMM4H 2026 shared task on flu-related\
+    \ tweet\nclassification across two subtasks: flu vaccination status and flu test\
+    \ outcome classification. \nFor each subtask, we evaluate two approaches: fine-tuning\
+    \ BERTweet-large with a\ntemporal-aware architecture, cross-validation ensembling,\
+    \ and regularization techniques, and\na GPT-4o few-shot prompting system with\
+    \ similarity-based dynamic example retrieval,\nchain-of-thought reasoning and\
+    \ contrastive label ranking. Fine-tuning proves superior for the\nflu vaccination\
+    \ subtask (micro-F1: 87.90%), where sufficient and relatively balanced training\
+    \ data\nis available, while few-shot prompting performs better for the flu test\
+    \ subtask (micro-F1: 95.74%), \nwhere limited and heavily imbalanced training\
+    \ data renders fine-tuning less effective."
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@s.unibuc.ro'
+    first_name: Irina
+    last_name: Patularu
+    name: Irina Patularu
+    username: ~Irina_Patularu1
+  decision: WinningSystem
+  file: 59.pdf
+  id: 59
+  openreview_id: UjdmZabpCm
+  pdf_file: 88c0bef65c719f4b6a1ee3c6028f79cc02530aec.pdf
+  title: 'BioNLP at \#SMM4H-HeaRD 2026 Task 3 Estimating Flu Vaccine Effectiveness:
+    A Temporal-Aware Fine-Tuning and Similarity-Based Few-Shot Prompting Approach'
+- abstract: This paper describes FluENS (Flu ENsemble System), our submission to the
+    Social Media Mining for Health (SMM4H) 2026 Shared Task 3, which targets fine-grained
+    classification of flu vaccination and flu testing statuses from tweets. FluENS
+    builds on the microsoft/deberta-v2-xlarge pre-trained language model and employs
+    a multi-seed ensemble strategy in which five models, each initialized with a different
+    random seed and trained on the full training set, are aggregated through soft-voting
+    over averaged softmax probabilities. We additionally incorporate balanced class
+    weights to mitigate severe label imbalance and apply a two-stage learning rate
+    schedule that separately controls the encoder and classification head. On the
+    development set, FluENS achieves a macro F1 of 79.64% and micro F1 of 85.56% on
+    the flu vaccination sub-task, and a macro F1 of 96.35% and micro F1 of 97.04%
+    on the flu testing sub-task, substantially outperforming a roberta-base baseline
+    across all metrics.
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@cs.iitr.ac.in'
+    first_name: Pradyumn
+    institution: Indian Institute of Technology, Roorkee, Dhirubhai Ambani Institute
+      Of Information and Communication Technology
+    last_name: Kejriwal
+    name: Pradyumn Kejriwal
+    username: ~Pradyumn_Kejriwal1
+  - emails: suhani_sc@cs.iitr.ac.in
+    first_name: Suhani Singh
+    institution: NA
+    last_name: Charan
+    name: Suhani Singh Charan
+    username: suhani_sc@cs.iitr.ac.in
+  - dblp_id: https://dblp.org/pid/46/7472.html
+    emails: '****@cs.iitr.ac.in'
+    first_name: Raksha
+    google_scholar_id: https://scholar.google.co.in/citations?user=V9oafzsAAAAJ&hl=en
+    homepage: https://www.iitr.ac.in/~CSE/Raksha_Sharma
+    last_name: Sharma
+    name: Raksha Sharma
+    username: ~Raksha_Sharma1
+  - dblp_id: https://dblp.org/pid/216/7282
+    emails: '****@bodhan.ai'
+    first_name: Rudra
+    google_scholar_id: https://scholar.google.com/citations?user=5bjj_9cAAAAJ&hl=en
+    homepage: http://murthyrudra.github.io
+    institution: IBM India Pvt Ltd
+    last_name: Murthy
+    name: Rudra Murthy
+    orcid: https://orcid.org/0000-0002-6236-1931
+    semantic_scholar_id: https://www.semanticscholar.org/author/V.-Rudra-Murthy/48398543
+    username: ~Rudra_Murthy1
+  decision: Poster
+  file: 61.pdf
+  id: 61
+  openreview_id: CSzf9v080U
+  pdf_file: 170b35fa23b0a2d9ea1ec2a2c4b5abbb74e11b02.pdf
+  title: 'Infimobius at \#SMM4H-HeaRD 2026: Multi-Seed DeBERTa Ensemble for Flu Vaccination
+    and Testing Status Classification'
+- abstract: 'We present the SuSh system for Subtask 1 of the MultiClinAI shared task
+    at the 11th SMM4H and HeaRD Workshop (ACL 2026), which addresses multilingual
+    clinical named entity recognition (NER) across seven languages. Our system adopts
+    a fully zero-shot approach using GLiNER-biomed-large-v1.0, a span-based NER model
+    pre-trained on biomedical text, requiring no task-specific fine-tuning or labeled
+    data in target languages. We apply a character-level sliding window strategy to
+    handle long clinical documents that exceed the model’s token limit and incorporate
+    a post processing pipeline including threshold optimization via F1-max sweep,
+    entity-specific gazetteer lookup derived from DisTEMIST and SympTEMIST terminology
+    lists, span boundary correction, and negation filtering. Our official submission
+    achieves a Strict F1 of 0.5175, Strict Precision of 0.5536, Strict Recall of 0.4859,
+    and CHR F1 of 0.6130 on the English disease subtask, demonstrating that domain
+    adapted zero-shot biomedical NER models can serve as competitive baselines for
+    multilingual
+
+    026 clinical entity recognition without any task specific training data.'
+
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@cs.iitr.ac.in'
+    first_name: Guddanti
+    google_scholar_id: https://scholar.google.com/citations?hl=en&authuser=2&user=ylOx8VkAAAAJ
+    last_name: Charan
+    middle_name: Venkata Sree
+    name: Guddanti Venkata Sree Charan
+    username: ~Guddanti_Venkata_Sree_Charan1
+  - emails: nama_ss@cs.iitr.ac.in
+    first_name: nama\_ss@cs.iitr.ac.in
+    institution: NA
+    last_name: nama\_ss@cs.iitr.ac.in
+    name: nama\_ss@cs.iitr.ac.in
+    username: nama_ss@cs.iitr.ac.in
+  - dblp_id: https://dblp.org/pid/46/7472.html
+    emails: '****@cs.iitr.ac.in'
+    first_name: Raksha
+    google_scholar_id: https://scholar.google.co.in/citations?user=V9oafzsAAAAJ&hl=en
+    homepage: https://www.iitr.ac.in/~CSE/Raksha_Sharma
+    last_name: Sharma
+    name: Raksha Sharma
+    username: ~Raksha_Sharma1
+  - dblp_id: https://dblp.org/pid/216/7282
+    emails: '****@bodhan.ai'
+    first_name: Rudra
+    google_scholar_id: https://scholar.google.com/citations?user=5bjj_9cAAAAJ&hl=en
+    homepage: http://murthyrudra.github.io
+    institution: IBM India Pvt Ltd
+    last_name: Murthy
+    name: Rudra Murthy
+    orcid: https://orcid.org/0000-0002-6236-1931
+    semantic_scholar_id: https://www.semanticscholar.org/author/V.-Rudra-Murthy/48398543
+    username: ~Rudra_Murthy1
+  decision: Poster
+  file: 64.pdf
+  id: 64
+  openreview_id: vR89hSCdZR
+  pdf_file: 77f3002c3ea751e92d34410fb3d4071ce941acab.pdf
+  title: 'Thunderbolts at \#SMM4H-HeaRD 2026: Detection of Insomnia in Clinical Notes
+    using Transformers'
+- abstract: 'We present Team TIET''s systems for two shared tasks at \#SMM4H-HeaRD
+    2026: Task 5 (detection of patient metadata in SARS-CoV-2 sequencing papers) and
+    Task 1 (multilingual adverse drug event detection across six languages plus an
+    unseen Farsi subset). For Task 5 we explore iterative LLM prompting followed by
+    fine-tuning BiomedBERT-base with weighted cross-entropy loss and probability threshold
+    optimization, achieving F1 = 0.760 on the official test set (above the competition
+    mean of 0.729). For Task 1 we fine-tune XLM-RoBERTa-base with a combined language-
+    and class-balanced sampling strategy and per-language threshold tuning, achieving
+    macro F1 = 0.497 overall (0.608 excluding the unseen Farsi subset). We report
+    empirical findings on BERT+LLM ensemble failure with bimodal probability distributions,
+    the superiority of base over large model variants under limited data, and the
+    importance of language-balanced gradient contribution in multilingual classification.'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@thapar.edu'
+    first_name: Divrose
+    last_name: Kaur
+    name: Divrose Kaur
+    username: ~Divrose_Kaur1
+  - emails: '****@thapar.edu'
+    first_name: Jatin
+    homepage: https://scholar.google.com/
+    last_name: Bedi
+    name: Jatin Bedi
+    username: ~Jatin_Bedi1
+  - emails: '****@thapar.edu'
+    first_name: Jasmeet
+    last_name: Singh
+    name: Jasmeet Singh
+    orcid: https://orcid.org/0000-0003-2585-2827
+    username: ~Jasmeet_Singh2
+  decision: Poster
+  file: 65.pdf
+  id: 65
+  openreview_id: 0tu9TvlUHa
+  pdf_file: 275722c4739749ca9ae98435b861158391a6d6df.pdf
+  title: 'Team TIET at \#SMM4H-HeaRD 2026: Fine-tuned Biomedical Transformers with
+    Language-Balanced Sampling for Patient Metadata and Multilingual ADE Detection'
+- abstract: 'This paper presents a hybrid solution for a binary classification of
+    medical PubMed articles created for identifying reports that associate clinical
+    metadata with SARS-CoV-2 genomic sequences. The system is designed to catch the
+    subtle distinction between reports of sequence-associated patient metadata and
+    sentences where such metadata is either unrelated, irellevant, or linked to previous
+    studies. The biggest challenge is the fact that the medical dataset is highly
+    imbalanced, consisting of only 13.3 \% of medical reports labeled positive.
+
+    Our system proposes a hybrid system that combines 4 approaches that includes dual-evidence
+    tagging, negation-aware suppression, semantic frame extraction, adversarial training.
+    All these approaches were tested on multiple models: BiomedBERT-base-abstract,
+    BioLinkBERT-large, PubMedBERT-base-fulltext, followed by a best subset ensamble
+    search to obtain the result of 0.792 F1 score, setting a new benchmark and positioning
+    the solution on the 1st place of the competition.'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@s.unibuc.ro'
+    first_name: Claudia-Alexandra
+    last_name: Ursu
+    name: Claudia-Alexandra Ursu
+    username: ~Claudia-Alexandra_Ursu1
+  - emails: '****@s.unibuc.ro'
+    first_name: Alecsandru-Florin
+    last_name: Soare
+    name: Alecsandru-Florin Soare
+    username: ~Alecsandru-Florin_Soare1
+  decision: WinningSystem
+  file: 67.pdf
+  id: 67
+  openreview_id: vCA5mSr6Qd
+  pdf_file: a535ef3c0b29059844cf794984dbdae2618f2e5a.pdf
+  title: 'MetaMiners at SMM4H-HeaRD 2026: A Semantic-Structural Knowledge-Enriched
+    Ensemble for SARS-CoV-2 Metadata Identification'
+- abstract: "Identifying sentences in COVID-19 literature that report patient metadata\
+    \ is an important step in genomic epidemiology, currently requiring costly manual\
+    \ curation.\n  We compare fine-tuned encoder-only models (BERT, BioLinkBERT) and\
+    \ autoregressive LLMs (Llama, Gemma, GPT-OSS) under prompting and fine-tuning\
+    \ regimes, using Focal Loss and undersampling to address severe class imbalance.\n\
+    \  Encoder-only models substantially outperform autoregressive models: BioLinkBERT-base\
+    \ with Focal Loss achieves macro F1 of 0.76, versus 0.54 for the best fine-tuned\
+    \ autoregressive model."
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@s.unibuc.ro'
+    first_name: Stefanescu
+    last_name: Anastasia
+    name: Stefanescu Anastasia
+    username: ~Stefanescu_Anastasia1
+  decision: Poster
+  file: 68.pdf
+  id: 68
+  openreview_id: RiXuCTTwuv
+  pdf_file: 94e4eea803eba86dce9b710b9935bcf0386b4e05.pdf
+  title: 'No_gmail at \#SMM4H-HeaRD 2026: Detecting Patient Metadata in COVID-19 Scientific
+    Literature: A Comparative Study of Encoder-Only and Autoregressive Language Models'
+- abstract: Computational mental health research has predominantly centered on English-speaking
+    populations, leaving Arabic-language discourse comparatively under-examined. We
+    present an exploratory computational study of 8,147 tweets from 607 users classified
+    by a GPT-4.1 personal-disclosure pipeline as likely lived-experience authors in
+    three condition-specific Arabic-language X (formerly Twitter) Communities. We
+    focus on discourse related to borderline personality disorder (BPD), bipolar disorder,
+    and ADHD, and characterize community-associated linguistic patterns using a multi-domain
+    cultural keyword framework. The results suggest that in this corpus, Bipolar tweets
+    contain more religious and medical vocabulary, BPD tweets contain more relational,
+    identity, and emotional-distress vocabulary, and ADHD tweets more often focus
+    on practical symptoms and medication management. We treat these patterns as hypothesis-generating
+    rather than confirmatory because the corpus is imbalanced across conditions, some
+    subcorpora are temporally concentrated, and the keyword framework is an initial
+    operationalization rather than a validated measurement instrument. The paper contributes
+    a reusable LLM-assisted personal-disclosure pipeline and an exploratory cultural
+    keyword framework for Arabic mental health discourse.
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - dblp_id: https://dblp.org/pid/258/8265
+    emails: '****@gwu.edu'
+    first_name: Amal
+    google_scholar_id: https://scholar.google.com/citations?user=zDLsDooAAAAJ&hl=en&oi=ao
+    institution: George Washington University
+    last_name: Alqahtani
+    middle_name: Abdullah
+    name: Amal Abdullah Alqahtani
+    orcid: https://orcid.org/0000-0002-1739-9025
+    username: ~Amal_Abdullah_Alqahtani1
+  - emails: '****@gwu.edu'
+    first_name: Rana
+    google_scholar_id: https://scholar.google.com/citations?user=dpzk1PIAAAAJ&hl=en&oi=ao
+    last_name: Salama
+    middle_name: Aref
+    name: Rana Aref Salama
+    username: ~Rana_Aref_Salama1
+  - dblp_id: https://dblp.org/pid/15/4305
+    emails: '****@gmail.com'
+    first_name: Mona
+    google_scholar_id: https://scholar.google.com.tw/citations?user=-y6SIhQAAAAJ
+    homepage: https://www.seas.gwu.edu/~mtdiab/
+    institution: Carnegie Mellon University
+    last_name: Diab
+    middle_name: T.
+    name: Mona T. Diab
+    semantic_scholar_id: https://www.semanticscholar.org/author/Mona-T.-Diab/1700007
+    username: ~Mona_T._Diab1
+  decision: WorkshopPaper
+  file: 71.pdf
+  id: 71
+  openreview_id: iH4ySQDha3
+  pdf_file: 016de9efa06b99c873fc8b91a219571433299f2c.pdf
+  title: Understanding the Sociocultural Dimensions of Mental Health Discourse in
+    Arabic X Communities
+- abstract: 'We present Team Paradise’s systems for three tasks in the SMM4H-HeaRD
+    2026 shared task: multilingual adverse drug event detection (Task 1), influenza
+    vaccine effectiveness estimation via two-subtask classification (Task 3), and
+    opioid impact span extraction (Task 7). For Task 1, threshold-only ablation on
+    XLMRoBERTa-large achieves a macro-F1 of 0.597, exceeding the field mean (0.547)
+    by +0.050. For Task 3, a three-stage hybrid pipeline combining twitter-RoBERTa-base-2022
+    with rule-based post-processing achieves Micro-F1 0.8434 (Subtask 1: vaccination
+    status) and 0.8936 (Subtask 2: test results). For Task 7, RoBERTa-large with CRF
+    decoding and sliding-window inference obtains relaxed F1 0.60 despite severe train-test
+    distributional shift Across tasks, we identify class imbalance, temporal ambiguity,
+    and platform heterogeneity as central challenges.'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@gmail.com'
+    first_name: Dhruv
+    homepage: https://dhruvgoyal.tech
+    last_name: Goyal
+    name: Dhruv Goyal
+    username: ~Dhruv_Goyal2
+  - emails: '****@gmail.com'
+    first_name: Ishita
+    last_name: Gupta
+    name: Ishita gupta
+    username: ~Ishita_gupta4
+  - emails: '****@thapar.edu'
+    first_name: Jatin
+    homepage: https://scholar.google.com/
+    last_name: Bedi
+    name: Jatin Bedi
+    username: ~Jatin_Bedi1
+  decision: Poster
+  file: 73.pdf
+  id: 73
+  openreview_id: BkWqDvreLF
+  pdf_file: 7d16b18bc0a4928b49f8338afd4cdef2f0e07310.pdf
+  title: 'Team Paradise at \#SMM4H-HeaRD 2026: Multi-Task Approaches for Social Media
+    Health Mining'
+- abstract: 'We present an overview of the MultiClinAI shared task, which focuses
+    on multilingual clinical entity extraction and automatic corpus generation through
+    annotation projection. It addresses two key challenges in clinical natural language
+    processing (NLP): (i) developing comparable multilingual named entity recognition
+    (NER) systems and (ii) automatically constructing multilingual clinical corpora
+    through annotation projection. The MultiClinAI task provides a unified benchmark
+    for evaluating multilingual and cross-lingual clinical NLP approaches that cover
+    diseases, symptoms, and procedures in Spanish, English, Dutch, Italian, Romanian,
+    Swedish, and Czech. A total of 21 teams from 13 countries participated, submitting
+    531 runs across the different subtasks. The top runs obtained very competitive
+    results, close to human expert annotation quality. The results highlight both
+    the challenges and opportunities of multilingual clinical information extraction.
+    All resources, including a corpus of over 738,201 manually revised entity mentions
+    across seven languages, are publicly available on Zenodo at: \url{https://zenodo.org/records/19334278}.'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@gmail.com'
+    first_name: Fernando
+    google_scholar_id: https://scholar.google.es/citations?user=apFkY98AAAAJ&hl=es
+    homepage: https://fernandogallegodonoso.es/
+    institution: Barcelona Supercomputing Center
+    last_name: Donoso
+    middle_name: Gallego
+    name: Fernando Gallego Donoso
+    orcid: https://orcid.org/0000-0001-8053-5707
+    username: ~Fernando_Gallego_Donoso1
+  - emails: '****@gmail.com'
+    first_name: Salvador
+    google_scholar_id: https://scholar.google.com/citations?user=oMMi4GQAAAAJ
+    institution: Barcelona Supercomputing Center
+    last_name: Lima-Lopez
+    name: Salvador Lima-Lopez
+    orcid: https://orcid.org/0000-0002-7384-1877
+    username: ~Salvador_Lima-Lopez1
+  - emails: judithrosell475@gmail.com
+    first_name: Judith
+    institution: NA
+    last_name: Rosell
+    name: Judith Rosell
+    username: judithrosell475@gmail.com
+  - emails: eulaliafarremaduell@gmail.com
+    first_name: Eulàlia
+    institution: NA
+    last_name: Farré-Maduel
+    name: Eulàlia Farré-Maduell
+    username: eulaliafarremaduell@gmail.com
+  - emails: '****@gmail.com'
+    first_name: Martin
+    homepage: https://www.bsc.es/krallinger-martin
+    institution: Barcelona Supercomputing Center
+    last_name: Krallinger
+    name: Martin Krallinger
+    username: ~Martin_Krallinger2
+  decision: FlashTalk
+  file: 74.pdf
+  id: 74
+  openreview_id: s5GpZlnS8H
+  pdf_file: 4d08f634e1122785bb6b2bc4da66da5193664771.pdf
+  title: 'The MultiClinAI Shared Task on Multilingual Clinical Corpus Construction
+    and Concept Extraction: Systems, Evaluation, and Datasets'
+- abstract: This paper provides an overview of Task 6 from the Social Media Mining
+    for Health/Health Real-World Data shared task (#SMM4H-HeaRD 2026), which focused
+    on predicting TNM staging from pathology reports from TCGA. Seven teams submitted
+    systems spanning fine-tuned clinical encoders, open-source generative LLMs, and
+    closed-source API models. On a straightforward test set, most teams achieved near-perfect
+    F1 scores (average 0.993, 0.972, and 0.957 for T, N, and M). However, on a harder
+    tiebreak set where explicit TNM notation was removed and staging had to be inferred
+    from clinical descriptions, performance dropped substantially (average 0.725,
+    0.783, and 0.846). Notably, the two teams using large closed-source API models
+    generalized best to the harder set, achieving the highest T and N scores despite
+    not leading on the easy set. These results suggest that while fine-tuned domain-specific
+    encoders excel at surface-level extraction, larger general-purpose LLMs may be
+    more robust when staging must be inferred from contextual clinical findings. All
+    teams surpassed baseline overall performance on both test sets.
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: '****@gmail.com'
+    first_name: Jose
+    google_scholar_id: https://scholar.google.com/citations?user=T7ByJYIAAAAJ&hl=en
+    institution: Cedars Sinai
+    last_name: Cortina
+    middle_name: Miguel Acitores
+    name: Jose Miguel Acitores Cortina
+    orcid: https://orcid.org/0009-0007-0361-9334
+    username: ~Jose_Miguel_Acitores_Cortina1
+  - emails: '****@cshs.org'
+    first_name: Jacob
+    google_scholar_id: https://scholar.google.com/citations?hl=en&authuser=1&user=tTwucBUAAAAJ
+    institution: Cedars-Sinai Medical Center
+    last_name: Berkowitz
+    middle_name: S.
+    name: Jacob S. Berkowitz
+    username: ~Jacob_S._Berkowitz1
+  - emails: '****@cshs.org'
+    first_name: Nadine
+    last_name: Friedrich
+    middle_name: A.
+    name: Nadine A. Friedrich
+    orcid: https://orcid.org/0000-0002-6713-0614
+    semantic_scholar_id: https://www.semanticscholar.org/author/Nadine-Friedrich/2378481379
+    username: ~Nadine_A._Friedrich1
+  - emails: '****@csmc.edu'
+    first_name: Nicholas
+    google_scholar_id: https://scholar.google.com/citations?user=ejoWKqsAAAAJ&hl=en
+    homepage: http://tatonettilab.org
+    last_name: Tatonetti
+    middle_name: P
+    name: Nicholas P Tatonetti
+    orcid: https://orcid.org/0000-0002-2700-2597
+    username: ~Nicholas_P_Tatonetti1
+  decision: FlashTalk
+  file: 75.pdf
+  id: 75
+  openreview_id: DgVMdpf894
+  pdf_file: 708a10f6b60c14c70d9d256d4e02a7bc029c5879.pdf
+  title: 'Overview of \#SMM4H-HeaRD 2026 – Task 6: Predicting TNM staging from pathology
+    reports'
+- abstract: 'We present two systems for the \#SMM4H-HeaRD 2026 Task 2 shared task of
+    automated insomnia detection from clinical notes. Our system addresses both subtasks:
+    (1) binary insomnia classification and (2) multi-label rule prediction with evidence
+    span extraction. For Subtask 1, we employ an ensemble architecture combining Qwen3-4B-Instruct
+    and Bio_ClinicalBERT to capture both general semantic reasoning and domain-specific
+    clinical representations. The framework utilizes chunk-based processing with overlapping
+    token windows to handle long clinical notes efficiently. For Subtask 2, we develop
+    a dual-head multi-task transformer model that jointly predicts insomnia labels
+    and token-level evidence spans using BIO tagging. To improve clinical relevance,
+    we additionally incorporate sentence-level filtering using sentence-transformer
+    embeddings and similarity-based retrieval of insomnia-related contexts. Experimental
+    results suggest competitive performance relative to the shared task mean and median
+    scores across both subtasks. Our best Subtask 1 system achieves a recall of 0.9474,
+    surpassing the shared-task mean and median recall, while our Subtask 2 system
+    exceeds the mean and median scores across label classification, exact match, and
+    partial match metrics. The end-to-end implementation is publicly available on
+    GitHub.'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - dblp_id: https://dblp.org/pid/186/4502.html
+    emails: '****@student.unimelb.edu.au'
+    first_name: Abir
+    google_scholar_id: https://scholar.google.com/citations?user=BGCZX64AAAAJ&hl=en
+    last_name: Naskar
+    name: Abir Naskar
+    orcid: https://orcid.org/0009-0006-3350-6683
+    semantic_scholar_id: https://www.semanticscholar.org/author/Abir-Naskar/3465208
+    username: ~Abir_Naskar1
+  - dblp_id: https://dblp.org/pid/34/7070
+    emails: '****@utah.edu'
+    first_name: Mike
+    last_name: Conway
+    name: Mike Conway
+    username: ~Mike_Conway1
+  decision: Poster
+  file: 76.pdf
+  id: 76
+  openreview_id: hranMLrgtC
+  pdf_file: 43f3209a3784309405694e4af3492ca498a2b431.pdf
+  title: 'NoviceTrio in \#SMM4H-HeaRD 2026: Hybrid Clinical Transformer Ensembles for
+    Insomnia Detection and Evidence Extraction from Clinical Notes'

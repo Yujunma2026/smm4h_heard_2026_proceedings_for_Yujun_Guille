@@ -1,0 +1,195 @@
+- entries:
+    - first_name: Lisa
+      last_name: Raithel
+    - first_name: Guillermo
+      last_name: Lopez-Garcia
+    - first_name: Dongfang
+      last_name: Xu
+    - first_name: Ahmad
+      last_name: Rezaie Mianroodi
+    - first_name: Ari
+      last_name: Klein
+    - first_name: Jacob
+      last_name: Berkowitz
+    - first_name: Jose
+      last_name: Miguel Acitores
+    - first_name: Sumon Kanti
+      last_name: Dey
+    - first_name: Abeed
+      last_name: Sarker
+    - first_name: Salvador
+      last_name: Lima-López
+  role: Program Chairs
+  type: committee
+- entries:
+    - first_name: Juan M
+      last_name: Banda
+    - first_name: Robert
+      last_name: Leaman
+    - first_name: Luis M
+      last_name: Rocha
+    - first_name: Kirk
+      last_name: Roberts
+    - first_name: Raul
+      last_name: Rodriguez-Esteban
+    - first_name: Elena
+      last_name: Tutubalina
+    - first_name: Karin
+      last_name: Verspoor
+    - first_name: Pierre
+      last_name: Zweigenbaum
+  role: Program Committee
+  type: committee
+- entries:
+  - first_name: Radja
+    last_name: Afren
+  - first_name: Rathijit
+    last_name: Aich
+  - first_name: João
+    last_name: Almeida
+  - first_name: Ioan-Tudor-Alexandru
+    last_name: Anghel
+  - first_name: Sophie
+    last_name: Arnoult
+  - first_name: Vasudev
+    last_name: Awatramani
+  - first_name: Parsa
+    last_name: Bagherzadeh
+  - first_name: Juan
+    last_name: Banda
+  - first_name: Shankar
+    last_name: Biradar
+  - first_name: Tiberiu
+    last_name: Boros
+  - first_name: Svetla
+    last_name: Boytcheva
+  - first_name: Diego
+    last_name: Burgos
+  - first_name: Suchandra
+    last_name: Chakraborty
+  - first_name: Donger
+    last_name: Chen
+  - first_name: Ivan
+    last_name: Chernov
+  - first_name: Radu-Gabriel
+    last_name: Chivereanu
+  - first_name: Emilia-Ioana
+    last_name: Cristea
+  - first_name: Gijs
+    last_name: Danoe
+  - first_name: Nirjhar
+    last_name: Das
+  - first_name: Harshal
+    last_name: Dharpure
+  - first_name: Andres
+    last_name: Duque
+  - first_name: Diego
+    last_name: Estuar
+  - first_name: Rubén
+    last_name: Fernández
+  - first_name: Pietro
+    last_name: Ferrazzi
+  - first_name: Dhruv
+    last_name: Goyal
+  - first_name: Ishita
+    last_name: Gupta
+  - first_name: Brian
+    last_name: Habersberger
+  - first_name: Antonio Jesus Tamayo
+    last_name: Herrera
+  - first_name: Yi-Wen
+    last_name: Hsiao
+  - first_name: Sofia
+    last_name: Jamil
+  - first_name: Richard
+    last_name: Jonker A. A.
+  - first_name: Ayush
+    last_name: Kumar
+  - first_name: Shobhan
+    last_name: Kumar
+  - first_name: Alberto
+    last_name: Lavelli
+  - first_name: Robert
+    last_name: Leaman
+  - first_name: Zihan
+    last_name: Liang
+  - first_name: Abhishek
+    last_name: Maity
+  - first_name: Alexandros
+    last_name: Maniatis
+  - first_name: Sérgio
+    last_name: Matos
+  - first_name: Francisco
+    last_name: Moreno-Barea
+  - first_name: Abir
+    last_name: Naskar
+  - first_name: Abdusalam
+    last_name: Nwesri
+  - first_name: Karen
+    last_name: O'Connor
+  - first_name: Bhaarat
+    last_name: Pachori
+  - first_name: Vasile
+    last_name: Pais
+  - first_name: Irina
+    last_name: Patularu
+  - first_name: Rajesh
+    last_name: Piryani
+  - first_name: Aatish
+    last_name: Pradhan
+  - first_name: Supreetha
+    last_name: R
+  - first_name: François
+    last_name: Remy
+  - first_name: Kirk
+    last_name: Roberts
+  - first_name: Luis
+    last_name: Rocha
+  - first_name: Raul
+    last_name: Rodriguez-Esteban
+  - first_name: Thanya
+    last_name: Santhosh
+  - first_name: Yutaka
+    last_name: Sasaki
+  - first_name: Hsuan-Lei
+    last_name: Shao
+  - first_name: Aman
+    last_name: Sinha
+  - first_name: Soubraylu
+    last_name: Sivakumar
+  - first_name: Zafi Sherhan
+    last_name: Syed
+  - first_name: Ramya
+    last_name: Tekumalla
+  - first_name: Doan
+    last_name: Tien
+  - first_name: Nicolas
+    last_name: Turenne
+  - first_name: Elena
+    last_name: Tutubalina
+  - first_name: Evita
+    last_name: Vardhani
+  - first_name: Sylvia
+    last_name: Vassileva
+  - first_name: Francisco
+    last_name: Veredas
+  - first_name: Karin
+    last_name: Verspoor
+  - first_name: Piek
+    last_name: Vossen
+  - first_name: Thìn
+    last_name: Văn
+  - first_name: Deahan
+    last_name: Yu
+  - first_name: Farnaz
+    last_name: Zeidi
+  - first_name: Petr
+    last_name: Zelina
+  - first_name: Huixin
+    last_name: Zhan
+  - first_name: Pierre
+    last_name: Zweigenbaum
+  - first_name: Bram
+    last_name: van Es
+  role: Reviewers
+  type: committee
