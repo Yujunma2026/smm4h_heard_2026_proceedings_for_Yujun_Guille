@@ -1,0 +1,99 @@
+- members:
+  - first_name: Graciela
+    institution: Cedars-Sinai Medical Center, USA
+    last_name: Gonzalez-Hernandez
+  - first_name: Guillermo
+    institution: Stanford Health Care, USA
+    last_name: Lopez-Garcia
+  - first_name: Ari
+    institution: University of Pennsylvania, USA
+    last_name: Klein
+  role: General Chairs
+- members:
+  - first_name: Graciela
+    institution: Cedars-Sinai Medical Center, USA
+    last_name: Gonzalez-Hernandez
+  - first_name: Guillermo
+    institution: Stanford Health Care, USA
+    last_name: Lopez-Garcia
+  - first_name: Dongfang
+    institution: Independent Researcher, Former Research Data Scientist at Cedars-Sinai Medical Center, CA, USA
+    last_name: Xu
+  - first_name: Ivan
+    institution: Cedars-Sinai Medical Center, USA
+    last_name: Flores
+  - first_name: Jose Miguel
+    institution: Cedars-Sinai Medical Center, USA
+    last_name: Acitores
+  - first_name: Jacob
+    institution: Cedars-Sinai Medical Center, USA
+    last_name: Berkowitz
+  - first_name: Nicholas
+    institution: Cedars-Sinai Medical Center, USA
+    last_name: Tatonetti
+  - first_name: Ari Z.
+    institution: University of Pennsylvania, USA
+    last_name: Klein
+  - first_name: Abeed
+    institution: Emory University, USA
+    last_name: Sarker
+  - first_name: Sumon
+    institution: Emory University, USA
+    last_name: Kanti Dey
+  - first_name: Ahmad Rezaie
+    institution: Dalhousie University, Vector Institute, Canada
+    last_name: Mianroodi
+  - first_name: Frank
+    institution: Dalhousie University, Vector Institute, Canada
+    last_name: Rudzicz
+  - first_name: Lisa
+    institution: Technische Universität Berlin, Germany
+    last_name: Raithel
+  - first_name: Roland
+    institution: DFKI, Germany
+    last_name: Roller
+  - first_name: Philippe
+    institution: DFKI, Germany
+    last_name: Thomas
+  - first_name: Farnaz
+    institution: Paul Ehrlich Institute, Germany
+    last_name: Zeidi
+  - first_name: Yu
+    institution: Hong Kong Polytechnic University, Hong Kong
+    last_name: Zhai
+  - first_name: Tomohiro
+    institution: Nara Institute of Science and Technology, Japan
+    last_name: Nishiyama
+  - first_name: Pierre
+    institution: LISN, CNRS, Université Paris-Saclay, France
+    last_name: Zweigenbaum
+  - first_name: Elena
+    institution: AIRI, Kazan Federal University, Russia
+    last_name: Tutbalina
+  - first_name: Salvador
+    institution: Barcelona Supercomputing Center, Spain
+    last_name: Lima-López
+  - first_name: Judith
+    institution: Barcelona Supercomputing Center, Spain
+    last_name: Rosell
+  - first_name: Martin
+    institution: Barcelona Supercomputing Center, Spain
+    last_name: Krallinger
+  role: Shared Task Committee
+- members:
+  - first_name: Graciela
+    institution: Cedars-Sinai Medical Center, USA
+    last_name: Gonzalez-Hernandez
+  - first_name: Guillermo
+    institution: Stanford Health Care, USA
+    last_name: Lopez-Garcia
+  - first_name: Yujun
+    institution: Cedars-Sinai Medical Center, USA
+    last_name: Ma
+  role: Workshop Committee
+- members:
+  - first_name: Guillermo
+    institution: Stanford Health Care, USA
+    last_name: Lopez-Garcia
+  role: Publication Chair
+

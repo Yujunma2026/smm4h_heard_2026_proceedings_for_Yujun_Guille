@@ -1,0 +1,75 @@
+- end_time: 2026-07-03 08:45:00
+  start_time: 2026-07-03 08:30:00
+  title: 'Workshop Introduction -- Graciela Gonzalez-Hernandez'
+- end_time: 2026-07-03 09:20:00
+  start_time: 2026-07-03 08:45:00
+  title: 'Task 8 - MultiClinAI: Multilingual Clinical Entity Annotation Projection
+    and Extraction'
+  papers:
+  - id: 18
+  - id: 41
+- end_time: 2026-07-03 09:45:00
+  start_time: 2026-07-03 09:20:00
+  title: 'Task 1 - Detection of Adverse Drug Events in Multilingual and Multi-platform
+    Social Media Posts'
+  papers:
+  - id: 19
+- end_time: 2026-07-03 10:00:00
+  start_time: 2026-07-03 09:45:00
+  title: 'Workshop Paper'
+  papers:
+  - id: 71
+- end_time: 2026-07-03 10:25:00
+  start_time: 2026-07-03 10:00:00
+  title: 'Task 4 - Generation of Realistic Structured Medical Notes from Dialogues'
+  papers:
+  - id: 27
+- end_time: 2026-07-03 11:00:00
+  start_time: 2026-07-03 10:25:00
+  title: Coffee Break
+- end_time: 2026-07-03 11:25:00
+  start_time: 2026-07-03 11:00:00
+  title: 'Task 5 - Detection of Patient Metadata in SARSCoV-2 Sequencing Articles'
+  papers:
+  - id: 67
+- end_time: 2026-07-03 12:15:00
+  start_time: 2026-07-03 11:25:00
+  title: 'Keynote Speaker 1 -- Wendy Chapman'
+- end_time: 2026-07-03 13:15:00
+  start_time: 2026-07-03 12:15:00
+  title: Lunch Break
+- end_time: 2026-07-03 13:40:00
+  start_time: 2026-07-03 13:15:00
+  title: 'Task 6 - Predicting TNM Staging from TCGA Pathology Reports'
+  papers:
+  - id: 32
+- end_time: 2026-07-03 13:55:00
+  start_time: 2026-07-03 13:40:00
+  title: 'Task 3 - Estimating Flu Vaccine Effectiveness from Social Media Posts'
+  papers:
+  - id: 59
+- end_time: 2026-07-03 14:40:00
+  start_time: 2026-07-03 13:55:00
+  title: 'Keynote Speaker 2 -- Brian Chapman'
+- end_time: 2026-07-03 15:40:00
+  start_time: 2026-07-03 14:40:00
+  title: Poster Presentation Session
+- end_time: 2026-07-03 15:55:00
+  start_time: 2026-07-03 15:40:00
+  title: 'Workshop Paper'
+  papers:
+  - id: 26
+- end_time: 2026-07-03 16:20:00
+  start_time: 2026-07-03 15:55:00
+  title: 'Task 7 - Extraction of Social and Clinical Impacts of Substance Use from
+    Social Media Posts'
+  papers:
+  - id: 15
+- end_time: 2026-07-03 16:45:00
+  start_time: 2026-07-03 16:20:00
+  title: 'Task 2 - Detection of Insomnia in Clinical Notes'
+  papers:
+  - id: 46
+- end_time: 2026-07-03 17:00:00
+  start_time: 2026-07-03 16:45:00
+  title: 'Conclusion and Closing Remarks -- Graciela Gonzalez-Hernandez'
