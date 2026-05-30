@@ -1,0 +1,1277 @@
+\documentclass[11pt,oneside]{book}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage[a4paper,top=2cm,bottom=3cm,left=2cm,right=2cm,marginparwidth=1.75cm]{geometry}
+\usepackage{hyperref}
+\usepackage{eurosym}
+
+
+%\usepackage[T1]{fontenc}
+% For Vietnamese characters
+\usepackage[T5]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage{multicol}
+\usepackage{pdfpages}
+\usepackage{pax}
+\usepackage{times}
+\usepackage[english,latin]{babel}
+
+\hypersetup{
+    colorlinks,
+    linktoc=all,
+    linkcolor=red,
+    pdftitle={Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}
+}
+\setlength{\paperwidth}{21cm}    % A4
+\setlength{\paperheight}{29.7cm} % A4
+\special{papersize=21cm, 29.7cm}
+\pdfpageheight\paperheight
+\pdfpagewidth\paperwidth
+\setlength\topmargin{-5mm} \setlength\oddsidemargin{-0cm}
+\setlength\textheight{24.7cm} \setlength\textwidth{16cm}
+\setlength\columnsep{0.6cm}  \newlength\titlebox \setlength\titlebox{2.00in}
+\setlength\headheight{5pt}   \setlength\headsep{0pt}
+\setlength\footskip{1.0cm}
+\setlength\parindent{0pt}
+
+\pagestyle{plain}
+\pagenumbering{roman}
+
+\date{}
+\title{ACL Anthology}
+
+% General use macros
+
+\begin{document}
+
+%%%%%%%%%
+% Cover %
+%%%%%%%%%
+\begin{titlepage}
+  \phantomsection
+  \addcontentsline{toc}{section}{Title page}
+  \begin{center}
+    \vspace{1.5cm}
+
+    {\LARGE SMM4H 2026}
+
+    \vspace*{65mm}
+
+    {\bf\LARGE The 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}
+
+    \vspace*{5cm}
+
+    {\bf\LARGE Proceedings of the Workshop}
+
+    \vfill
+
+    {\LARGE July 3, 2026}
+  \end{center}
+\end{titlepage}
+\newpage
+
+%%%%%%%%%%%%
+% Sponsors %
+%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%
+% Copyright %
+%%%%%%%%%%%%%
+\phantomsection
+\addcontentsline{toc}{section}{Copyright}
+\vspace*{11cm}
+{\large
+
+\noindent
+\textcopyright 2026 Association for Computational Linguistics\\
+
+\vspace*{2cm}
+\noindent
+Order copies of this and other ACL proceedings from:
+
+\vspace*{1cm}
+\begin{tabular}{p{1.5cm}l}
+& Association for Computational Linguistics (ACL)\\
+& 317 Sidney Baker St. S \\
+& Suite 400 - 134\\
+& Kerrville, TX 78028\\
+& USA\\
+& Tel: +1-855-225-1962\\
+&{\tt acl@aclweb.org}\\
+\end{tabular}
+
+\vspace*{1cm}
+ISBN 979-8-89176-432-3
+}
+\newpage
+
+
+%%%%%%%%%%%%
+% Prefaces %
+%%%%%%%%%%%%
+  \phantomsection
+  \addcontentsline{toc}{section}{Preface}
+  \begin{center}
+   { \Large \textbf{Preface}}
+  \end{center}
+  \vspace*{0.5cm}
+  Welcome to the 11th Social Media Mining for Health Research and Applications and Health Real-World Data (\#SMM4H-HeaRD) Workshop and Shared Tasks, co-located with the 64th Annual Meeting of the Association for Computational Linguistics (ACL 2026). This year, \#SMM4H-HeaRD 2026 will be held online, continuing our tradition of connecting data mining researchers who focus on leveraging social media and real-world health data for health informatics.
+
+\par\vspace{1em}
+This year's edition emphasizes privacy-preserving data sharing and real-world evaluation, particularly in the context of health-related text from sources such as social media, electronic health records, and biomedical literature. In alignment with the ACL 2026 Theme Track on the Explainability of NLP Models, we also invited work that improves the transparency, interpretability, and trustworthiness of models applied in high-stakes clinical and public health contexts.
+
+\par\vspace{1em}
+For \#SMM4H-HeaRD 2026, we organized eight shared tasks spanning diverse domains and data modalities, including detection of adverse drug events in multilingual social media posts, detection of insomnia in clinical notes, estimating flu vaccine effectiveness from social media, generation of structured medical notes from dialogues, detection of patient metadata in SARS-CoV-2 sequencing articles, predicting TNM staging from pathology reports, extraction of social and clinical impacts of substance use, and multilingual clinical entity annotation projection and extraction. Each submission underwent a rigorous review process by program committee members chosen for their expertise.
+
+\par\vspace{1em}
+We hope you find the workshop papers insightful and inspiring. We extend our gratitude to the program committee, additional reviewers, ACL 2026 organizers, annotators of the shared task data, and everyone who submitted a paper or participated in the shared tasks. \#SMM4H-HeaRD 2026 would not have been possible without their contributions.
+
+\par\vspace{2em}
+\#SMM4H-HeaRD 2026 Workshop Chairs and Shared Task Committee
+
+  \newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% Organizing Committee %
+%%%%%%%%%%%%%%%%%%%%%%%%
+\phantomsection
+\addcontentsline{toc}{section}{Organizing Committee}
+\begin{center}
+{\Large \textbf{Organizing Committee}}
+\end{center}
+\vspace*{1cm}
+\begin{description}
+  \item{\bf General Chairs}\vspace{2mm}\\
+      Graciela Gonzalez-Hernandez, Cedars-Sinai Medical Center, USA\\
+      Guillermo Lopez-Garcia, Stanford Health Care, USA\\
+      Ari Klein, University of Pennsylvania, USA\\
+    \item{\bf Shared Task Committee}\vspace{2mm}\\
+      Graciela Gonzalez-Hernandez, Cedars-Sinai Medical Center, USA\\
+      Guillermo Lopez-Garcia, Stanford Health Care, USA\\
+      Dongfang Xu, Independent Researcher, Former Research Data Scientist at Cedars-Sinai Medical Center, CA, USA\\
+      Ivan Flores, Cedars-Sinai Medical Center, USA\\
+      Jose Miguel Acitores, Cedars-Sinai Medical Center, USA\\
+      Jacob Berkowitz, Cedars-Sinai Medical Center, USA\\
+      Nicholas Tatonetti, Cedars-Sinai Medical Center, USA\\
+      Ari Z. Klein, University of Pennsylvania, USA\\
+      Abeed Sarker, Emory University, USA\\
+      Sumon Kanti Dey, Emory University, USA\\
+      Ahmad Rezaie Mianroodi, Dalhousie University, Vector Institute, Canada\\
+      Frank Rudzicz, Dalhousie University, Vector Institute, Canada\\
+      Lisa Raithel, Technische Universität Berlin, Germany\\
+      Roland Roller, DFKI, Germany\\
+      Philippe Thomas, DFKI, Germany\\
+      Farnaz Zeidi, Paul Ehrlich Institute, Germany\\
+      Yu Zhai, Hong Kong Polytechnic University, Hong Kong\\
+      Tomohiro Nishiyama, Nara Institute of Science and Technology, Japan\\
+      Pierre Zweigenbaum, LISN, CNRS, Université Paris-Saclay, France\\
+      Elena Tutbalina, AIRI, Kazan Federal University, Russia\\
+      Salvador Lima-López, Barcelona Supercomputing Center, Spain\\
+      Judith Rosell, Barcelona Supercomputing Center, Spain\\
+      Martin Krallinger, Barcelona Supercomputing Center, Spain\\
+    \item{\bf Workshop Committee}\vspace{2mm}\\
+      Graciela Gonzalez-Hernandez, Cedars-Sinai Medical Center, USA\\
+      Guillermo Lopez-Garcia, Stanford Health Care, USA\\
+      Yujun Ma, Cedars-Sinai Medical Center, USA\\
+    \item{\bf Publication Chair}\vspace{2mm}\\
+      Guillermo Lopez-Garcia, Stanford Health Care, USA\\
+  \end{description}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%
+% Program Committee %
+%%%%%%%%%%%%%%%%%%%%%
+\phantomsection
+\addcontentsline{toc}{section}{Program Committee}
+\begin{center}
+\Large \textbf{Program Committee}
+\end{center}
+\vspace*{1cm}
+\begin{description}
+  \item{\bf Program Chairs}\vspace{2mm}\\
+            Lisa Raithel\\
+          Guillermo Lopez-Garcia\\
+          Dongfang Xu\\
+          Ahmad Rezaie Mianroodi\\
+          Ari Klein\\
+          Jacob Berkowitz\\
+          Jose Miguel Acitores\\
+          Sumon Kanti Dey\\
+          Abeed Sarker\\
+          Salvador Lima-López\\
+      
+  \item{\bf Program Committee}\vspace{2mm}\\
+            Juan M Banda\\
+          Robert Leaman\\
+          Luis M Rocha\\
+          Kirk Roberts\\
+          Raul Rodriguez-Esteban\\
+          Elena Tutubalina\\
+          Karin Verspoor\\
+          Pierre Zweigenbaum\\
+      
+  \item{\bf Reviewers}\vspace{2mm}\\
+            Radja Afren\\
+          Rathijit Aich\\
+          João Almeida\\
+          Ioan-Tudor-Alexandru Anghel\\
+          Sophie Arnoult\\
+          Vasudev Awatramani\\
+          Parsa Bagherzadeh\\
+          Juan Banda\\
+          Shankar Biradar\\
+          Tiberiu Boros\\
+          Svetla Boytcheva\\
+          Diego Burgos\\
+          Suchandra Chakraborty\\
+          Donger Chen\\
+          Ivan Chernov\\
+          Radu-Gabriel Chivereanu\\
+          Emilia-Ioana Cristea\\
+          Gijs Danoe\\
+          Nirjhar Das\\
+          Harshal Dharpure\\
+          Andres Duque\\
+          Diego Estuar\\
+          Rubén Fernández\\
+          Pietro Ferrazzi\\
+          Dhruv Goyal\\
+          Ishita Gupta\\
+          Brian Habersberger\\
+          Antonio Jesus Tamayo Herrera\\
+          Yi-Wen Hsiao\\
+          Sofia Jamil\\
+          Richard Jonker A. A.\\
+          Ayush Kumar\\
+          Shobhan Kumar\\
+          Alberto Lavelli\\
+          Robert Leaman\\
+          Zihan Liang\\
+          Abhishek Maity\\
+          Alexandros Maniatis\\
+          Sérgio Matos\\
+          Francisco Moreno-Barea\\
+          Abir Naskar\\
+          Abdusalam Nwesri\\
+          Karen O'Connor\\
+          Bhaarat Pachori\\
+          Vasile Pais\\
+          Irina Patularu\\
+          Rajesh Piryani\\
+          Aatish Pradhan\\
+          Supreetha R\\
+          François Remy\\
+          Kirk Roberts\\
+          Luis Rocha\\
+          Raul Rodriguez-Esteban\\
+          Thanya Santhosh\\
+          Yutaka Sasaki\\
+          Hsuan-Lei Shao\\
+          Aman Sinha\\
+          Soubraylu Sivakumar\\
+          Zafi Sherhan Syed\\
+          Ramya Tekumalla\\
+          Doan Tien\\
+          Nicolas Turenne\\
+          Elena Tutubalina\\
+          Evita Vardhani\\
+          Sylvia Vassileva\\
+          Francisco Veredas\\
+          Karin Verspoor\\
+          Piek Vossen\\
+          Thìn Văn\\
+          Deahan Yu\\
+          Farnaz Zeidi\\
+          Petr Zelina\\
+          Huixin Zhan\\
+          Pierre Zweigenbaum\\
+          Bram van Es\\
+      
+\end{description}
+\newpage
+
+%%%%%%%%%%%%%%%%%
+% Invited Talks %
+%%%%%%%%%%%%%%%%%
+  \phantomsection
+  \addcontentsline{toc}{section}{Keynote Talk: Invited 1}
+  \begin{center}
+          {\Large \textbf{Keynote Talk}\\}
+      {\LARGE \textbf{Invited 1}\\}
+        \vspace*{0.5cm}
+    %\begin{minipage}[c][0.35\linewidth][c]{0.35\linewidth}
+     % \end{minipage}\\
+    \textbf{Jhon Doe}\\
+        University of California\\
+        
+        
+        \textbf{2020-07-01 18:30:00} -- 
+                Room: \textbf{Room 1}\\
+        
+  \end{center}
+
+  \vspace*{0.2cm}
+    \textbf{Abstract:} The open exchange of ideas, the freedom of thought and expression, and respectful scientific debate are central to the aims and goals of a ACL conference. These require a community and an environment that recognizes the inherent worth of every person and group, that fosters dignity, understanding, and mutual respect, and that embraces diversity. For these reasons, ACL is dedicated to providing a harassment-free experience for participants at our events and in our programs.
+Harassment and hostile behavior are unwelcome at any ACL conference. This includes: speech or be- havior (including in public presentations and on-line discourse) that intimidates, creates discomfort, or interferes with a person’s participation or opportunity for participation in the conference. We aim for ACL conferences to be an environment where harassment in any form does not happen, including but not lim- ited to: harassment based on race, gender, religion, age, color, national origin, ancestry, disability, sexual orientation, or gender identity. Harassment includes degrading verbal comments, deliberate intimidation, stalking, harassing photography or recording, inappropriate physical contact, and unwelcome sexual at- tention.
+It is the responsibility of the community as a whole to promote an inclusive and positive environment for our scholarly activities. In addition, any participant who experiences harassment or hostile behavior may contact any current member of the ACL Board or contact Priscilla Rasmussen, who is usually available at the registration desk of the conference. Please be assured that if you approach us, your concerns will be kept in strict confidence, and we will consult with you on any actions taken.
+The ACL board members are listed at:
+https://www.aclweb.org/portal/about
+The full policy and its implementation is defined at:
+https://www.aclweb.org/adminwiki/index.php?title=Anti\-Harassment\_Policy\\
+  \newline
+  
+    \textbf{Bio:} The open exchange of ideas, the freedom of thought and expression, and respectful scientific debate are central to the aims and goals of a ACL conference. These require a community and an environment that recognizes the inherent worth of every person and group, that fosters dignity, understanding, and mutual respect, and that embraces diversity. For these reasons, ACL is dedicated to providing a harassment-free experience for participants at our events and in our programs.
+Harassment and hostile behavior are unwelcome at any ACL conference. This includes: speech or be- havior (including in public presentations and on-line discourse) that intimidates, creates discomfort, or interferes with a person’s participation or opportunity for participation in the conference. We aim for ACL conferences to be an environment where harassment in any form does not happen, including but not lim- ited to: harassment based on race, gender, religion, age, color, national origin, ancestry, disability, sexual orientation, or gender identity. Harassment includes degrading verbal comments, deliberate intimidation, stalking, harassing photography or recording, inappropriate physical contact, and unwelcome sexual at- tention.
+It is the responsibility of the community as a whole to promote an inclusive and positive environment for our scholarly activities. In addition, any participant who experiences harassment or hostile behavior may contact any current member of the ACL Board or contact Priscilla Rasmussen, who is usually available at the registration desk of the conference. Please be assured that if you approach us, your concerns will be kept in strict confidence, and we will consult with you on any actions taken.
+The ACL board members are listed at:
+https://www.aclweb.org/portal/about
+The full policy and its implementation is defined at:
+https://www.aclweb.org/adminwiki/index.php?title=Anti\-Harassment\_Policy
+  \newpage
+    \phantomsection
+  \addcontentsline{toc}{section}{Keynote Talk: Invited 2}
+  \begin{center}
+          {\Large \textbf{Keynote Talk}\\}
+      {\LARGE \textbf{Invited 2}\\}
+        \vspace*{0.5cm}
+    %\begin{minipage}[c][0.35\linewidth][c]{0.35\linewidth}
+     % \end{minipage}\\
+    \textbf{Jennifer Doe}\\
+        University of New York\\
+        
+        
+        \textbf{2020-07-02 18:30:00} -- 
+                Room: \textbf{Room 2}\\
+        
+  \end{center}
+
+  \vspace*{0.2cm}
+    \textbf{Abstract:} The open exchange of ideas, the freedom of thought and expression, and respectful scientific debate are central to the aims and goals of a ACL conference. These require a community and an environment that recognizes the inherent worth of every person and group, that fosters dignity, understanding, and mutual respect, and that embraces diversity. For these reasons, ACL is dedicated to providing a harassment-free experience for participants at our events and in our programs.
+Harassment and hostile behavior are unwelcome at any ACL conference. This includes: speech or be- havior (including in public presentations and on-line discourse) that intimidates, creates discomfort, or interferes with a person’s participation or opportunity for participation in the conference. We aim for ACL conferences to be an environment where harassment in any form does not happen, including but not lim- ited to: harassment based on race, gender, religion, age, color, national origin, ancestry, disability, sexual orientation, or gender identity. Harassment includes degrading verbal comments, deliberate intimidation, stalking, harassing photography or recording, inappropriate physical contact, and unwelcome sexual at- tention.
+It is the responsibility of the community as a whole to promote an inclusive and positive environment for our scholarly activities. In addition, any participant who experiences harassment or hostile behavior may contact any current member of the ACL Board or contact Priscilla Rasmussen, who is usually available at the registration desk of the conference. Please be assured that if you approach us, your concerns will be kept in strict confidence, and we will consult with you on any actions taken.
+The ACL board members are listed at:
+https://www.aclweb.org/portal/about
+The full policy and its implementation is defined at:
+https://www.aclweb.org/adminwiki/index.php?title=Anti\-Harassment\_Policy\\
+  \newline
+  
+    \textbf{Bio:} The open exchange of ideas, the freedom of thought and expression, and respectful scientific debate are central to the aims and goals of a ACL conference. These require a community and an environment that recognizes the inherent worth of every person and group, that fosters dignity, understanding, and mutual respect, and that embraces diversity. For these reasons, ACL is dedicated to providing a harassment-free experience for participants at our events and in our programs.
+Harassment and hostile behavior are unwelcome at any ACL conference. This includes: speech or be- havior (including in public presentations and on-line discourse) that intimidates, creates discomfort, or interferes with a person’s participation or opportunity for participation in the conference. We aim for ACL conferences to be an environment where harassment in any form does not happen, including but not lim- ited to: harassment based on race, gender, religion, age, color, national origin, ancestry, disability, sexual orientation, or gender identity. Harassment includes degrading verbal comments, deliberate intimidation, stalking, harassing photography or recording, inappropriate physical contact, and unwelcome sexual at- tention.
+It is the responsibility of the community as a whole to promote an inclusive and positive environment for our scholarly activities. In addition, any participant who experiences harassment or hostile behavior may contact any current member of the ACL Board or contact Priscilla Rasmussen, who is usually available at the registration desk of the conference. Please be assured that if you approach us, your concerns will be kept in strict confidence, and we will consult with you on any actions taken.
+The ACL board members are listed at:
+https://www.aclweb.org/portal/about
+The full policy and its implementation is defined at:
+https://www.aclweb.org/adminwiki/index.php?title=Anti\-Harassment\_Policy
+  \newpage
+  
+
+%%%%%%%%%%%%%%%%%
+% Panels %
+%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%
+% Special Additional Pages %
+%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%
+% Table of Contents %
+%%%%%%%%%%%%%%%%%%%%%
+\phantomsection
+\addcontentsline{toc}{section}{Table of Contents}
+\newpage  % Empty page before TOC
+\pagestyle{plain}
+\begin{center}
+{\Large \textbf{Table of Contents}}
+\end{center}
+\vspace*{1em}
+\newcommand\page[1]{\rightskip=25pt \dotfill\rlap{\hbox to 25pt{\hfill#1}}\par}
+\begin{itemize}[leftmargin=*,label={}]
+       \item \hyperlink{page.1}{\emph{A3S@C-DAC at \#SMM4H-HeaRD 2026: Reasoning Meets Evidence: LLMs for Interpretable Insomnia Detection with Evidence Extraction in Clinical Notes}}\\ \hspace*{2em} Abhishek Maity\index{Maity}, Amol Shinde\index{Shinde}, Abhishek Suresh Kushare\index{Kushare} and Swapnil Pawar\index{Pawar}\dotfill \hyperlink{page.1}{1}
+       \item \hyperlink{page.7}{\emph{Gladiators at \#SMM4H–HeaRD 2026: Multi-Seed XLM-RoBERTa Ensemble with Focal Loss and Per-Language Threshold Optimization for Multilingual Adverse Drug Event Detection}}\\ \hspace*{2em} Ankit Kumar Singh\index{Singh}\dotfill \hyperlink{page.7}{7}
+       \item \hyperlink{page.12}{\emph{LSI\_UNED at \#SMM4H–HeaRD 2026: Grid-Based Biomedical Named Entity Recognition Across Languages and Entity Types}}\\ \hspace*{2em} Alicia Ramirez-Arrabe\index{Ramirez-Arrabe}, Juan Martinez-Romo\index{Martinez-Romo} and Andres Duque\index{Duque}\dotfill \hyperlink{page.12}{12}
+       \item \hyperlink{page.18}{\emph{SINAI at \#SMM4H–HeaRD 2026: Multilingual Clinical NER with MrBERT-biomed and Optuna Hyperparameter Optimization}}\\ \hspace*{2em} Lucas Molino Piñar\index{Piñar}, Manuel Carlos Diaz-Galiano\index{Diaz-Galiano} and María-Teresa Martín-Valdivia\index{Martín-Valdivia}\dotfill \hyperlink{page.18}{18}
+       \item \hyperlink{page.23}{\emph{Prestige at \#SMM4H-HeaRD 2026: Binary Insomnia Classification from Clinical Notes Using LLMs with Chain-of-Thought Reasoning}}\\ \hspace*{2em} Oyindolapo O. Komolafe\index{Komolafe}\dotfill \hyperlink{page.23}{23}
+       \item \hyperlink{page.28}{\emph{Team Gazoo! at \#SMM4H-HeaRD 2026: Zero-Training NER via Iterative LLM Prompt Self-Optimization for Opioid Impact Span Detection}}\\ \hspace*{2em} Diego Estuar\index{Estuar}\dotfill \hyperlink{page.28}{28}
+       \item \hyperlink{page.36}{\emph{DNT at \#SMM4H–HeaRD 2026: Leveraging BERT-based Encoders and LLMs for Medical Information Extraction}}\\ \hspace*{2em} Doan Nhat Tien\index{Tien} and Thìn Đặng Văn\index{Văn}\dotfill \hyperlink{page.36}{36}
+       \item \hyperlink{page.41}{\emph{BIT.UA at \#SMM4H–HeaRD 2026: Towards Multi-Class Multilingual Clinical Entity Recognition with Multi-Head CRF Ensembles}}\\ \hspace*{2em} Richard A. A. Jonker\index{Jonker} and Sérgio Matos\index{Matos}\dotfill \hyperlink{page.41}{41}
+       \item \hyperlink{page.49}{\emph{Bhramastra at \#SMM4H-HeaRD 2026: A Multi-Stage Hunter-Judge Pipeline using DSPy-Optimized LLMs for Multilingual ADE Detection}}\\ \hspace*{2em} Bhaarat Pachori\index{Pachori}\dotfill \hyperlink{page.49}{49}
+       \item \hyperlink{page.56}{\emph{LLATMU at \#SMM4H-HeaRD 2026: Clinical Text Structuring with QLoRA-based Generation and Partial-Label TNM Classification}}\\ \hspace*{2em} Eric Hsiao\index{Hsiao}, Min-Hsuan Ku\index{Ku} and Hsuan-Lei Shao\index{Shao}\dotfill \hyperlink{page.56}{56}
+       \item \hyperlink{page.61}{\emph{Patient2Paper at \#SMM4H-HeaRD 2026: Retrieval-Augmented Few-Shot Generation for Clinical Note Synthesis}}\\ \hspace*{2em} Ioan-Tudor-Alexandru Anghel\index{Anghel}, Timotei Andrei\index{Andrei}, Comârdici Marian Bogdan\index{Bogdan} and Carina Sâicu\index{Sâicu}\dotfill \hyperlink{page.61}{61}
+       \item \hyperlink{page.67}{\emph{In2Lab-TNT at \#SMM4H-HeaRD 2026: An Application of QTT's Terminological Entanglement to Leverage Insomnia Detection in Clinical Notes}}\\ \hspace*{2em} Antonio Jesus Tamayo Herrera\index{Herrera}, Giovanny Díaz-Laínes\index{Díaz-Laínes}, Carlos Mario Perez Perez\index{Perez} and Diego A Burgos\index{Burgos}\dotfill \hyperlink{page.67}{67}
+       \item \hyperlink{page.72}{\emph{blue at SMM4H-HeaRD 2026: Class-Weighted Transformer Ensembles with Structured Decoding and Chain-of-Thought Blending across Six Health NLP Shared Tasks}}\\ \hspace*{2em} Krish Sharma\index{Sharma}, Rhea Singhal\index{Singhal} and Jatin Bedi\index{Bedi}\dotfill \hyperlink{page.72}{72}
+       \item \hyperlink{page.82}{\emph{DT4H.nl at \#SMM4H-HeaRD 2026: Multilingual Clinical NER with multilingual and monolingual models}}\\ \hspace*{2em} Bram van Es\index{van Es}\dotfill \hyperlink{page.82}{82}
+       \item \hyperlink{page.88}{\emph{SMMTech at \#SMM4H-HeaRD 2026: Detection of Insomnia in Clinical Notes}}\\ \hspace*{2em} Emilia-Ioana Cristea\index{Cristea}\dotfill \hyperlink{page.88}{88}
+       \item \hyperlink{page.93}{\emph{Beyond Lexical Similarity: Evaluating Faithfulness in LLM-Based Medical Question Reformulation}}\\ \hspace*{2em} Md Rabiul Hasan\index{Hasan}, Aleka Melese Ayalew\index{Ayalew} and Mourad Oussalah\index{Oussalah}\dotfill \hyperlink{page.93}{93}
+       \item \hyperlink{page.103}{\emph{NU\_DeepHealthNLP at \#SMM4H-HeaRD 2026: Entity-Conditioned Generation and a Four-Stage Pipeline for Automated SOAP Note Generation}}\\ \hspace*{2em} Thanya Mysore Santhosh\index{Santhosh} and Deahan Yu\index{Yu}\dotfill \hyperlink{page.103}{103}
+       \item \hyperlink{page.108}{\emph{GoBlueInformatics at \#SMM4H-HeaRD 2026: Long-Context Encoders and Generative Biomedical LLMs for Pathological TNM Stage Prediction}}\\ \hspace*{2em} Shangqing Wei\index{Wei}\dotfill \hyperlink{page.108}{108}
+       \item \hyperlink{page.113}{\emph{Enigma at \#SMM4H–HeaRD 2026: Leveraging Multilingual Pre-trained Models for Clinical Named Entity Recognition}}\\ \hspace*{2em} Sylvia Vassileva\index{Vassileva}, Plamena Ilieva\index{Ilieva}, Teodor Svetoslavov Kostadinov\index{Kostadinov}, Monika Peteva Petkova\index{Petkova}, Daniel Manchevski\index{Manchevski}, Vitosh Doynov\index{Doynov}, Ivan Koychev\index{Koychev} and Svetla Boytcheva\index{Boytcheva}\dotfill \hyperlink{page.113}{113}
+       \item \hyperlink{page.121}{\emph{RACAI at \#SMM4H-HeaRD: Named Entity Recognition for Detecting the Impacts of Drug Abuse in Social Media Posts: Zero-Shot and Fine-Tuning Approaches}}\\ \hspace*{2em} Tiberiu Boros\index{Boros} and Radu-Gabriel Chivereanu\index{Chivereanu}\dotfill \hyperlink{page.121}{121}
+       \item \hyperlink{page.127}{\emph{ICB-UMA at \#SMM4H–HeaRD 2026: Hybrid Clinical Entity Projection for MultiClinAI: Adaptive Candidate Windows, XGBoost, and LLM Refinement}}\\ \hspace*{2em} Alvaro Rey-Blanes\index{Rey-Blanes}, Sara Giménez-Gómez\index{Giménez-Gómez}, Francisco J. Veredas\index{Veredas} and Francisco J. Moreno-Barea\index{Moreno-Barea}\dotfill \hyperlink{page.127}{127}
+       \item \hyperlink{page.133}{\emph{URJC-Team at \#SMM4H-HeaRD 2026: TNM Stage Extraction with a Regex-LLM Workflow}}\\ \hspace*{2em} Natalia Madrueño\index{Madrueño}, Jose Walter Hernández Pérez\index{Pérez}, Rubén R. Fernández\index{Fernández} and Soto Montalvo\index{Montalvo}\dotfill \hyperlink{page.133}{133}
+       \item \hyperlink{page.139}{\emph{LotusOrchid at \#SMM4H–HeaRD 2026: Fitting pretrained encoders for Dutch medical data}}\\ \hspace*{2em} Sophie Arnoult\index{Arnoult}, Shutao Chen\index{Chen} and Piek Vossen\index{Vossen}\dotfill \hyperlink{page.139}{139}
+       \item \hyperlink{page.146}{\emph{PEI at \#SMM4H-HeaRD 2026: Enhancing Patient Metadata Detection via Hypothesis-Conditioned Classification and Paraphrase-Based Data Augmentation}}\\ \hspace*{2em} Farnaz Zeidi\index{Zeidi}, Roman Christof\index{Christof}, Farnoush Zeidi\index{Zeidi}, Renate König\index{König} and Liam Childs\index{Childs}\dotfill \hyperlink{page.146}{146}
+       \item \hyperlink{page.154}{\emph{Dr-BERT-NL at \#SMM4H–HeaRD 2026: DOKTERBERT – Ontology-Grounded Contextual Representations for Dutch Clinical NLP}}\\ \hspace*{2em} Gijs Danoe\index{Danoe}, Andreas Voss\index{Voss}, Axel Hamprecht\index{Hamprecht} and Matthijs S. Berends\index{Berends}\dotfill \hyperlink{page.154}{154}
+       \item \hyperlink{page.160}{\emph{Vasudev Awatramani at \#SMM4H-HeaRD 2026: A Two-Pass LLM Pipeline with Deterministic Rule Derivation for Interpretable Insomnia Detection in Clinical Notes}}\\ \hspace*{2em} Vasudev Awatramani\index{Awatramani}\dotfill \hyperlink{page.160}{160}
+       \item \hyperlink{page.165}{\emph{Parallia at \#SMM4H-HeaRD 2026: ClinicalAligner26AM: A Cross-Lingual Aligner for Dataset Translation; Evidences from the MultiClinCorpus Shared Task}}\\ \hspace*{2em} François Remy\index{Remy}\dotfill \hyperlink{page.165}{165}
+       \item \hyperlink{page.173}{\emph{Discovery@FI at \#SMM4H–HeaRD 2026: Ensemble Character Classifier for Multilingual Clinical NER}}\\ \hspace*{2em} Petr Zelina\index{Zelina} and Vit Novacek\index{Novacek}\dotfill \hyperlink{page.173}{173}
+       \item \hyperlink{page.177}{\emph{IITPatna\_ADE at \#SMM4H-HeaRD 2026: Multilingual Adverse Drug Event Detection with LoRA-XLM-RoBERTa, Cross-Fold Ensembles, and Post-hoc Calibration}}\\ \hspace*{2em} Sofia Jamil\index{Jamil}, Manish Singh\index{Singh}, Harshal Dharpure\index{Dharpure}, Sriparna Saha\index{Saha} and Rajiv Misra\index{Misra}\dotfill \hyperlink{page.177}{177}
+       \item \hyperlink{page.182}{\emph{CUET\_DiagNLP at \#SMM4H-HeaRD 2026: Per-Axis TNM Staging from Pathology Reports and Opioid Impact Span Detection from Social Media}}\\ \hspace*{2em} Shuva Dey\index{Dey}, Priyangshu Barua\index{Barua} and Mohammad Ashfak Habib\index{Habib}\dotfill \hyperlink{page.182}{182}
+       \item \hyperlink{page.187}{\emph{MedMind AI at \#SMM4H-HeaRD 2026: Data Extraction and Generation Using Prompt Engineering and Structured Outputs (Tasks 1–6)}}\\ \hspace*{2em} Aatish Pradhan\index{Pradhan} and Brian M. Habersberger\index{Habersberger}\dotfill \hyperlink{page.187}{187}
+       \item \hyperlink{page.206}{\emph{CaresAI at SMM4H-HeaRD 2026: Predicting TNM Staging}}\\ \hspace*{2em} Joseph Itopa Abubakar\index{Abubakar}, Jorge Jarme\index{Jarme}, Favour Igwezeke\index{Igwezeke} and Mary Adewunmi\index{Adewunmi}\dotfill \hyperlink{page.206}{206}
+       \item \hyperlink{page.211}{\emph{Vinland\_Vector at \#SMM4H-HeaRD 2026: Multilingual ADE Detection and Query-Augmented Clinical NER for English}}\\ \hspace*{2em} Nirjhar Das\index{Das}, Rathijit Aich\index{Aich} and Mahfuzulhoq Chowdhury\index{Chowdhury}\dotfill \hyperlink{page.211}{211}
+       \item \hyperlink{page.216}{\emph{SIEMENS at \#SMM4H–HeaRD 2026: The Impact of Training Strategy and Backbone Selection on BERT-based Multilingual Clinical NER}}\\ \hspace*{2em} Manuela Daniela Danu\index{Danu}\dotfill \hyperlink{page.216}{216}
+       \item \hyperlink{page.222}{\emph{HALELab-NITK at \#SMM4H-HeaRD2026: Inclusion of Feature Engineering for Detection of Patient Metadata in SARS-CoV2 Sequencing Articles}}\\ \hspace*{2em} Aakarsh Bansal\index{Bansal}, Abhishek Srinivas\index{Srinivas} and Sowmya Kamath S.\index{S.}\dotfill \hyperlink{page.222}{222}
+       \item \hyperlink{page.225}{\emph{Cuet\_Data\_Wizards at \#SMM4H-HeaRD 2026: Multilingual ADE Detection and Influenza Vaccine Effectiveness Estimation from Social Media}}\\ \hspace*{2em} Abir Dey\index{Dey}, Mohammed Omar Faiaz\index{Faiaz} and Muhammad Ibrahim Khan\index{Khan}\dotfill \hyperlink{page.225}{225}
+       \item \hyperlink{page.230}{\emph{Limics at \#SMM4H-HeaRD 2026: Uncertainty-Driven Prediction for ADE Detection in Social Media}}\\ \hspace*{2em} Nour Allam\index{Allam}\dotfill \hyperlink{page.230}{230}
+       \item \hyperlink{page.237}{\emph{FU-HU-P5 at \#SMM4H-HeaRD 2026: MedSynth Dialogue-to-Note Generation}}\\ \hspace*{2em} Jessica Ying En Wong\index{Wong}\dotfill \hyperlink{page.237}{237}
+       \item \hyperlink{page.240}{\emph{ACSS-PSL at \#SMM4H-HeaRD 2026: An LLM-Driven Autoresearch Loop for Opioid-Impact NER}}\\ \hspace*{2em} Olivier Caron\index{Caron}, Bruno Chaves Ferreira\index{Ferreira} and Christophe Benavent\index{Benavent}\dotfill \hyperlink{page.240}{240}
+       \item \hyperlink{page.246}{\emph{Creative Catalysts at \#SMM4H-HeaRD 2026: XLM-RoBERTa for Task 1 Binary Classification of Social Media Posts Containing Adverse Drug Events}}\\ \hspace*{2em} Radja Afren\index{Afren}, Hichem Rahab\index{Rahab} and Imane Guellil\index{Guellil}\dotfill \hyperlink{page.246}{246}
+       \item \hyperlink{page.252}{\emph{BioNLP at \#SMM4H-HeaRD 2026 Task 3 Estimating Flu Vaccine Effectiveness: A Temporal-Aware Fine-Tuning and Similarity-Based Few-Shot Prompting Approach}}\\ \hspace*{2em} Irina Patularu\index{Patularu}\dotfill \hyperlink{page.252}{252}
+       \item \hyperlink{page.260}{\emph{Infimobius at \#SMM4H-HeaRD 2026: Multi-Seed DeBERTa Ensemble for Flu Vaccination and Testing Status Classification}}\\ \hspace*{2em} Pradyumn Kejriwal\index{Kejriwal}, Suhani Singh Charan\index{Charan}, Raksha Sharma\index{Sharma} and Rudra Murthy\index{Murthy}\dotfill \hyperlink{page.260}{260}
+       \item \hyperlink{page.264}{\emph{Thunderbolts at \#SMM4H-HeaRD 2026: Detection of Insomnia in Clinical Notes using Transformers}}\\ \hspace*{2em} Guddanti Venkata Sree Charan\index{Charan}, nama\_ss@cs.iitr.ac.in nama\_ss@cs.iitr.ac.in\index{nama\_ss@cs.iitr.ac.in}, Raksha Sharma\index{Sharma} and Rudra Murthy\index{Murthy}\dotfill \hyperlink{page.264}{264}
+       \item \hyperlink{page.268}{\emph{Team TIET at \#SMM4H-HeaRD 2026: Fine-tuned Biomedical Transformers with Language-Balanced Sampling for Patient Metadata and Multilingual ADE Detection}}\\ \hspace*{2em} Divrose Kaur\index{Kaur}, Jatin Bedi\index{Bedi} and Jasmeet Singh\index{Singh}\dotfill \hyperlink{page.268}{268}
+       \item \hyperlink{page.272}{\emph{MetaMiners at SMM4H-HeaRD 2026: A Semantic-Structural Knowledge-Enriched Ensemble for SARS-CoV-2 Metadata Identification}}\\ \hspace*{2em} Claudia-Alexandra Ursu\index{Ursu} and Alecsandru-Florin Soare\index{Soare}\dotfill \hyperlink{page.272}{272}
+       \item \hyperlink{page.280}{\emph{No\_gmail at \#SMM4H-HeaRD 2026: Detecting Patient Metadata in COVID-19 Scientific Literature: A Comparative Study of Encoder-Only and Autoregressive Language Models}}\\ \hspace*{2em} Stefanescu Anastasia\index{Anastasia}\dotfill \hyperlink{page.280}{280}
+       \item \hyperlink{page.286}{\emph{Understanding the Sociocultural Dimensions of Mental Health Discourse in Arabic X Communities}}\\ \hspace*{2em} Amal Abdullah Alqahtani\index{Alqahtani}, Rana Aref Salama\index{Salama} and Mona T. Diab\index{Diab}\dotfill \hyperlink{page.286}{286}
+       \item \hyperlink{page.305}{\emph{Team Paradise at \#SMM4H-HeaRD 2026: Multi-Task Approaches for Social Media Health Mining}}\\ \hspace*{2em} Dhruv Goyal\index{Goyal}, Ishita Gupta\index{Gupta} and Jatin Bedi\index{Bedi}\dotfill \hyperlink{page.305}{305}
+       \item \hyperlink{page.309}{\emph{The MultiClinAI Shared Task on Multilingual Clinical Corpus Construction and Concept Extraction: Systems, Evaluation, and Datasets}}\\ \hspace*{2em} Fernando Gallego Donoso\index{Donoso}, Salvador Lima-Lopez\index{Lima-Lopez}, Judith Rosell\index{Rosell}, Eulàlia Farré-Maduel\index{Farré-Maduel} and Martin Krallinger\index{Krallinger}\dotfill \hyperlink{page.309}{309}
+       \item \hyperlink{page.332}{\emph{Overview of \#SMM4H-HeaRD 2026 – Task 6: Predicting TNM staging from pathology reports}}\\ \hspace*{2em} Jose Miguel Acitores Cortina\index{Cortina}, Jacob S. Berkowitz\index{Berkowitz}, Nadine A. Friedrich\index{Friedrich} and Nicholas P Tatonetti\index{Tatonetti}\dotfill \hyperlink{page.332}{332}
+       \item \hyperlink{page.338}{\emph{NoviceTrio in \#SMM4H-HeaRD 2026: Hybrid Clinical Transformer Ensembles for Insomnia Detection and Evidence Extraction from Clinical Notes}}\\ \hspace*{2em} Abir Naskar\index{Naskar} and Mike Conway\index{Conway}\dotfill \hyperlink{page.338}{338}
+  \end{itemize}
+\newpage
+
+%%%%%%%%%%%
+% Program %
+%%%%%%%%%%%
+\phantomsection
+\addcontentsline{toc}{section}{Program}
+\renewcommand{\baselinestretch}{0.87}
+\setlength{\parindent}{0in}
+\setlength{\parskip}{2ex}
+
+\begin{center}
+{\Large \textbf{Program}}
+\end{center}
+\vspace*{0.5em}
+
+        \begin{tabular}{p{24mm}p{124mm}}
+    \multicolumn{2}{l}{\bf Friday, July 3, 2026 } \\\\
+                08:30 - 08:45 & \emph{Workshop Introduction -- Graciela Gonzalez-Hernandez}\\\\
+      
+                      08:45 - 09:20 & \emph{Task 8 - MultiClinAI: Multilingual Clinical Entity Annotation Projection and Extraction}\\\\
+      
+                
+                      & \hyperlink{page.41}{\emph{BIT.UA at \#SMM4H–HeaRD 2026: Towards Multi-Class Multilingual Clinical Entity Recognition with Multi-Head CRF Ensembles}}\\
+        & Richard A. A. Jonker\index{Jonker} and Sérgio Matos\index{Matos}\\\\
+                
+                      & \hyperlink{page.165}{\emph{Parallia at \#SMM4H-HeaRD 2026: ClinicalAligner26AM: A Cross-Lingual Aligner for Dataset Translation; Evidences from the MultiClinCorpus Shared Task}}\\
+        & François Remy\index{Remy}\\\\
+                      09:20 - 09:45 & \emph{Task 1 - Detection of Adverse Drug Events in Multilingual and Multi-platform Social Media Posts}\\\\
+      
+                
+                      & \hyperlink{page.49}{\emph{Bhramastra at \#SMM4H-HeaRD 2026: A Multi-Stage Hunter-Judge Pipeline using DSPy-Optimized LLMs for Multilingual ADE Detection}}\\
+        & Bhaarat Pachori\index{Pachori}\\\\
+                      09:45 - 10:00 & \emph{Workshop Paper}\\\\
+      
+                
+                      & \hyperlink{page.286}{\emph{Understanding the Sociocultural Dimensions of Mental Health Discourse in Arabic X Communities}}\\
+        & Amal Abdullah Alqahtani\index{Alqahtani}, Rana Aref Salama\index{Salama} and Mona T. Diab\index{Diab}\\\\
+                      10:00 - 10:25 & \emph{Task 4 - Generation of Realistic Structured Medical Notes from Dialogues}\\\\
+      
+                
+                      & \hyperlink{page.103}{\emph{NU\_DeepHealthNLP at \#SMM4H-HeaRD 2026: Entity-Conditioned Generation and a Four-Stage Pipeline for Automated SOAP Note Generation}}\\
+        & Thanya Mysore Santhosh\index{Santhosh} and Deahan Yu\index{Yu}\\\\
+                      10:25 - 11:00 & \emph{Coffee Break}\\\\
+      
+                      11:00 - 11:25 & \emph{Task 5 - Detection of Patient Metadata in SARSCoV-2 Sequencing Articles}\\\\
+      
+                
+                      & \hyperlink{page.272}{\emph{MetaMiners at SMM4H-HeaRD 2026: A Semantic-Structural Knowledge-Enriched Ensemble for SARS-CoV-2 Metadata Identification}}\\
+        & Claudia-Alexandra Ursu\index{Ursu} and Alecsandru-Florin Soare\index{Soare}\\\\
+              \end{tabular}
+    \newpage
+          \begin{tabular}{p{24mm}p{124mm}}
+    \multicolumn{2}{l}{\bf Friday, July 3, 2026 (continued)} \\\\
+                11:25 - 12:15 & \emph{Keynote Speaker 1 -- Wendy Chapman}\\\\
+      
+                      12:15 - 13:15 & \emph{Lunch Break}\\\\
+      
+                      13:15 - 13:40 & \emph{Task 6 - Predicting TNM Staging from TCGA Pathology Reports}\\\\
+      
+                
+                      & \hyperlink{page.133}{\emph{URJC-Team at \#SMM4H-HeaRD 2026: TNM Stage Extraction with a Regex-LLM Workflow}}\\
+        & Natalia Madrueño\index{Madrueño}, Jose Walter Hernández Pérez\index{Pérez}, Rubén R. Fernández\index{Fernández} and Soto Montalvo\index{Montalvo}\\\\
+                      13:40 - 13:55 & \emph{Task 3 - Estimating Flu Vaccine Effectiveness from Social Media Posts}\\\\
+      
+                
+                      & \hyperlink{page.252}{\emph{BioNLP at \#SMM4H-HeaRD 2026 Task 3 Estimating Flu Vaccine Effectiveness: A Temporal-Aware Fine-Tuning and Similarity-Based Few-Shot Prompting Approach}}\\
+        & Irina Patularu\index{Patularu}\\\\
+                      13:55 - 14:40 & \emph{Keynote Speaker 2 -- Brian Chapman}\\\\
+      
+                      14:40 - 15:40 & \emph{Poster Presentation Session}\\\\
+      
+                      15:40 - 15:55 & \emph{Workshop Paper}\\\\
+      
+                
+                      & \hyperlink{page.93}{\emph{Beyond Lexical Similarity: Evaluating Faithfulness in LLM-Based Medical Question Reformulation}}\\
+        & Md Rabiul Hasan\index{Hasan}, Aleka Melese Ayalew\index{Ayalew} and Mourad Oussalah\index{Oussalah}\\\\
+                      15:55 - 16:20 & \emph{Task 7 - Extraction of Social and Clinical Impacts of Substance Use from Social Media Posts}\\\\
+      
+                
+                      & \hyperlink{page.28}{\emph{Team Gazoo! at \#SMM4H-HeaRD 2026: Zero-Training NER via Iterative LLM Prompt Self-Optimization for Opioid Impact Span Detection}}\\
+        & Diego Estuar\index{Estuar}\\\\
+                      16:20 - 16:45 & \emph{Task 2 - Detection of Insomnia in Clinical Notes}\\\\
+      
+                
+                      & \hyperlink{page.187}{\emph{MedMind AI at \#SMM4H-HeaRD 2026: Data Extraction and Generation Using Prompt Engineering and Structured Outputs (Tasks 1–6)}}\\
+        & Aatish Pradhan\index{Pradhan} and Brian M. Habersberger\index{Habersberger}\\\\
+              \end{tabular}
+    \newpage
+          \begin{tabular}{p{24mm}p{124mm}}
+    \multicolumn{2}{l}{\bf Friday, July 3, 2026 (continued)} \\\\
+                16:45 - 17:00 & \emph{Conclusion and Closing Remarks -- Graciela Gonzalez-Hernandez}\\\\
+      
+              \end{tabular}
+    \newpage
+      
+  % Flag to generate only front matter or include papers.
+%%%%%%%%%%
+% Papers %
+%%%%%%%%%%
+\pagenumbering{arabic}
+\setcounter{page}{1}
+ \renewcommand{\headrulewidth}{0pt}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 1--6 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{A3S@C-DAC at \#SMM4H-HeaRD 2026: Reasoning Meets Evidence: LLMs for Interpretable Insomnia Detection with Evidence Extraction in Clinical Notes},ref:paper_{3}}]{smm4h2026master/smm4h2026/papers/3.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 7--11 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{Gladiators at \#SMM4H–HeaRD 2026: Multi-Seed XLM-RoBERTa Ensemble with Focal Loss and Per-Language Threshold Optimization for Multilingual Adverse Drug Event Detection},ref:paper_{7}}]{smm4h2026master/smm4h2026/papers/7.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 12--17 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{LSI\_UNED at \#SMM4H–HeaRD 2026: Grid-Based Biomedical Named Entity Recognition Across Languages and Entity Types},ref:paper_{8}}]{smm4h2026master/smm4h2026/papers/8.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 18--22 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{SINAI at \#SMM4H–HeaRD 2026: Multilingual Clinical NER with MrBERT-biomed and Optuna Hyperparameter Optimization},ref:paper_{9}}]{smm4h2026master/smm4h2026/papers/9.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 23--27 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{Prestige at \#SMM4H-HeaRD 2026: Binary Insomnia Classification from Clinical Notes Using LLMs with Chain-of-Thought Reasoning},ref:paper_{10}}]{smm4h2026master/smm4h2026/papers/10.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 28--35 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{Team Gazoo! at \#SMM4H-HeaRD 2026: Zero-Training NER via Iterative LLM Prompt Self-Optimization for Opioid Impact Span Detection},ref:paper_{15}}]{smm4h2026master/smm4h2026/papers/15.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 36--40 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{DNT at \#SMM4H–HeaRD 2026: Leveraging BERT-based Encoders and LLMs for Medical Information Extraction},ref:paper_{16}}]{smm4h2026master/smm4h2026/papers/16.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 41--48 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{BIT.UA at \#SMM4H–HeaRD 2026: Towards Multi-Class Multilingual Clinical Entity Recognition with Multi-Head CRF Ensembles},ref:paper_{18}}]{smm4h2026master/smm4h2026/papers/18.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 49--55 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{Bhramastra at \#SMM4H-HeaRD 2026: A Multi-Stage Hunter-Judge Pipeline using DSPy-Optimized LLMs for Multilingual ADE Detection},ref:paper_{19}}]{smm4h2026master/smm4h2026/papers/19.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 56--60 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{LLATMU at \#SMM4H-HeaRD 2026: Clinical Text Structuring with QLoRA-based Generation and Partial-Label TNM Classification},ref:paper_{20}}]{smm4h2026master/smm4h2026/papers/20.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 61--66 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{Patient2Paper at \#SMM4H-HeaRD 2026: Retrieval-Augmented Few-Shot Generation for Clinical Note Synthesis},ref:paper_{21}}]{smm4h2026master/smm4h2026/papers/21.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 67--71 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{In2Lab-TNT at \#SMM4H-HeaRD 2026: An Application of QTT's Terminological Entanglement to Leverage Insomnia Detection in Clinical Notes},ref:paper_{22}}]{smm4h2026master/smm4h2026/papers/22.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 72--81 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{blue at SMM4H-HeaRD 2026: Class-Weighted Transformer Ensembles with Structured Decoding and Chain-of-Thought Blending across Six Health NLP Shared Tasks},ref:paper_{23}}]{smm4h2026master/smm4h2026/papers/23.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 82--87 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{DT4H.nl at \#SMM4H-HeaRD 2026: Multilingual Clinical NER with multilingual and monolingual models},ref:paper_{24}}]{smm4h2026master/smm4h2026/papers/24.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 88--92 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{SMMTech at \#SMM4H-HeaRD 2026: Detection of Insomnia in Clinical Notes},ref:paper_{25}}]{smm4h2026master/smm4h2026/papers/25.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 93--102 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{Beyond Lexical Similarity: Evaluating Faithfulness in LLM-Based Medical Question Reformulation},ref:paper_{26}}]{smm4h2026master/smm4h2026/papers/26.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 103--107 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{NU\_DeepHealthNLP at \#SMM4H-HeaRD 2026: Entity-Conditioned Generation and a Four-Stage Pipeline for Automated SOAP Note Generation},ref:paper_{27}}]{smm4h2026master/smm4h2026/papers/27.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 108--112 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{GoBlueInformatics at \#SMM4H-HeaRD 2026: Long-Context Encoders and Generative Biomedical LLMs for Pathological TNM Stage Prediction},ref:paper_{28}}]{smm4h2026master/smm4h2026/papers/28.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 113--120 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{Enigma at \#SMM4H–HeaRD 2026: Leveraging Multilingual Pre-trained Models for Clinical Named Entity Recognition},ref:paper_{29}}]{smm4h2026master/smm4h2026/papers/29.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 121--126 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{RACAI at \#SMM4H-HeaRD: Named Entity Recognition for Detecting the Impacts of Drug Abuse in Social Media Posts: Zero-Shot and Fine-Tuning Approaches},ref:paper_{30}}]{smm4h2026master/smm4h2026/papers/30.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 127--132 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{ICB-UMA at \#SMM4H–HeaRD 2026: Hybrid Clinical Entity Projection for MultiClinAI: Adaptive Candidate Windows, XGBoost, and LLM Refinement},ref:paper_{31}}]{smm4h2026master/smm4h2026/papers/31.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 133--138 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{URJC-Team at \#SMM4H-HeaRD 2026: TNM Stage Extraction with a Regex-LLM Workflow},ref:paper_{32}}]{smm4h2026master/smm4h2026/papers/32.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 139--145 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{LotusOrchid at \#SMM4H–HeaRD 2026: Fitting pretrained encoders for Dutch medical data},ref:paper_{34}}]{smm4h2026master/smm4h2026/papers/34.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 146--153 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{PEI at \#SMM4H-HeaRD 2026: Enhancing Patient Metadata Detection via Hypothesis-Conditioned Classification and Paraphrase-Based Data Augmentation},ref:paper_{35}}]{smm4h2026master/smm4h2026/papers/35.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 154--159 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{Dr-BERT-NL at \#SMM4H–HeaRD 2026: DOKTERBERT – Ontology-Grounded Contextual Representations for Dutch Clinical NLP},ref:paper_{37}}]{smm4h2026master/smm4h2026/papers/37.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 160--164 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{Vasudev Awatramani at \#SMM4H-HeaRD 2026: A Two-Pass LLM Pipeline with Deterministic Rule Derivation for Interpretable Insomnia Detection in Clinical Notes},ref:paper_{39}}]{smm4h2026master/smm4h2026/papers/39.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 165--172 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{Parallia at \#SMM4H-HeaRD 2026: ClinicalAligner26AM: A Cross-Lingual Aligner for Dataset Translation; Evidences from the MultiClinCorpus Shared Task},ref:paper_{41}}]{smm4h2026master/smm4h2026/papers/41.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 173--176 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{Discovery@FI at \#SMM4H–HeaRD 2026: Ensemble Character Classifier for Multilingual Clinical NER},ref:paper_{42}}]{smm4h2026master/smm4h2026/papers/42.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 177--181 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{IITPatna\_ADE at \#SMM4H-HeaRD 2026: Multilingual Adverse Drug Event Detection with LoRA-XLM-RoBERTa, Cross-Fold Ensembles, and Post-hoc Calibration},ref:paper_{43}}]{smm4h2026master/smm4h2026/papers/43.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 182--186 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{CUET\_DiagNLP at \#SMM4H-HeaRD 2026: Per-Axis TNM Staging from Pathology Reports and Opioid Impact Span Detection from Social Media},ref:paper_{44}}]{smm4h2026master/smm4h2026/papers/44.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 187--205 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{MedMind AI at \#SMM4H-HeaRD 2026: Data Extraction and Generation Using Prompt Engineering and Structured Outputs (Tasks 1–6)},ref:paper_{46}}]{smm4h2026master/smm4h2026/papers/46.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 206--210 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{CaresAI at SMM4H-HeaRD 2026: Predicting TNM Staging},ref:paper_{47}}]{smm4h2026master/smm4h2026/papers/47.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 211--215 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{Vinland\_Vector at \#SMM4H-HeaRD 2026: Multilingual ADE Detection and Query-Augmented Clinical NER for English},ref:paper_{48}}]{smm4h2026master/smm4h2026/papers/48.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 216--221 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{SIEMENS at \#SMM4H–HeaRD 2026: The Impact of Training Strategy and Backbone Selection on BERT-based Multilingual Clinical NER},ref:paper_{49}}]{smm4h2026master/smm4h2026/papers/49.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 222--224 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{HALELab-NITK at \#SMM4H-HeaRD2026: Inclusion of Feature Engineering for Detection of Patient Metadata in SARS-CoV2 Sequencing Articles},ref:paper_{52}}]{smm4h2026master/smm4h2026/papers/52.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 225--229 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{Cuet\_Data\_Wizards at \#SMM4H-HeaRD 2026: Multilingual ADE Detection and Influenza Vaccine Effectiveness Estimation from Social Media},ref:paper_{53}}]{smm4h2026master/smm4h2026/papers/53.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 230--236 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{Limics at \#SMM4H-HeaRD 2026: Uncertainty-Driven Prediction for ADE Detection in Social Media},ref:paper_{54}}]{smm4h2026master/smm4h2026/papers/54.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 237--239 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{FU-HU-P5 at \#SMM4H-HeaRD 2026: MedSynth Dialogue-to-Note Generation},ref:paper_{55}}]{smm4h2026master/smm4h2026/papers/55.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 240--245 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{ACSS-PSL at \#SMM4H-HeaRD 2026: An LLM-Driven Autoresearch Loop for Opioid-Impact NER},ref:paper_{57}}]{smm4h2026master/smm4h2026/papers/57.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 246--251 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{Creative Catalysts at \#SMM4H-HeaRD 2026: XLM-RoBERTa for Task 1 Binary Classification of Social Media Posts Containing Adverse Drug Events},ref:paper_{58}}]{smm4h2026master/smm4h2026/papers/58.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 252--259 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{BioNLP at \#SMM4H-HeaRD 2026 Task 3 Estimating Flu Vaccine Effectiveness: A Temporal-Aware Fine-Tuning and Similarity-Based Few-Shot Prompting Approach},ref:paper_{59}}]{smm4h2026master/smm4h2026/papers/59.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 260--263 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{Infimobius at \#SMM4H-HeaRD 2026: Multi-Seed DeBERTa Ensemble for Flu Vaccination and Testing Status Classification},ref:paper_{61}}]{smm4h2026master/smm4h2026/papers/61.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 264--267 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{Thunderbolts at \#SMM4H-HeaRD 2026: Detection of Insomnia in Clinical Notes using Transformers},ref:paper_{64}}]{smm4h2026master/smm4h2026/papers/64.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 268--271 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{Team TIET at \#SMM4H-HeaRD 2026: Fine-tuned Biomedical Transformers with Language-Balanced Sampling for Patient Metadata and Multilingual ADE Detection},ref:paper_{65}}]{smm4h2026master/smm4h2026/papers/65.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 272--279 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{MetaMiners at SMM4H-HeaRD 2026: A Semantic-Structural Knowledge-Enriched Ensemble for SARS-CoV-2 Metadata Identification},ref:paper_{67}}]{smm4h2026master/smm4h2026/papers/67.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 280--285 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{No\_gmail at \#SMM4H-HeaRD 2026: Detecting Patient Metadata in COVID-19 Scientific Literature: A Comparative Study of Encoder-Only and Autoregressive Language Models},ref:paper_{68}}]{smm4h2026master/smm4h2026/papers/68.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 286--304 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{Understanding the Sociocultural Dimensions of Mental Health Discourse in Arabic X Communities},ref:paper_{71}}]{smm4h2026master/smm4h2026/papers/71.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 305--308 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{Team Paradise at \#SMM4H-HeaRD 2026: Multi-Task Approaches for Social Media Health Mining},ref:paper_{73}}]{smm4h2026master/smm4h2026/papers/73.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 309--331 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{The MultiClinAI Shared Task on Multilingual Clinical Corpus Construction and Concept Extraction: Systems, Evaluation, and Datasets},ref:paper_{74}}]{smm4h2026master/smm4h2026/papers/74.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 332--337 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{Overview of \#SMM4H-HeaRD 2026 – Task 6: Predicting TNM staging from pathology reports},ref:paper_{75}}]{smm4h2026master/smm4h2026/papers/75.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 338--344 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{NoviceTrio in \#SMM4H-HeaRD 2026: Hybrid Clinical Transformer Ensembles for Insomnia Detection and Evidence Extraction from Clinical Notes},ref:paper_{76}}]{smm4h2026master/smm4h2026/papers/76.pdf}
+
+%%%%%%%%%%%%%%%%
+% Author Index %
+%%%%%%%%%%%%%%%%
+\begin{huge}
+Author Index
+\end{huge}
+\vspace*{1em}
+\begin{multicols}{2}
+Abubakar, Joseph Itopa, \hyperlink{page.206}{206}\\
+Adewunmi, Mary, \hyperlink{page.206}{206}\\
+Afren, Radja, \hyperlink{page.246}{246}\\
+Aich, Rathijit, \hyperlink{page.211}{211}\\
+Allam, Nour, \hyperlink{page.230}{230}\\
+Alqahtani, Amal Abdullah, \hyperlink{page.286}{286}\\
+Anastasia, Stefanescu, \hyperlink{page.280}{280}\\
+Andrei, Timotei, \hyperlink{page.61}{61}\\
+Anghel, Ioan-Tudor-Alexandru, \hyperlink{page.61}{61}\\
+Arnoult, Sophie, \hyperlink{page.139}{139}\\
+Awatramani, Vasudev, \hyperlink{page.160}{160}\\
+Ayalew, Aleka Melese, \hyperlink{page.93}{93}\\
+\\ % Extra space between new letters.
+Bansal, Aakarsh, \hyperlink{page.222}{222}\\
+Barua, Priyangshu, \hyperlink{page.182}{182}\\
+Bedi, Jatin, \hyperlink{page.72}{72}, \hyperlink{page.268}{268}, \hyperlink{page.305}{305}\\
+Benavent, Christophe, \hyperlink{page.240}{240}\\
+Berends, Matthijs S., \hyperlink{page.154}{154}\\
+Berkowitz, Jacob S., \hyperlink{page.332}{332}\\
+Bogdan, Comârdici Marian, \hyperlink{page.61}{61}\\
+Boros, Tiberiu, \hyperlink{page.121}{121}\\
+Boytcheva, Svetla, \hyperlink{page.113}{113}\\
+Burgos, Diego A, \hyperlink{page.67}{67}\\
+\\ % Extra space between new letters.
+Caron, Olivier, \hyperlink{page.240}{240}\\
+Charan, Guddanti Venkata Sree, \hyperlink{page.264}{264}\\
+Charan, Suhani Singh, \hyperlink{page.260}{260}\\
+Chen, Shutao, \hyperlink{page.139}{139}\\
+Childs, Liam, \hyperlink{page.146}{146}\\
+Chivereanu, Radu-Gabriel, \hyperlink{page.121}{121}\\
+Chowdhury, Mahfuzulhoq, \hyperlink{page.211}{211}\\
+Christof, Roman, \hyperlink{page.146}{146}\\
+Conway, Mike, \hyperlink{page.338}{338}\\
+Cortina, Jose Miguel Acitores, \hyperlink{page.332}{332}\\
+Cristea, Emilia-Ioana, \hyperlink{page.88}{88}\\
+\\ % Extra space between new letters.
+Danoe, Gijs, \hyperlink{page.154}{154}\\
+Danu, Manuela Daniela, \hyperlink{page.216}{216}\\
+Das, Nirjhar, \hyperlink{page.211}{211}\\
+Dey, Abir, \hyperlink{page.225}{225}\\
+Dey, Shuva, \hyperlink{page.182}{182}\\
+Dharpure, Harshal, \hyperlink{page.177}{177}\\
+Diab, Mona T., \hyperlink{page.286}{286}\\
+Diaz-Galiano, Manuel Carlos, \hyperlink{page.18}{18}\\
+Donoso, Fernando Gallego, \hyperlink{page.309}{309}\\
+Doynov, Vitosh, \hyperlink{page.113}{113}\\
+Duque, Andres, \hyperlink{page.12}{12}\\
+Díaz-Laínes, Giovanny, \hyperlink{page.67}{67}\\
+\\ % Extra space between new letters.
+Estuar, Diego, \hyperlink{page.28}{28}\\
+\\ % Extra space between new letters.
+Faiaz, Mohammed Omar, \hyperlink{page.225}{225}\\
+Farré-Maduel, Eulàlia, \hyperlink{page.309}{309}\\
+Fernández, Rubén R., \hyperlink{page.133}{133}\\
+Ferreira, Bruno Chaves, \hyperlink{page.240}{240}\\
+Friedrich, Nadine A., \hyperlink{page.332}{332}\\
+\\ % Extra space between new letters.
+Giménez-Gómez, Sara, \hyperlink{page.127}{127}\\
+Goyal, Dhruv, \hyperlink{page.305}{305}\\
+Guellil, Imane, \hyperlink{page.246}{246}\\
+Gupta, Ishita, \hyperlink{page.305}{305}\\
+\\ % Extra space between new letters.
+Habersberger, Brian M., \hyperlink{page.187}{187}\\
+Habib, Mohammad Ashfak, \hyperlink{page.182}{182}\\
+Hamprecht, Axel, \hyperlink{page.154}{154}\\
+Hasan, Md Rabiul, \hyperlink{page.93}{93}\\
+Herrera, Antonio Jesus Tamayo, \hyperlink{page.67}{67}\\
+Hsiao, Eric, \hyperlink{page.56}{56}\\
+\\ % Extra space between new letters.
+Igwezeke, Favour, \hyperlink{page.206}{206}\\
+Ilieva, Plamena, \hyperlink{page.113}{113}\\
+\\ % Extra space between new letters.
+Jamil, Sofia, \hyperlink{page.177}{177}\\
+Jarme, Jorge, \hyperlink{page.206}{206}\\
+Jonker, Richard A. A., \hyperlink{page.41}{41}\\
+\\ % Extra space between new letters.
+Kaur, Divrose, \hyperlink{page.268}{268}\\
+Kejriwal, Pradyumn, \hyperlink{page.260}{260}\\
+Khan, Muhammad Ibrahim, \hyperlink{page.225}{225}\\
+Komolafe, Oyindolapo O., \hyperlink{page.23}{23}\\
+Kostadinov, Teodor Svetoslavov, \hyperlink{page.113}{113}\\
+Koychev, Ivan, \hyperlink{page.113}{113}\\
+Krallinger, Martin, \hyperlink{page.309}{309}\\
+Ku, Min-Hsuan, \hyperlink{page.56}{56}\\
+Kushare, Abhishek Suresh, \hyperlink{page.1}{1}\\
+König, Renate, \hyperlink{page.146}{146}\\
+\\ % Extra space between new letters.
+Lima-Lopez, Salvador, \hyperlink{page.309}{309}\\
+\\ % Extra space between new letters.
+Madrueño, Natalia, \hyperlink{page.133}{133}\\
+Maity, Abhishek, \hyperlink{page.1}{1}\\
+Manchevski, Daniel, \hyperlink{page.113}{113}\\
+Martinez-Romo, Juan, \hyperlink{page.12}{12}\\
+Martín-Valdivia, María-Teresa, \hyperlink{page.18}{18}\\
+Matos, Sérgio, \hyperlink{page.41}{41}\\
+Misra, Rajiv, \hyperlink{page.177}{177}\\
+Montalvo, Soto, \hyperlink{page.133}{133}\\
+Moreno-Barea, Francisco J., \hyperlink{page.127}{127}\\
+Murthy, Rudra, \hyperlink{page.260}{260}, \hyperlink{page.264}{264}\\
+\\ % Extra space between new letters.
+nama\_ss@cs.iitr.ac.in, nama\_ss@cs.iitr.ac.in, \hyperlink{page.264}{264}\\
+Naskar, Abir, \hyperlink{page.338}{338}\\
+Novacek, Vit, \hyperlink{page.173}{173}\\
+\\ % Extra space between new letters.
+Oussalah, Mourad, \hyperlink{page.93}{93}\\
+\\ % Extra space between new letters.
+Pachori, Bhaarat, \hyperlink{page.49}{49}\\
+Patularu, Irina, \hyperlink{page.252}{252}\\
+Pawar, Swapnil, \hyperlink{page.1}{1}\\
+Perez, Carlos Mario Perez, \hyperlink{page.67}{67}\\
+Petkova, Monika Peteva, \hyperlink{page.113}{113}\\
+Piñar, Lucas Molino, \hyperlink{page.18}{18}\\
+Pradhan, Aatish, \hyperlink{page.187}{187}\\
+Pérez, Jose Walter Hernández, \hyperlink{page.133}{133}\\
+\\ % Extra space between new letters.
+Rahab, Hichem, \hyperlink{page.246}{246}\\
+Ramirez-Arrabe, Alicia, \hyperlink{page.12}{12}\\
+Remy, François, \hyperlink{page.165}{165}\\
+Rey-Blanes, Alvaro, \hyperlink{page.127}{127}\\
+Rosell, Judith, \hyperlink{page.309}{309}\\
+\\ % Extra space between new letters.
+S., Sowmya Kamath, \hyperlink{page.222}{222}\\
+Saha, Sriparna, \hyperlink{page.177}{177}\\
+Salama, Rana Aref, \hyperlink{page.286}{286}\\
+Santhosh, Thanya Mysore, \hyperlink{page.103}{103}\\
+Shao, Hsuan-Lei, \hyperlink{page.56}{56}\\
+Sharma, Krish, \hyperlink{page.72}{72}\\
+Sharma, Raksha, \hyperlink{page.260}{260}, \hyperlink{page.264}{264}\\
+Shinde, Amol, \hyperlink{page.1}{1}\\
+Singh, Ankit Kumar, \hyperlink{page.7}{7}\\
+Singh, Jasmeet, \hyperlink{page.268}{268}\\
+Singh, Manish, \hyperlink{page.177}{177}\\
+Singhal, Rhea, \hyperlink{page.72}{72}\\
+Soare, Alecsandru-Florin, \hyperlink{page.272}{272}\\
+Srinivas, Abhishek, \hyperlink{page.222}{222}\\
+Sâicu, Carina, \hyperlink{page.61}{61}\\
+\\ % Extra space between new letters.
+Tatonetti, Nicholas P, \hyperlink{page.332}{332}\\
+Tien, Doan Nhat, \hyperlink{page.36}{36}\\
+\\ % Extra space between new letters.
+Ursu, Claudia-Alexandra, \hyperlink{page.272}{272}\\
+\\ % Extra space between new letters.
+van Es, Bram, \hyperlink{page.82}{82}\\
+Vassileva, Sylvia, \hyperlink{page.113}{113}\\
+Veredas, Francisco J., \hyperlink{page.127}{127}\\
+Voss, Andreas, \hyperlink{page.154}{154}\\
+Vossen, Piek, \hyperlink{page.139}{139}\\
+Văn, Thìn Đặng, \hyperlink{page.36}{36}\\
+\\ % Extra space between new letters.
+Wei, Shangqing, \hyperlink{page.108}{108}\\
+Wong, Jessica Ying En, \hyperlink{page.237}{237}\\
+\\ % Extra space between new letters.
+Yu, Deahan, \hyperlink{page.103}{103}\\
+\\ % Extra space between new letters.
+Zeidi, Farnaz, \hyperlink{page.146}{146}\\
+Zeidi, Farnoush, \hyperlink{page.146}{146}\\
+Zelina, Petr, \hyperlink{page.173}{173}\\
+\\ % Extra space between new letters.
+\end{multicols}
+
+
+\end{document}
