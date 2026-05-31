@@ -2279,3 +2279,64 @@
   pdf_file: 43f3209a3784309405694e4af3492ca498a2b431.pdf
   title: 'NoviceTrio in \#SMM4H-HeaRD 2026: Hybrid Clinical Transformer Ensembles for
     Insomnia Detection and Evidence Extraction from Clinical Notes'
+
+- abstract: 'This paper provides an overview of Task 2 from the Social Media Mining for Health and Health Real-World Data (#SMM4H-HeaRD)
+2026 Workshop and Shared Tasks, which focused on the detection of insomnia in clinical notes derived from the MIMIC-III dataset.
+The task consisted of two subtasks: binary text classification to determine whether a patient is likely experiencing insomnia (Subtask 1),
+and multi-label classification combined with character-level evidence extraction to identify supporting evidence for specific insomnia crite-
+ria (Subtask 2). Eight teams participated, using approaches ranging from large language model (LLM) prompting and fine-tuned encoder mod-
+els to hybrid rule-based pipelines. Results demonstrated that structured LLM pipelines with deterministic post-processing achieved the
+strongest overall performance, while character-level span extraction remained substantially harder than classification across all systems.
+These findings highlight both the promise of NLP for identifying underdiagnosed conditions in electronic health records and the ongoing
+difficulty of producing interpretable, evidence-grounded clinical predictions.'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+    - emails: jchan51@illinois.edu
+      first_name: Joey
+      last_name: Chan
+      name: Joey Chan
+    - emails: lauren.gryboski@cuanschutz.edu
+      first_name: Lauren D.
+      last_name: Gryboski
+      name: Lauren D. Gryboski
+    - emails: glopezg@stanford.edu
+      first_name: Guillermo
+      last_name: Lopez-Garcia
+      name: Guillermo Lopez-Garcia
+    - emails: Graciela.GonzalezHernandez@csmc.edu
+      first_name: Graciela
+      last_name: Gonzalez-Hernandez
+      name: Graciela Gonzalez-Hernandez
+  decision: WorkshopPaper
+  file: 77.pdf
+  id: 77
+  title: 'Overview of \#SMM4H-HeaRD 2026 - Task 2: Detection of Insomnia in Clinical
+      Notes'
+- abstract: 'The aim of the Social Media Mining for Health Applications and Health Real-World Data (#SMM4H-HeaRD) shared tasks is to fos-
+ter the development and evaluation of natural language processing, machine learning, and artificial intelligence methods for analyzing health-related text from social media and other
+real-world data sources. For the 11th iteration, held online and co-located with ACL 2026, the workshop continued the expanded #SMM4H-
+HeaRD platform initiated in 2025, broaden-ing its scope beyond social media to include additional health real-world data sources such as clinical narratives and biomedical literature.
+The 8 shared tasks covered diverse data sources, health domains (e.g., adverse drug events, insomnia, influenza vaccine effectiveness, cancer
+staging, substance use), and task formulations (e.g., classification, named entity recognition, span extraction, and text generation). In total, 110 teams registered, representing 31 countries.
+In this paper, we present an overview of the datasets, participant systems, and performance results, providing insights into current methods
+for mining social media and health real-world data for biomedical and clinical applications.'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: ''
+  authors:
+  - emails: glopezg@stanford.edu
+    first_name: Guillermo
+    last_name: Lopez-Garcia
+    name: Guillermo Lopez-Garcia
+  - emails: Graciela.GonzalezHernandez@csmc.edu
+    first_name: Graciela
+    last_name: Gonzalez-Hernandez
+    name: Graciela Gonzalez-Hernandez
+  decision: WorkshopPaper
+  file: 78.pdf
+  id: 78
+  title: 'Overview of the 11th Social Media Mining for Health (\#SMM4H) and Health Real-World Data (HeaRD) Shared Tasks at ACL 2026'

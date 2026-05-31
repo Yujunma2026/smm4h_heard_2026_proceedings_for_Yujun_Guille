@@ -117,16 +117,22 @@ ISBN 979-8-89176-432-3
    { \Large \textbf{Preface}}
   \end{center}
   \vspace*{0.5cm}
-  Welcome to the 11th Social Media Mining for Health Research and Applications and Health Real-World Data (\#SMM4H-HeaRD) Workshop and Shared Tasks, co-located with the 64th Annual Meeting of the Association for Computational Linguistics (ACL 2026). This year, \#SMM4H-HeaRD 2026 will be held online, continuing our tradition of connecting data mining researchers who focus on leveraging social media and real-world health data for health informatics.
+  Welcome to the 11th Social Media Mining for Health Research and Applications and the Health Real-World Data (\#SMM4H-HeaRD) Workshop and Shared Tasks, co-located with the 64th Annual Meeting of the Association for Computational Linguistics (ACL 2026). This year’s workshop is held online, connecting the global community of researchers who develop and evaluate natural language processing, machine learning, and artificial intelligence methods for health-related text.
+\par\vspace{1em}
+
+Since its inception in 2016, \#SMM4H has grown from a small, focused workshop, into one of the field’s most visible recurring venues for health NLP research. Over eleven editions, the workshop has brought together hundreds of teams from across the world, spanning academia, industry, government, and clinical institutions. Participation has grown substantially year over year. Collectively, the \#SMM4H shared tasks and associated publications have accumulated over 1,700 citations, reflecting the community’s sustained reliance on the datasets, baselines, and benchmarking frameworks the workshop has produced.
+\par\vspace{1em}
+
+The \#SMM4H-HeaRD 2026 edition marks a record in the scope of our shared task program, with eight shared tasks spanning an unprecedentedly broad range of domains and data modalities: detection of adverse drug events in multilingual social media posts, detection of insomnia in clinical notes, estimating flu vaccine effectiveness from social media, generation of structured medical notes from dialogues, detection of patient metadata in SARS-CoV-2 sequencing articles, predicting TNM staging from pathology reports, extraction of social and clinical impacts of substance use, and multilingual clinical entity annotation projection and extraction. This year, 110 registered teams from 31 countries registered, and 79 teams participated in at least one task — the largest participation in the workshop’s history. The shared tasks included 8 tasks: 12 teams for Task 1, 8 for Task 2, 6 for Task 3, 5 for Task 4, 10 for Task 5, 7 for Task 6, 10 for Task 7, and 21 for Task 8. Winning systems were invited for oral presentations, and other accepted system description papers were included as poster presentations.In all, these proceedings include 53 papers.
 
 \par\vspace{1em}
-This year's edition emphasizes privacy-preserving data sharing and real-world evaluation, particularly in the context of health-related text from sources such as social media, electronic health records, and biomedical literature. In alignment with the ACL 2026 Theme Track on the Explainability of NLP Models, we also invited work that improves the transparency, interpretability, and trustworthiness of models applied in high-stakes clinical and public health contexts.
+This year’s edition also highlights the field’s evolving methodological landscape. Large language models featured prominently across submissions, used for classification, information extraction, data augmentation, and structured output generation — reflecting both their growing accessibility and the community’s interest in evaluating their reliability in high-stakes health contexts. In alignment with the ACL 2026 Theme Track on the Explainability of NLP Models, we specifically invited work that advances the transparency, interpretability, and trustworthiness of models applied in clinical and public health settings.
 
 \par\vspace{1em}
-For \#SMM4H-HeaRD 2026, we organized eight shared tasks spanning diverse domains and data modalities, including detection of adverse drug events in multilingual social media posts, detection of insomnia in clinical notes, estimating flu vaccine effectiveness from social media, generation of structured medical notes from dialogues, detection of patient metadata in SARS-CoV-2 sequencing articles, predicting TNM staging from pathology reports, extraction of social and clinical impacts of substance use, and multilingual clinical entity annotation projection and extraction. Each submission underwent a rigorous review process by program committee members chosen for their expertise.
+This year’s workshop features two invited keynotes. Wendy Chapman, PhD (Associate Dean of Health Informatics and Chief Learning Health Officer, UT Southwestern Medical Center) asks “Beyond Model Performance: What Kind of Care Does AI Enable?”, arguing that evaluation must extend well beyond accuracy to encompass implementation, human factors, and real-world impact on care. Brian Chapman, Associate Professor at UT Southwestern Medical Center, takes a complementary patient-facing perspective in “‘I’ll Be Your Mirror’: Using NLP to Expand Patient Meaning Making”, challenging the field to build NLP tools that serve the patients who generate the data, not only the institutions that collect it.
 
 \par\vspace{1em}
-We hope you find the workshop papers insightful and inspiring. We extend our gratitude to the program committee, additional reviewers, ACL 2026 organizers, annotators of the shared task data, and everyone who submitted a paper or participated in the shared tasks. \#SMM4H-HeaRD 2026 would not have been possible without their contributions.
+We are deeply grateful to our program committee, reviewers, and, particularly our shared task organizers for their rigorous and dedicated work. We also thank the annotators who created the shared task datasets, the ACL 2026 organizing team for their support, and every researcher who submitted a paper or participated in a shared task. \#SMM4H-HeaRD would not exist without this community, and we are grateful to see it continue to grow.
 
 \par\vspace{2em}
 \#SMM4H-HeaRD 2026 Workshop Chairs and Shared Task Committee
@@ -296,74 +302,50 @@ We hope you find the workshop papers insightful and inspiring. We extend our gra
 % Invited Talks %
 %%%%%%%%%%%%%%%%%
   \phantomsection
-  \addcontentsline{toc}{section}{Keynote Talk: Invited 1}
+  \addcontentsline{toc}{section}{Keynote Talk: Beyond Model Performance$:$ What Kind of Care Does AI Enable?}
   \begin{center}
           {\Large \textbf{Keynote Talk}\\}
-      {\LARGE \textbf{Invited 1}\\}
+      {\LARGE \textbf{Beyond Model Performance$:$ What Kind of Care Does AI Enable?}\\}
         \vspace*{0.5cm}
     %\begin{minipage}[c][0.35\linewidth][c]{0.35\linewidth}
      % \end{minipage}\\
-    \textbf{Jhon Doe}\\
-        University of California\\
+    \textbf{Wendy Chapman}\\
+        UT Southwestern Medical Center\\
         
         
-        \textbf{2020-07-01 18:30:00} -- 
-                Room: \textbf{Room 1}\\
-        
+                
   \end{center}
 
   \vspace*{0.2cm}
-    \textbf{Abstract:} The open exchange of ideas, the freedom of thought and expression, and respectful scientific debate are central to the aims and goals of a ACL conference. These require a community and an environment that recognizes the inherent worth of every person and group, that fosters dignity, understanding, and mutual respect, and that embraces diversity. For these reasons, ACL is dedicated to providing a harassment-free experience for participants at our events and in our programs.
-Harassment and hostile behavior are unwelcome at any ACL conference. This includes: speech or be- havior (including in public presentations and on-line discourse) that intimidates, creates discomfort, or interferes with a person’s participation or opportunity for participation in the conference. We aim for ACL conferences to be an environment where harassment in any form does not happen, including but not lim- ited to: harassment based on race, gender, religion, age, color, national origin, ancestry, disability, sexual orientation, or gender identity. Harassment includes degrading verbal comments, deliberate intimidation, stalking, harassing photography or recording, inappropriate physical contact, and unwelcome sexual at- tention.
-It is the responsibility of the community as a whole to promote an inclusive and positive environment for our scholarly activities. In addition, any participant who experiences harassment or hostile behavior may contact any current member of the ACL Board or contact Priscilla Rasmussen, who is usually available at the registration desk of the conference. Please be assured that if you approach us, your concerns will be kept in strict confidence, and we will consult with you on any actions taken.
-The ACL board members are listed at:
-https://www.aclweb.org/portal/about
-The full policy and its implementation is defined at:
-https://www.aclweb.org/adminwiki/index.php?title=Anti\-Harassment\_Policy\\
+    \textbf{Abstract:} As AI becomes increasingly capable of performing tasks once reserved for clinicians, the most important questions are shifting from algorithms to systems. This talk will examine how AI is changing the nature of clinical work, patient participation, and healthcare delivery, and why model accuracy alone tells us little about real-world impact. Drawing on experiences from Learning Health Systems, digital health implementation, and human-centered design, I will argue that evaluation must begin long before deployment and continue throughout the innovation lifecycle. Ultimately, the future of clinical NLP depends on moving beyond asking whether AI can perform a task and instead ask a more fundamental question: What kind of care does AI enable?\\
   \newline
   
-    \textbf{Bio:} The open exchange of ideas, the freedom of thought and expression, and respectful scientific debate are central to the aims and goals of a ACL conference. These require a community and an environment that recognizes the inherent worth of every person and group, that fosters dignity, understanding, and mutual respect, and that embraces diversity. For these reasons, ACL is dedicated to providing a harassment-free experience for participants at our events and in our programs.
-Harassment and hostile behavior are unwelcome at any ACL conference. This includes: speech or be- havior (including in public presentations and on-line discourse) that intimidates, creates discomfort, or interferes with a person’s participation or opportunity for participation in the conference. We aim for ACL conferences to be an environment where harassment in any form does not happen, including but not lim- ited to: harassment based on race, gender, religion, age, color, national origin, ancestry, disability, sexual orientation, or gender identity. Harassment includes degrading verbal comments, deliberate intimidation, stalking, harassing photography or recording, inappropriate physical contact, and unwelcome sexual at- tention.
-It is the responsibility of the community as a whole to promote an inclusive and positive environment for our scholarly activities. In addition, any participant who experiences harassment or hostile behavior may contact any current member of the ACL Board or contact Priscilla Rasmussen, who is usually available at the registration desk of the conference. Please be assured that if you approach us, your concerns will be kept in strict confidence, and we will consult with you on any actions taken.
-The ACL board members are listed at:
-https://www.aclweb.org/portal/about
-The full policy and its implementation is defined at:
-https://www.aclweb.org/adminwiki/index.php?title=Anti\-Harassment\_Policy
+    \textbf{Bio:} Wendy Chapman, PhD, is Associate Dean of Health Informatics and Chief Learning Health Officer at UT Southwestern Medical Center. She got a BA in linguistics and followed her husband into the field of medical informatics, fand or more than 20 years, she developed and evaluated natural language processing and AI methods for healthcare, with the goal of improving patient care. Over time, she realized that strong model performance alone rarely translated into changes in clinical practice, leading her to focus on implementation, human factors, and learning health systems. After helping establish the Centre for Digital Transformation of Health at the University of Melbourne to support the translation of digital innovations into care, she now works at the intersection of research and health system operations, bridging the gap between innovation and implementation.
   \newpage
     \phantomsection
-  \addcontentsline{toc}{section}{Keynote Talk: Invited 2}
+  \addcontentsline{toc}{section}{Keynote Talk: ``I'll Be Your Mirror”: Using NLP to Expand Patient Meaning Making}
   \begin{center}
           {\Large \textbf{Keynote Talk}\\}
-      {\LARGE \textbf{Invited 2}\\}
+      {\LARGE \textbf{``I'll Be Your Mirror”: Using NLP to Expand Patient Meaning Making}\\}
         \vspace*{0.5cm}
     %\begin{minipage}[c][0.35\linewidth][c]{0.35\linewidth}
      % \end{minipage}\\
-    \textbf{Jennifer Doe}\\
-        University of New York\\
+    \textbf{Brain Chapman}\\
+        UT Southwestern Medical Center\\
         
         
-        \textbf{2020-07-02 18:30:00} -- 
-                Room: \textbf{Room 2}\\
-        
+                
   \end{center}
 
   \vspace*{0.2cm}
-    \textbf{Abstract:} The open exchange of ideas, the freedom of thought and expression, and respectful scientific debate are central to the aims and goals of a ACL conference. These require a community and an environment that recognizes the inherent worth of every person and group, that fosters dignity, understanding, and mutual respect, and that embraces diversity. For these reasons, ACL is dedicated to providing a harassment-free experience for participants at our events and in our programs.
-Harassment and hostile behavior are unwelcome at any ACL conference. This includes: speech or be- havior (including in public presentations and on-line discourse) that intimidates, creates discomfort, or interferes with a person’s participation or opportunity for participation in the conference. We aim for ACL conferences to be an environment where harassment in any form does not happen, including but not lim- ited to: harassment based on race, gender, religion, age, color, national origin, ancestry, disability, sexual orientation, or gender identity. Harassment includes degrading verbal comments, deliberate intimidation, stalking, harassing photography or recording, inappropriate physical contact, and unwelcome sexual at- tention.
-It is the responsibility of the community as a whole to promote an inclusive and positive environment for our scholarly activities. In addition, any participant who experiences harassment or hostile behavior may contact any current member of the ACL Board or contact Priscilla Rasmussen, who is usually available at the registration desk of the conference. Please be assured that if you approach us, your concerns will be kept in strict confidence, and we will consult with you on any actions taken.
-The ACL board members are listed at:
-https://www.aclweb.org/portal/about
-The full policy and its implementation is defined at:
-https://www.aclweb.org/adminwiki/index.php?title=Anti\-Harassment\_Policy\\
+    \textbf{Abstract:} NLP healthcare applications have almost exclusively been clinician facing, even though patients have had increasing access, by law and by practice, to their own clinical texts. A systematic review of NLP on patient-authored text found that even work using patient-generated data has been oriented primarily toward clinical surveillance and institutional quality improvement; the patient who generated the text rarely benefits directly from the analysis. Yet the tools themselves are not inherently clinician-facing or applicable only to clinical text. This talk explores how NLP can serve as a mirror through which patients see themselves reflected in their own data. Drawing on a fifty-year longitudinal auto-ethnographic corpus blending memoir, personal journals, medical records, wearable data, and other artifacts, I juxtapose what clinical records document with what personal narratives reveal, illustrating meaning making across diverse health circumstances using tools ranging from psycholinguistic text analysis to generative AI. I close by suggesting that NLP-enabled reflections can meaningfully support patient meaning making, and by sketching open questions for patient-facing NLP research\\
   \newline
   
-    \textbf{Bio:} The open exchange of ideas, the freedom of thought and expression, and respectful scientific debate are central to the aims and goals of a ACL conference. These require a community and an environment that recognizes the inherent worth of every person and group, that fosters dignity, understanding, and mutual respect, and that embraces diversity. For these reasons, ACL is dedicated to providing a harassment-free experience for participants at our events and in our programs.
-Harassment and hostile behavior are unwelcome at any ACL conference. This includes: speech or be- havior (including in public presentations and on-line discourse) that intimidates, creates discomfort, or interferes with a person’s participation or opportunity for participation in the conference. We aim for ACL conferences to be an environment where harassment in any form does not happen, including but not lim- ited to: harassment based on race, gender, religion, age, color, national origin, ancestry, disability, sexual orientation, or gender identity. Harassment includes degrading verbal comments, deliberate intimidation, stalking, harassing photography or recording, inappropriate physical contact, and unwelcome sexual at- tention.
-It is the responsibility of the community as a whole to promote an inclusive and positive environment for our scholarly activities. In addition, any participant who experiences harassment or hostile behavior may contact any current member of the ACL Board or contact Priscilla Rasmussen, who is usually available at the registration desk of the conference. Please be assured that if you approach us, your concerns will be kept in strict confidence, and we will consult with you on any actions taken.
-The ACL board members are listed at:
-https://www.aclweb.org/portal/about
-The full policy and its implementation is defined at:
-https://www.aclweb.org/adminwiki/index.php?title=Anti\-Harassment\_Policy
+    \textbf{Bio:} Brian Chapman is a an associate professor at UT Southwestern Medical Center, with an honorary appointment at the University of Melbourne. His academic journey began in electrical engineering and applied mathematics before the siren call of health research - dormant since his childhood as a cancer patient - lured him away from a plasma physics PhD at the University of Wisconsin–Madison toward medical imaging. He completed his PhD at the University of Utah, where his dissertation tackled medical imaging problems from a medical informatics perspective.
+
+For much of his career Brian's research was primarily within radiology, until a move to Australia in 2019 - necessitated, as with most of his many institutional moves, by his wife's globetrotting habits - brought a different health system, a different university culture, and a global pandemic that together redirected his interests toward using informatics and AI to help patients better engage with their own healthcare. He views his greatest professional accomplishments as having occurred in the classroom.
+
+Outside of work, Brian vacuums after three huskies, makes visual art, and reads widely in biography, memoir, history, and philosophy. A native of Salt Lake City, he loves downhill skiing and mountain biking. His favorite TV shows include Yes, Minister, The Rockford Files, and Fawlty Towers, which he considers a perfectly coherent set of preferences.
   \newpage
   
 
@@ -439,6 +421,8 @@ https://www.aclweb.org/adminwiki/index.php?title=Anti\-Harassment\_Policy
        \item \hyperlink{page.309}{\emph{The MultiClinAI Shared Task on Multilingual Clinical Corpus Construction and Concept Extraction: Systems, Evaluation, and Datasets}}\\ \hspace*{2em} Fernando Gallego Donoso\index{Donoso}, Salvador Lima-Lopez\index{Lima-Lopez}, Judith Rosell\index{Rosell}, Eulàlia Farré-Maduel\index{Farré-Maduel} and Martin Krallinger\index{Krallinger}\dotfill \hyperlink{page.309}{309}
        \item \hyperlink{page.332}{\emph{Overview of \#SMM4H-HeaRD 2026 – Task 6: Predicting TNM staging from pathology reports}}\\ \hspace*{2em} Jose Miguel Acitores Cortina\index{Cortina}, Jacob S. Berkowitz\index{Berkowitz}, Nadine A. Friedrich\index{Friedrich} and Nicholas P Tatonetti\index{Tatonetti}\dotfill \hyperlink{page.332}{332}
        \item \hyperlink{page.338}{\emph{NoviceTrio in \#SMM4H-HeaRD 2026: Hybrid Clinical Transformer Ensembles for Insomnia Detection and Evidence Extraction from Clinical Notes}}\\ \hspace*{2em} Abir Naskar\index{Naskar} and Mike Conway\index{Conway}\dotfill \hyperlink{page.338}{338}
+       \item \hyperlink{page.345}{\emph{Overview of \#SMM4H-HeaRD 2026 - Task 2: Detection of Insomnia in Clinical Notes}}\\ \hspace*{2em} Joey Chan\index{Chan}, Lauren D. Gryboski\index{Gryboski}, Guillermo Lopez-Garcia\index{Lopez-Garcia} and Graciela Gonzalez-Hernandez\index{Gonzalez-Hernandez}\dotfill \hyperlink{page.345}{345}
+       \item \hyperlink{page.353}{\emph{Overview of the 11th Social Media Mining for Health (\#SMM4H) and Health Real-World Data (HeaRD) Shared Tasks at ACL 2026}}\\ \hspace*{2em} Guillermo Lopez-Garcia\index{Lopez-Garcia} and Graciela Gonzalez-Hernandez\index{Gonzalez-Hernandez}\dotfill \hyperlink{page.353}{353}
   \end{itemize}
 \newpage
 
@@ -1104,6 +1088,28 @@ https://www.aclweb.org/adminwiki/index.php?title=Anti\-Harassment\_Policy
   							2026 Association for Computational Linguistics}}
   }
   \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{NoviceTrio in \#SMM4H-HeaRD 2026: Hybrid Clinical Transformer Ensembles for Insomnia Detection and Evidence Extraction from Clinical Notes},ref:paper_{76}}]{smm4h2026master/smm4h2026/papers/76.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 345--352 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{Overview of \#SMM4H-HeaRD 2026 - Task 2: Detection of Insomnia in Clinical Notes},ref:paper_{77}}]{smm4h2026master/smm4h2026/papers/77.pdf}
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}
+    \footnotesize
+
+            
+    \put(0,13){\parbox[t]{\paperwidth}{\centering
+    							\emph{Proceedings of the 11th Social Media Mining for Health Research and Applications (SMM4H-HeaRD 2026) Workshop and Shared Tasks}, pages 353--369 \\
+  	  						July 3, 2026 \textcopyright
+  							2026 Association for Computational Linguistics}}
+  }
+  \includepdf[pagecommand={\thispagestyle{plain}},pages=-,addtotoc={1,section,1,{Overview of the 11th Social Media Mining for Health (\#SMM4H) and Health Real-World Data (HeaRD) Shared Tasks at ACL 2026},ref:paper_{78}}]{smm4h2026master/smm4h2026/papers/78.pdf}
 
 %%%%%%%%%%%%%%%%
 % Author Index %
@@ -1138,6 +1144,7 @@ Boytcheva, Svetla, \hyperlink{page.113}{113}\\
 Burgos, Diego A, \hyperlink{page.67}{67}\\
 \\ % Extra space between new letters.
 Caron, Olivier, \hyperlink{page.240}{240}\\
+Chan, Joey, \hyperlink{page.345}{345}\\
 Charan, Guddanti Venkata Sree, \hyperlink{page.264}{264}\\
 Charan, Suhani Singh, \hyperlink{page.260}{260}\\
 Chen, Shutao, \hyperlink{page.139}{139}\\
@@ -1171,7 +1178,9 @@ Ferreira, Bruno Chaves, \hyperlink{page.240}{240}\\
 Friedrich, Nadine A., \hyperlink{page.332}{332}\\
 \\ % Extra space between new letters.
 Giménez-Gómez, Sara, \hyperlink{page.127}{127}\\
+Gonzalez-Hernandez, Graciela, \hyperlink{page.345}{345}, \hyperlink{page.353}{353}\\
 Goyal, Dhruv, \hyperlink{page.305}{305}\\
+Gryboski, Lauren D., \hyperlink{page.345}{345}\\
 Guellil, Imane, \hyperlink{page.246}{246}\\
 Gupta, Ishita, \hyperlink{page.305}{305}\\
 \\ % Extra space between new letters.
@@ -1201,6 +1210,7 @@ Kushare, Abhishek Suresh, \hyperlink{page.1}{1}\\
 König, Renate, \hyperlink{page.146}{146}\\
 \\ % Extra space between new letters.
 Lima-Lopez, Salvador, \hyperlink{page.309}{309}\\
+Lopez-Garcia, Guillermo, \hyperlink{page.345}{345}, \hyperlink{page.353}{353}\\
 \\ % Extra space between new letters.
 Madrueño, Natalia, \hyperlink{page.133}{133}\\
 Maity, Abhishek, \hyperlink{page.1}{1}\\
