@@ -2328,14 +2328,122 @@ for mining social media and health real-world data for biomedical and clinical a
     presentation_type: N/A
     submitted_area: ''
   authors:
-  - emails: glopezg@stanford.edu
-    first_name: Guillermo
-    last_name: Lopez-Garcia
-    name: Guillermo Lopez-Garcia
-  - emails: Graciela.GonzalezHernandez@csmc.edu
-    first_name: Graciela
-    last_name: Gonzalez-Hernandez
-    name: Graciela Gonzalez-Hernandez
+    - emails: glopezg@stanford.edu
+      first_name: Guillermo
+      last_name: Lopez-Garcia
+      name: Guillermo Lopez-Garcia
+    - emails: jacitores@csmc.edu
+      first_name: Jose Miguel
+      last_name: Acitores Cortina
+      name: Jose Miguel Acitores Cortina
+    - emails: jberkowitz@csmc.edu
+      first_name: Jacob
+      last_name: Berkowitz
+      name: Jacob Berkowitz
+    - emails: jchan51@illinois.edu
+      first_name: Joey
+      last_name: Chan
+      name: Joey Chan
+    - emails: sumon@emory.edu
+      first_name: Sumon Kanti
+      last_name: Dey
+      name: Sumon Kanti Dey
+    - emails: iflores@bsc.es
+      first_name: Ivan
+      last_name: Flores Amaro
+      name: Ivan Flores Amaro
+    - emails: fgallego@bsc.es
+      first_name: Fernando
+      last_name: Gallego
+      name: Fernando Gallego
+    - emails: lauren.gryboski@cuanschutz.edu
+      first_name: Lauren
+      last_name: Gryboski
+      name: Lauren Gryboski
+    - emails: ariklein@upenn.edu
+      first_name: Ari Z.
+      last_name: Klein
+      name: Ari Z. Klein
+    - emails: fzeidi@pei.de
+      first_name: Farnoush
+      last_name: Zeidi Kolehparcheh
+      name: Farnoush Zeidi Kolehparcheh
+    - emails: martin.krallinger@bsc.es
+      first_name: Martin
+      last_name: Krallinger
+      name: Martin Krallinger
+    - emails: slima@bsc.es
+      first_name: Salvador
+      last_name: Lima-Lopez
+      name: Salvador Lima-Lopez
+    - emails: yujun.ma@csmc.edu
+      first_name: Yujun
+      last_name: Ma
+      name: Yujun Ma
+    - emails: nishiyama@naist.jp
+      first_name: Tomohiro
+      last_name: Nishiyama
+      name: Tomohiro Nishiyama
+    - emails: ahmad.rezaie@dal.ca
+      first_name: Ahmad
+      last_name: Rezaie Mianroodi
+      name: Ahmad Rezaie Mianroodi
+    - emails: amirali.rezaie@shahrood.ac.ir
+      first_name: Amirali
+      last_name: Rezaie Mianroodi
+      name: Amirali Rezaie Mianroodi
+    - emails: lisa.raithel@dfki.de
+      first_name: Lisa
+      last_name: Raithel
+      name: Lisa Raithel
+    - emails: roland.roller@dfki.de
+      first_name: Roland
+      last_name: Roller
+      name: Roland Roller
+    - emails: judith.rosell@bsc.es
+      first_name: Judith
+      last_name: Rosell
+      name: Judith Rosell
+    - emails: frank.rudzicz@dal.ca
+      first_name: Frank
+      last_name: Rudzicz
+      name: Frank Rudzicz
+    - emails: abeed.sarker@emory.edu
+      first_name: Abeed
+      last_name: Sarker
+      name: Abeed Sarker
+    - emails: nicholas.tatonetti@csmc.edu
+      first_name: Nicholas
+      last_name: Tatonetti
+      name: Nicholas Tatonetti
+    - emails: philippe.thomas@dfki.de
+      first_name: Philippe
+      last_name: Thomas
+      name: Philippe Thomas
+    - emails: tutubalina@airi.net
+      first_name: Elena
+      last_name: Tutubalina
+      name: Elena Tutubalina
+    - emails: dongfang.xu@gmail.com
+      first_name: Dongfang
+      last_name: Xu
+      name: Dongfang Xu
+    - emails: farnaz.zeidi@pei.de
+      first_name: Farnaz
+      last_name: Zeidi
+      name: Farnaz Zeidi
+    - emails: yu.zhai@polyu.edu.hk
+      first_name: Yu
+      last_name: Zhai
+      name: Yu Zhai
+    - emails: pierre.zweigenbaum@lisn.fr
+      first_name: Pierre
+      last_name: Zweigenbaum
+      name: Pierre Zweigenbaum
+    - emails: Graciela.GonzalezHernandez@csmc.edu
+      first_name: Graciela
+      last_name: Gonzalez-Hernandez
+      name: Graciela Gonzalez-Hernandez
   decision: WorkshopPaper
   file: 78.pdf
   id: 78
