@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  31 MAY 2026 16:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  1 JUN 2026 19:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -745,82 +745,87 @@ been already used, duplicate ignored
 l.108 \newpage
                [1{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/base/8r.en
 c}] [2]
-Underfull \hbox (badness 10000) in paragraph at lines 149--153
+Underfull \hbox (badness 10000) in paragraph at lines 154--156
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 153--177
+Underfull \hbox (badness 10000) in paragraph at lines 156--159
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--182
+Underfull \hbox (badness 10000) in paragraph at lines 159--183
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 182--184
+Underfull \hbox (badness 10000) in paragraph at lines 183--188
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 188--190
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 197--208
+Underfull \hbox (badness 10000) in paragraph at lines 203--214
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 209--218
+Underfull \hbox (badness 10000) in paragraph at lines 215--224
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 219--295
+Underfull \hbox (badness 10000) in paragraph at lines 225--301
 
  []
 
 [4] [5] [6]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 303.
+(hyperref)                removing `math shift' on input line 309.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 303.
+(hyperref)                removing `math shift' on input line 309.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <17.28> on input line 306.
+(Font)              <17.28> on input line 312.
 
-Underfull \hbox (badness 10000) in paragraph at lines 318--320
+Underfull \hbox (badness 10000) in paragraph at lines 324--326
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 318--320
+Underfull \hbox (badness 10000) in paragraph at lines 324--326
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 339--341
+Underfull \hbox (badness 10000) in paragraph at lines 345--347
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--341
+Underfull \hbox (badness 10000) in paragraph at lines 345--347
 
  []
 
 [8]
-Overfull \hbox (5.6604pt too wide) in paragraph at lines 376--377
+Overfull \hbox (5.6604pt too wide) in paragraph at lines 382--383
 [][][]\T5/ptm/m/it/10.95 Team Ga-zoo! at #SMM4H-HeaRD 2026: Zero-Training NER v
 ia Ite-ra-ti-ve LLM Prompt Self-Optimization
  []
 
 [9] [10] [11] [12]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 441.
+(Font)              <10.95> on input line 447.
 
-Underfull \hbox (badness 1509) in paragraph at lines 473--474
+Underfull \hbox (badness 1509) in paragraph at lines 479--480
 [][][]\T5/ptm/m/it/10.95 MetaMiners at SMM4H-HeaRD 2026: A Semantic-Structural 
 Knowledge-
  []
@@ -841,10 +846,10 @@ Package rerunfilecheck Info: Checksums for `front_matter.out':
 (rerunfilecheck)             After:  27715DEB4A07794940F912F5E8BBF8A9;1683.
  ) 
 Here is how much of TeX's memory you used:
- 13468 strings out of 467525
- 214182 string characters out of 5418982
+ 13470 strings out of 467525
+ 214244 string characters out of 5418982
  664718 words of memory out of 5000000
- 42109 multiletter control sequences out of 15000+600000
+ 42111 multiletter control sequences out of 15000+600000
  653921 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,12n,90p,1279b,598s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1066,7 +1071,7 @@ l/texlive/2026/texmf-dist/fonts/type1/vntex/urwvn/utmb8v.pfb></usr/local/texliv
 e/2026/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2026/tex
 mf-dist/fonts/type1/vntex/urwvn/utmr8v.pfb></usr/local/texlive/2026/texmf-dist/
 fonts/type1/vntex/urwvn/utmri8v.pfb>
-Output written on build/front_matter.pdf (16 pages, 121134 bytes).
+Output written on build/front_matter.pdf (16 pages, 121264 bytes).
 PDF statistics:
  357 PDF objects out of 1000 (max. 8388607)
  323 compressed objects within 4 object streams

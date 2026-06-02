@@ -2,13 +2,15 @@
   - first_name: Graciela
     institution: Cedars-Sinai Medical Center, USA
     last_name: Gonzalez-Hernandez
+  role: General Chair
+- members:
   - first_name: Guillermo
     institution: Stanford Health Care, USA
     last_name: Lopez-Garcia
   - first_name: Ari
     institution: University of Pennsylvania, USA
     last_name: Klein
-  role: General Chairs
+  role: Workshop Co-Chairs
 - members:
   - first_name: Graciela
     institution: Cedars-Sinai Medical Center, USA
@@ -79,7 +81,7 @@
   - first_name: Martin
     institution: Barcelona Supercomputing Center, Spain
     last_name: Krallinger
-  role: Shared Task Committee
+  role: Shared Task Organizers
 - members:
   - first_name: Graciela
     institution: Cedars-Sinai Medical Center, USA
