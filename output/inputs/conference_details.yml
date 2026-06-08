@@ -9,5 +9,7 @@ location: "San Diego, United States"
 editors:
   - first_name: "Guillermo"
     last_name: "Lopez-Garcia"
+  - first_name: "Graciela"
+    last_name: "Gonzalez-Hernandez"
 publisher: "Association for Computational Linguistics"
 volume_name: "1"
