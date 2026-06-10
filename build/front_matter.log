@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  10 JUN 2026 10:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  10 JUN 2026 10:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -770,62 +770,62 @@ Underfull \hbox (badness 10000) in paragraph at lines 189--191
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 204--215
+Underfull \hbox (badness 10000) in paragraph at lines 204--216
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 216--225
+Underfull \hbox (badness 10000) in paragraph at lines 217--226
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 226--302
+Underfull \hbox (badness 10000) in paragraph at lines 227--303
 
  []
 
 [4] [5] [6]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 310.
+(hyperref)                removing `math shift' on input line 311.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 310.
+(hyperref)                removing `math shift' on input line 311.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <17.28> on input line 313.
+(Font)              <17.28> on input line 314.
 
-Underfull \hbox (badness 10000) in paragraph at lines 325--327
+Underfull \hbox (badness 10000) in paragraph at lines 326--328
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 325--327
+Underfull \hbox (badness 10000) in paragraph at lines 326--328
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 346--348
+Underfull \hbox (badness 10000) in paragraph at lines 347--349
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 346--348
+Underfull \hbox (badness 10000) in paragraph at lines 347--349
 
  []
 
 [8]
-Overfull \hbox (5.6604pt too wide) in paragraph at lines 383--384
+Overfull \hbox (5.6604pt too wide) in paragraph at lines 384--385
 [][][]\T5/ptm/m/it/10.95 Team Ga-zoo! at #SMM4H-HeaRD 2026: Zero-Training NER v
 ia Ite-ra-ti-ve LLM Prompt Self-Optimization
  []
 
 [9] [10] [11] [12]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 448.
+(Font)              <10.95> on input line 449.
 
-Underfull \hbox (badness 1509) in paragraph at lines 480--481
+Underfull \hbox (badness 1509) in paragraph at lines 481--482
 [][][]\T5/ptm/m/it/10.95 MetaMiners at SMM4H-HeaRD 2026: A Semantic-Structural 
 Knowledge-
  []
@@ -1071,7 +1071,7 @@ l/texlive/2026/texmf-dist/fonts/type1/vntex/urwvn/utmb8v.pfb></usr/local/texliv
 e/2026/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2026/tex
 mf-dist/fonts/type1/vntex/urwvn/utmr8v.pfb></usr/local/texlive/2026/texmf-dist/
 fonts/type1/vntex/urwvn/utmri8v.pfb>
-Output written on build/front_matter.pdf (16 pages, 121293 bytes).
+Output written on build/front_matter.pdf (16 pages, 121319 bytes).
 PDF statistics:
  357 PDF objects out of 1000 (max. 8388607)
  323 compressed objects within 4 object streams
